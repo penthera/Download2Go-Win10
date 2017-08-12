@@ -1,0 +1,372 @@
+﻿<Page
+    x:Class="VirtuosoClient.TestHarness.SettingPage" 
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+      xmlns:local="using:VirtuosoClient.TestHarness"
+     xmlns:Common="using:VirtuosoClient.TestHarness.Common"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <ImageBrush x:Key="HubBackgroundImageBrush" ImageSource="Assets/HubBackground.png"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="HighContrast">
+                    <ImageBrush x:Key="HubBackgroundImageBrush" ImageSource="{x:Null}"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+            <Common:VirtuosoClientStatusFormatter x:Key="VirtuosoClientStatusFormatter"/>
+            <Common:VirtuosoClientEnvironmentStatusFormatter x:Key="VirtuosoClientEnvironmentStatusFormatter"/>
+            <Common:DiskStorageFormatter x:Key="DiskStorageFormatter"/>
+            <Common:UnlimitedFormatter x:Key="UnlimitedFormatter"/>
+
+        </ResourceDictionary>
+    </Page.Resources>
+
+    <!--
+        This grid acts as a root panel for the page that defines two rows:
+        * Row 0 contains the back button and page title
+        * Row 1 contains the rest of the page layout
+    -->
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Width="{Binding ActualWidth, ElementName=pageRoot}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="pageTitle" x:Uid="HubPage" Text="Virtuoso Test Harness" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="0" 
+                        VerticalAlignment="Center" HorizontalAlignment="Stretch" IsHitTestVisible="false" TextWrapping="NoWrap" TextAlignment="Center"/>
+
+        </Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Row="1" Margin="0,0,0,20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0"  Margin="30,0,0,0" x:Name="detail1Row">
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="18"/>
+                            <Setter Property="Padding" Value="5,10,5,5" />
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="SettingHeading" Grid.Row="0" Grid.Column="0" Text="SETTINGS &amp; STATUS" FontWeight="Bold" FontSize="20" Foreground="{ThemeResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Margin="0,10,10,10" />
+                    <!--<TextBlock Grid.Row="0" Grid.Column="1" Text="STATUS" FontWeight="Bold" FontSize="25" Foreground="{ThemeResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Margin="0,10,10,10" />-->
+                    <TextBlock x:Name="EngineStatus"  Grid.Row="1" Grid.Column="0" Text="Engine Status"/>
+                    <TextBlock x:Name="Enginevalue" Grid.Row="1" Grid.Column="1" Text="{Binding EngineStatus,Converter={StaticResource VirtuosoClientStatusFormatter}}"/>
+                    <TextBlock x:Name="NetworkStatus" Grid.Row="2" Grid.Column="0" Text="Network Status" />
+                    <TextBlock x:Name="NetworkValue" Grid.Row="2" Grid.Column="1" Text="{Binding NetworkStatus,Converter={StaticResource VirtuosoClientEnvironmentStatusFormatter}}"/>
+                    <TextBlock x:Name="StorageStatus" Grid.Row="3" Grid.Column="0" Text="Storage Status" />
+                    <TextBlock x:Name="StorageValue" Grid.Row="3" Grid.Column="1" Text="{Binding DiskStatus,Converter={StaticResource VirtuosoClientEnvironmentStatusFormatter}}"/>
+                    <TextBlock x:Name="FreeSpace" Grid.Row="4" Grid.Column="0" Text="Disk Free Space" />
+                    <TextBlock x:Name="FreeSpaceValue" Grid.Row="4" Grid.Column="1" Text="{Binding DiskFreeSpace,Converter={StaticResource DiskStorageFormatter}}"/>
+                    <TextBlock x:Name="licensestatus" Grid.Row="5" Grid.Column="0" Text="LicenseStatus" />
+                    <TextBlock x:Name="licensestatusvalue" Grid.Row="5" Grid.Column="1" Text="{Binding LicenseStatus}"/>
+                    <TextBlock x:Name="Trustsecureclock" Grid.Row="6" Grid.Column="0" Text="Trust Secure Clock" />
+                    <TextBlock x:Name="Trustsecureclockvalue" Grid.Row="6" Grid.Column="1" Text="{Binding TrustVirtuosoTime}"/>
+                    <TextBlock x:Name="Secureclock" Grid.Row="7" Grid.Column="0" Text="Secure Clock" />
+                    <TextBlock x:Name="SecureClockValue" Grid.Row="7" Grid.Column="1" Text="{Binding SecureClock}"/>
+                    <TextBlock x:Name="SystemClock" Grid.Row="8" Grid.Column="0" Text="System Clock" />
+                    <TextBlock x:Name="SystemClockValue" Grid.Row="8" Grid.Column="1" Text="{Binding SystemClock}"/>
+                    <TextBlock x:Name="PropertySetting" Grid.Row="9" Grid.Column="0" Text="PROPERTY SETTINGS" FontWeight="Bold" FontSize="20" Foreground="{ThemeResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Margin="0,0,10,10"/>
+                    <TextBlock x:Name="MOF" Grid.Row="10" Grid.Column="0" Text="Maximum OfflinePeriod" />
+                    <TextBlock x:Name="MOFvalue" Grid.Row="10" Grid.Column="1" Text="{Binding Moff}"/>
+                    <TextBlock x:Name="DOD" Grid.Row="11" Grid.Column="0" Text="Devices For Download" />
+                    <TextBlock x:Name="DODValue" Grid.Row="11" Grid.Column="1" Text="{Binding MDD}"/>
+                    <TextBlock x:Name="UDQ" Grid.Row="12" Grid.Column="0" Text="Used Device Quota" />
+                    <TextBlock x:Name="UDQValue" Grid.Row="12" Grid.Column="1" Text="{Binding BackplaneSettings.UsedDeviceQuota}"/>
+                    <TextBlock x:Name="MDA" Grid.Row="13" Grid.Column="0" Text="Max Download Account" />
+                    <TextBlock x:Name="MDAValue" Grid.Row="13" Grid.Column="1" Text="{Binding BackplaneSettings.MaxDownloadsAccount,Converter={StaticResource UnlimitedFormatter} }"/>
+                    <TextBlock x:Name="MAD" Grid.Row="14" Grid.Column="0" Text="Max Asset Download" />
+                    <TextBlock x:Name="MADValue" Grid.Row="14" Grid.Column="1" Text="{Binding BackplaneSettings.MaxAssetDownloads,Converter={StaticResource UnlimitedFormatter}}"/>
+                    <TextBlock x:Name="MPD" Grid.Row="15" Grid.Column="0" Text="Max Permitted Downloads" />
+                    <TextBlock x:Name="MPDValue" Grid.Row="15" Grid.Column="1" Text="{Binding BackplaneSettings.MaxPermittedDownloads,Converter={StaticResource UnlimitedFormatter}}"/>
+                    <TextBlock x:Name="LiceseKey" Grid.Row="16" Grid.Column="0" Text="LicenseKey ExpiryDate" />
+                    <TextBlock x:Name="LicesekeyValue" Grid.Row="16" Grid.Column="1" Text="{Binding LicenseKeyExpiryDate}"/>
+                    <TextBlock x:Name="LiceseExpiry" Grid.Row="17" Grid.Column="0" Text="LicenseKey ExpiryDay"/>
+                    <TextBlock x:Name="LiceseExpiryValue" Grid.Row="17" Grid.Column="1" Text="{Binding LicenseKeyvalueExpiryDay}"/>
+                    <TextBlock x:Name="maxsdk" Grid.Row="18" Grid.Column="0" Text="MaxSdk" />
+                    <TextBlock x:Name="maxsdkvalue" Grid.Row="18" Grid.Column="1" Text="{Binding MaxSdk}"/>
+
+                </Grid>
+                <Grid Grid.Column="1"  Margin="30,0,40,0" x:Name="detailRow">
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="18"/>
+                            <Setter Property="Padding" Value="5,10,5,5" />
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <TextBlock  x:Name="DeviceHeading" Grid.Row="0" Grid.Column="0" FontWeight="Bold" FontSize="20"  Text="DEVICE SETTINGS"  Foreground="{ThemeResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Margin="0,10,10,10"/>
+                    <TextBlock  x:Name="OverCell" Grid.Row="1" Grid.Column="0" Text="Download Over Cell" />
+                    <CheckBox  x:Name="OverCellValue" Grid.Row="1" Grid.Column="1" IsChecked="{Binding Settings.DownloadOverCell, Mode=TwoWay}" />
+                    <TextBlock  x:Name="FileSize" Grid.Row="2" Grid.Column="0" Text="Validate File Sizes" />
+                    <CheckBox  x:Name="FileSizeValue" Grid.Row="2" Grid.Column="1" IsChecked="{Binding Settings.ValidateFileSizes, Mode=TwoWay}" />
+                    <TextBlock  x:Name="Enabled" Grid.Row="3" Grid.Column="0" Text="Download Enabled" />
+                    <CheckBox  x:Name="EnabledValue" Grid.Row="3" Grid.Column="1" IsChecked="{Binding Device.DownloadEnabled,Mode=TwoWay}" />
+                    <TextBlock  x:Name="Logging" Grid.Row="4" Grid.Column="0" Text="LOGGING"   />
+                    <ComboBox   Grid.Row="4" Grid.Column="1" x:Name="LogLevel_Combo" SelectedIndex="{Binding LogLevel}" SelectionChanged="Selector_OnLogLevelChanged" Width="160"  MinHeight="15" FontSize="12" >
+                        <ComboBoxItem Tag="0" HorizontalContentAlignment="Center">Debug</ComboBoxItem>
+                        <ComboBoxItem Tag="1" HorizontalContentAlignment="Center">Verbose</ComboBoxItem>
+                        <ComboBoxItem Tag="2" HorizontalContentAlignment="Center">Warning</ComboBoxItem>
+                        <ComboBoxItem Tag="3" HorizontalContentAlignment="Center">Error</ComboBoxItem>
+                        <ComboBoxItem Tag="4" HorizontalContentAlignment="Center">None</ComboBoxItem>
+                    </ComboBox>
+                    <TextBlock  x:Name="NetworkLoggingEnabled" Grid.Row="5" Grid.Column="0" Text="Net Log Enabled" />
+                    <CheckBox  x:Name="NetworkLoggingEnabledValue" Grid.Row="5" Grid.Column="1" IsChecked="{Binding NetworkLoggingEnabled, Mode=TwoWay}" />
+                    <TextBlock  x:Name="NetworkLoggingIP" Grid.Row="6" Grid.Column="0" Text="Net Log IP" />
+                    <TextBox  x:Name="NetworkLoggingIPValue" Grid.Row="6" Grid.Column="1" Text="{Binding NetworkLoggingIP, Mode=TwoWay}" Width="160"  HorizontalAlignment="Left" Margin="0,10,0,0" />
+                    <TextBlock  x:Name="NetworkLoggingPort" Grid.Row="7" Grid.Column="0" Text="Nickname" />
+                    <TextBox  x:Name="NetworkLoggingPortValue" Grid.Row="7" Grid.Column="1" Text="{Binding NetworkLoggingPort,Mode=TwoWay}" Width="160"  HorizontalAlignment="Left" Margin="0,10,0,0" />
+                    <TextBlock  x:Name="Headroom" Grid.Row="8" Grid.Column="0" Text="Storage Headroom (MB)" />
+                    <TextBox  x:Name="HeadroomValue" Grid.Row="8" Grid.Column="1" Text="{Binding Settings.Headroom, Mode=TwoWay}" HorizontalAlignment="Left"  Width="160" />
+                    <TextBlock  x:Name="AllowableStorage" Grid.Row="9" Grid.Column="0" Text="Allowable Storage (MB)" />
+                    <TextBox  x:Name="AllowableStorageValue" Grid.Row="9" Grid.Column="1" Text="{Binding Settings.MaxStorage, Mode=TwoWay}" Width="160"  HorizontalAlignment="Left" Margin="0,10,0,0" />
+                    <TextBlock  x:Name="NickName" Grid.Row="10" Grid.Column="0" Text="Nickname" />
+                    <TextBox  x:Name="NickNameValue" Grid.Row="10" Grid.Column="1" Text="{Binding Device.NickName,Mode=TwoWay}" Width="160"  HorizontalAlignment="Left" Margin="0,10,0,0" />
+                    <TextBlock  x:Name="Segment" Grid.Row="11" Grid.Column="0" Text="Max Permitted Segment Errors" />
+                    <TextBox  x:Name="SegmentValue" Grid.Row="11" Grid.Column="1"  Text="{Binding Settings.MaxPermittedSegmentErrors, Mode=TwoWay}"   Width="160"  HorizontalAlignment="Left" Margin="0,10,0,0" />
+                    <TextBlock  x:Name="HttpCode" Grid.Row="12" Grid.Column="0" Text="HTTP Code error Segment" />
+                    <ComboBox   Grid.Row="12" Grid.Column="1" x:Name="CodeSegment_Combo" SelectedIndex="{Binding HttpCodeErrorSegment}" SelectionChanged="Selector_CodeError" Width="160"  Margin="0,10,0,0" >
+                        <ComboBoxItem Tag="0" HorizontalContentAlignment="Center">OK</ComboBoxItem>
+                        <ComboBoxItem Tag="1" HorizontalContentAlignment="Center">Not found</ComboBoxItem>
+                    </ComboBox>
+
+                    <StackPanel  Name="buttonpanel"  Grid.Row="13" Grid.Column="0" Orientation="Horizontal" Margin="0,25,0,0">
+                        <Button Click="SettingSave_ItemClick"  Name="Btn_SettingSave">Save</Button>
+                        <Button Click="Mail_ItemClick"  Name="Btn_Mail" Margin="10,0,0,0">Send Mail</Button>
+                        <Button Click="HyperlinkButton_Click"  Name="Btn_Device" Margin="10,0,0,0">User Device</Button>
+                    </StackPanel>
+                </Grid>
+            </Grid>
+
+        </ScrollViewer>
+
+        <CommandBar Grid.Row="2" VerticalAlignment="Bottom"  ClosedDisplayMode="Minimal" x:Name="Commandbar" Margin="0,0,0,20">
+
+            <AppBarButton x:Name="DeviceButton" Icon="CellPhone"  Label="Devices" Click="DeviceButton_Click" />
+            <AppBarButton x:Name="HomeButton"  Icon="Home" Label="Home" Click="HomeButton_Click"/>
+           
+            <AppBarSeparator/>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="ForceSync" Icon="Refresh" Label="Sync" Click="ForceSync_Click"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup>
+                <VisualState x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="pageTitle.Style" Value="{StaticResource HeaderTextBlockStyle}" />
+                        <Setter Target="pageTitle.HorizontalAlignment" Value="Stretch" />
+                        <Setter Target="Commandbar.Margin"  Value="0,0,0,0" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="pageTitle.Style" Value="{StaticResource TitleTextBlockStyle}" />
+
+                        <Setter Target="DeviceHeading.FontSize"  Value="13" />
+                        <Setter Target="DeviceHeading.Padding"  Value="0,2,0,2" />
+                        <Setter Target="OverCell.FontSize"  Value="14" />
+                        <Setter Target="OverCell.Padding"  Value="0,2,0,2" />
+                        <Setter Target="OverCellValue.FontSize"  Value="14" />
+                        <Setter Target="OverCellValue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="FileSize.FontSize"  Value="14" />
+                        <Setter Target="FileSize.Padding"  Value="0,4,0,4" />
+                        <Setter Target="FileSizeValue.FontSize"  Value="14" />
+                        <Setter Target="FileSizeValue.Padding"  Value="0,0,0,0" />
+                        <Setter Target="EnabledValue.FontSize"  Value="14" />
+                        <Setter Target="EnabledValue.Padding"  Value="0,0,0,0" />
+                        <Setter Target="Enabled.FontSize"  Value="14" />
+                        <Setter Target="Enabled.Padding"  Value="0,4,0,4" />
+                        <Setter Target="Logging.FontSize"  Value="14" />
+                        <Setter Target="Logging.Padding"  Value="0,4,0,4" />
+                        <Setter Target="LogLevel_Combo.FontSize"  Value="14" />
+                        <Setter Target="LogLevel_Combo.Padding"  Value="0,0,0,0" />
+                        <Setter Target="Headroom.FontSize"  Value="14" />
+                        <Setter Target="Headroom.Padding"  Value="0,4,0,4" />
+                        <Setter Target="HeadroomValue.FontSize"  Value="14" />
+                        <Setter Target="HeadroomValue.Padding"  Value="0,0,0,0" />
+                        <Setter Target="AllowableStorage.FontSize"  Value="14" />
+                        <Setter Target="AllowableStorage.Padding"  Value="0,4,0,4" />
+                        <Setter Target="AllowableStorageValue.FontSize"  Value="14" />
+                        <Setter Target="AllowableStorageValue.Margin" Value="0,0,0,0" />
+                        <Setter Target="NickName.Padding"  Value="0,4,0,4" />
+                        <Setter Target="NickName.FontSize"  Value="14" />
+                        <Setter Target="NickNameValue.Margin"  Value="0,0,0,0" />
+                        <Setter Target="NickNameValue.FontSize"  Value="14" />
+
+                        <Setter Target="Segment.Padding"  Value="0,4,0,4" />
+                        <Setter Target="Segment.FontSize"  Value="14" />
+                        <Setter Target="SegmentValue.Margin"  Value="0,0,0,0" />
+                        <Setter Target="SegmentValue.FontSize"  Value="14" />
+                        <Setter Target="HttpCode.Padding"  Value="0,4,0,4" />
+                        <Setter Target="HttpCode.FontSize"  Value="14" />
+                        <Setter Target="CodeSegment_Combo.Margin"  Value="0,0,0,0" />
+                        <Setter Target="CodeSegment_Combo.FontSize"  Value="14" />
+                        <Setter Target="Btn_SettingSave.FontSize"  Value="13" />
+                        <Setter Target="Btn_Mail.FontSize"  Value="13" />
+                        <Setter Target="Btn_Device.FontSize"  Value="13" />
+                        <Setter Target="buttonpanel.Margin"  Value="0,0,0,0" />
+                        <Setter Target="SettingHeading.FontSize"  Value="13" />
+                        <Setter Target="SettingHeading.Padding"  Value="0,2,0,2" />
+                        <Setter Target="EngineStatus.FontSize"  Value="14" />
+                        <Setter Target="EngineStatus.Padding"  Value="0,2,0,2" />
+                        <Setter Target="NetworkStatus.FontSize"  Value="14" />
+                        <Setter Target="NetworkStatus.Padding"  Value="0,2,0,2" />
+                        <Setter Target="StorageStatus.FontSize"  Value="14" />
+                        <Setter Target="StorageStatus.Padding"  Value="0,2,0,2" />
+                        <Setter Target="FreeSpace.FontSize"  Value="14" />
+                        <Setter Target="FreeSpace.Padding"  Value="0,2,0,2" />
+                        <Setter Target="Enginevalue.FontSize"  Value="14" />
+                        <Setter Target="Enginevalue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="NetworkValue.FontSize"  Value="14" />
+                        <Setter Target="NetworkValue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="StorageValue.FontSize"  Value="14" />
+                        <Setter Target="StorageValue.Padding"  Value="0,2,0,2" />
+
+                        <Setter Target="FreeSpaceValue.FontSize"  Value="14" />
+                        <Setter Target="FreeSpaceValue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="DODValue.FontSize"  Value="14" />
+                        <Setter Target="DODValue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="UDQValue.FontSize"  Value="14" />
+                        <Setter Target="UDQValue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="MDAValue.FontSize"  Value="14" />
+                        <Setter Target="MDAValue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="MADValue.FontSize"  Value="14" />
+                        <Setter Target="MADValue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="MPDValue.FontSize"  Value="14" />
+                        <Setter Target="MPDValue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="MPDValue.FontSize"  Value="14" />
+                        <Setter Target="MPDValue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="LicesekeyValue.FontSize"  Value="14" />
+                        <Setter Target="LicesekeyValue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="LiceseExpiryValue.FontSize"  Value="14" />
+                        <Setter Target="LiceseExpiryValue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="maxsdkvalue.FontSize"  Value="14" />
+                        <Setter Target="maxsdkvalue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="Trustsecureclockvalue.FontSize"  Value="14" />
+                        <Setter Target="Trustsecureclockvalue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="SecureClockValue.FontSize"  Value="14" />
+                        <Setter Target="SecureClockValue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="SystemClockValue.FontSize"  Value="14" />
+                        <Setter Target="SystemClockValue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="MOFvalue.FontSize"  Value="14" />
+                        <Setter Target="MOFvalue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="licensestatusvalue.FontSize"  Value="14" />
+                        <Setter Target="licensestatusvalue.Padding"  Value="0,2,0,2" />
+                        <Setter Target="PropertySetting.FontSize"  Value="13" />
+                        <Setter Target="PropertySetting.Padding"  Value="0,2,0,2" />
+                        <Setter Target="MOF.FontSize"  Value="14" />
+                        <Setter Target="MOF.Padding"  Value="0,2,0,2" />
+                        <Setter Target="DOD.FontSize"  Value="14" />
+                        <Setter Target="DOD.Padding"  Value="0,2,0,2" />
+                        <Setter Target="UDQ.FontSize"  Value="14" />
+                        <Setter Target="UDQ.Padding"  Value="0,2,0,2" />
+                        <Setter Target="MDA.FontSize"  Value="14" />
+                        <Setter Target="MDA.Padding"  Value="0,2,0,2" />
+                        <Setter Target="MAD.FontSize"  Value="14" />
+                        <Setter Target="MAD.Padding"  Value="0,2,0,2" />
+                        <Setter Target="MPD.FontSize"  Value="14" />
+                        <Setter Target="MPD.Padding"  Value="0,2,0,2" />
+                        <Setter Target="LiceseKey.FontSize"  Value="14" />
+                        <Setter Target="LiceseKey.Padding"  Value="0,2,0,2" />
+                        <Setter Target="LiceseExpiry.FontSize"  Value="14" />
+                        <Setter Target="LiceseExpiry.Padding"  Value="0,2,0,2" />
+                        <Setter Target="maxsdk.FontSize"  Value="14" />
+                        <Setter Target="maxsdk.Padding"  Value="0,2,0,2" />
+                        <Setter Target="licensestatus.FontSize"  Value="14" />
+                        <Setter Target="licensestatus.Padding"  Value="0,2,0,2" />
+                        <Setter Target="Trustsecureclock.FontSize"  Value="14" />
+                        <Setter Target="Trustsecureclock.Padding"  Value="0,2,0,2" />
+                        <Setter Target="Secureclock.FontSize"  Value="14" />
+                        <Setter Target="Secureclock.Padding"  Value="0,2,0,2" />
+                        <Setter Target="SystemClock.FontSize"  Value="14" />
+                        <Setter Target="SystemClock.Padding"  Value="0,2,0,10" />
+                        <Setter Target="maxsdk.Margin"  Value="0,0,0,20" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+
+    </Grid>
+
+
+</Page>

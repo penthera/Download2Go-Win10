@@ -1,0 +1,1583 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="GENERATOR" content="VSdocman - documentation generator; http://www.helixoft.com" />
+	<title>IVirtuosoClient Interface</title>
+
+	<link rel="stylesheet" type="text/css" href="msdn2017/msdn2017.css"></link>
+	<script src="msdn2017/msdn2017.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushCpp.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushJScript.js" type="text/javascript"></script>
+	<link href="SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
+	<link href="SyntaxHighlighter/styles/shThemeMsdnLW.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>				
+
+	<script type="text/javascript">
+<!--
+if (self.name != "vbdocright") {
+	if (location.search != "?toc=no") {
+		var filename = location.pathname.replace(/\\/g, "/");
+		filename = filename.substring(filename.lastIndexOf('/')+1);
+		location.replace("index.html#" + filename);
+	} 
+}
+
+function replaceTitleAndUrl(win, title, url) {
+	if(history.replaceState) {
+		win.history.replaceState(null, title, url);
+	} else {
+		win.document.title = document.title;
+		win.location.replace(url);
+	}
+}
+//-->
+	</script>	
+</head>
+
+<body style="direction: ltr;">
+	<script type="text/javascript">
+		try {
+			if (location.search != "?toc=no") {
+				parent.document.title = document.title;
+				var filename = location.pathname.replace(/\\/g, "/");
+				filename = filename.substring(filename.lastIndexOf('/')+1);
+				if (window.parent.location.search == null || window.parent.location.search != "?" + filename) {
+					if (window.parent.location.hash == null || window.parent.location.hash != "#" + filename) {
+						replaceTitleAndUrl(window.parent, document.title, "index.html#" + filename);
+					}
+				}
+			}
+		} catch (ex) {}
+	</script>
+	<div id="topic">
+<!--HEADER START-->
+  <div id="header">
+  	<div id="runningHeaderText">VirtuosoSDK Reference</div>
+  	<h1 class="title">IVirtuosoClient Interface</h1>
+  	<div id="headerLinks">
+
+	<a href="#seeAlsoSection">See Also</a>
+
+		</div>
+		<hr />
+	</div>
+<!--HEADER END-->
+    
+		<div id="mainSection">
+      <div id="mainBody">
+        <p />
+       
+        The central control for all download-related activities.
+
+
+        <p /><strong>Namespace:</strong>
+<a href="topic_0000000000000000.html">Penthera.VirtuosoClient.Public</a>
+
+
+
+
+        <br /><strong>Assembly:</strong> CnCWindowsSDK (in CnCWindowsSDK.dll)
+
+
+
+
+
+
+
+
+
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Syntax</a></span>
+		<div><hr /></div>
+	</div>
+
+	<div id="syntaxSection" class="section">	
+	
+	
+	<div id="syntaxCodeBlocks">
+		<div class="codeSnippetContainer">		
+			<div class="codeSnippetTabs">
+				<div class="codeSnippetTabLeftCornerActive">
+				</div>
+				<div class="codeSnippetTab csFirstTab csActiveTab codeVB">
+					<a>VB</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeCsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeCpp">
+					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
+				</div>
+				<div class="codeSnippetTab csLastTab csNaTab codeJScript">
+					<a href="javascript: CodeSnippet_SetLanguage('JScript');">JScript</a>
+				</div>
+				<div class="codeSnippetTabRightCorner">
+				</div>
+				<div style="clear:both;">
+				</div>
+			</div>
+	
+			<div class="codeSnippetCodeCollection">
+				<div class="codeSnippetToolbar">
+					<a title="Copy to clipboard." href="javascript:void(0)" onclick="CopyCode(this);">Copy</a>
+				</div>
+				
+				<div class="codeSnippetCode codeVB">
+					<pre xml:space="preserve" class="brush: vb">Public Interface IVirtuosoClient&nbsp;<br />    Inherits <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged.aspx">INotifyPropertyChanged</a></pre>			
+				</div>
+				<div class="codeSnippetCode codeNA">
+					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
+				</div>
+			</div>
+		</div>
+		
+		<div class="codeSnippetContainer">
+			<div class="codeSnippetTabs">
+				<div class="codeSnippetTabLeftCorner">
+				</div>
+				<div class="codeSnippetTab csFirstTab csNaTab codeVB">
+					<a>VB</a>
+				</div>
+				<div class="codeSnippetTab csActiveTab codeCsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeCpp">
+					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
+				</div>
+				<div class="codeSnippetTab csLastTab csNaTab codeJScript">
+					<a href="javascript: CodeSnippet_SetLanguage('JScript');">JScript</a>
+				</div>
+				<div class="codeSnippetTabRightCorner">
+				</div>
+				<div style="clear:both;">
+				</div>
+			</div>
+	
+			<div class="codeSnippetCodeCollection">
+				<div class="codeSnippetToolbar">
+					<a title="Copy to clipboard." href="javascript:void(0)" onclick="CopyCode(this);">Copy</a>
+				</div>
+				
+				<div class="codeSnippetCode codeCsharp">
+					<pre xml:space="preserve" class="brush: csharp">public interface IVirtuosoClient : <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged.aspx">INotifyPropertyChanged</a></pre>			
+				</div>
+				<div class="codeSnippetCode codeNA">
+					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
+				</div>
+			</div>
+		</div>
+
+		<div class="codeSnippetContainer">
+			<div class="codeSnippetTabs">
+				<div class="codeSnippetTabLeftCorner">
+				</div>
+				<div class="codeSnippetTab csFirstTab csNaTab codeVB">
+					<a>VB</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeCsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csActiveTab codeCpp">
+					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
+				</div>
+				<div class="codeSnippetTab csLastTab csNaTab codeJScript">
+					<a href="javascript: CodeSnippet_SetLanguage('JScript');">JScript</a>
+				</div>
+				<div class="codeSnippetTabRightCorner">
+				</div>
+				<div style="clear:both;">
+				</div>
+			</div>
+	
+			<div class="codeSnippetCodeCollection">
+				<div class="codeSnippetToolbar">
+					<a title="Copy to clipboard." href="javascript:void(0)" onclick="CopyCode(this);">Copy</a>
+				</div>
+				
+				<div class="codeSnippetCode codeCpp">
+					<pre xml:space="preserve" class="brush: cpp">public interface class IVirtuosoClient : public <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged.aspx">INotifyPropertyChanged</a>^</pre>			
+				</div>
+				<div class="codeSnippetCode codeNA">
+					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
+				</div>
+			</div>
+		</div>
+		
+		<div class="codeSnippetContainer">
+			<div class="codeSnippetTabs">
+				<div class="codeSnippetTabLeftCorner">
+				</div>
+				<div class="codeSnippetTab csFirstTab csNaTab codeVB">
+					<a>VB</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeCsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeCpp">
+					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
+				</div>
+				<div class="codeSnippetTab csActiveTab csLastTab codeJScript">
+					<a href="javascript: CodeSnippet_SetLanguage('JScript');">JScript</a>
+				</div>
+				<div class="codeSnippetTabRightCornerActive">
+				</div>
+				<div style="clear:both;">
+				</div>
+			</div>
+	
+			<div class="codeSnippetCodeCollection">
+				<div class="codeSnippetToolbar">
+					<a title="Copy to clipboard." href="javascript:void(0)" onclick="CopyCode(this);">Copy</a>
+				</div>
+				
+				<div class="codeSnippetCode codeJScript">
+					<pre xml:space="preserve" class="brush: js">public interface IVirtuosoClient&nbsp;<br />   implements <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged.aspx">INotifyPropertyChanged</a></pre>			
+				</div>
+				<div class="codeSnippetCode codeNA">
+					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
+				</div>
+			</div>
+		</div>
+		
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
+</div>
+
+
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Properties</a></span>
+		<div><hr /></div>
+	</div>
+
+	<div id="PropertiesSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000DF.html">Backplane</a>
+
+	</td>
+	<td>
+
+Gets the backplane.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000F3.html">DiskFreeSpace</a>
+
+	</td>
+	<td>
+
+The amount of space remaining on disk, in bytes
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000F1.html">DiskStatusOK</a>
+
+	</td>
+	<td>
+
+Whether disk usage state permits downloading
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000FF.html">Downloaded</a>
+
+	</td>
+	<td>
+
+Assets that have finished downloading
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000F0.html">License</a>
+
+	</td>
+	<td>
+
+Gets the license.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000F6.html">NetworkStatusOK</a>
+
+	</td>
+	<td>
+
+Whether current network state permits downloading
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000F5.html">PermittedSpaceRemaining</a>
+
+	</td>
+	<td>
+
+The amount of disk space that may still be used for downloads, in bytes
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000FE.html">Queue</a>
+
+	</td>
+	<td>
+
+All Assets in the system
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000F4.html">SDKUsedSpace</a>
+
+	</td>
+	<td>
+
+The amount of disk space used by the SDK, in bytes
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000EC.html">Settings</a>
+
+	</td>
+	<td>
+
+Access to the VirtuosoSettings object, which encapsulates all system defaults
+and operator changeable values.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000EE.html">Status</a>
+
+	</td>
+	<td>
+
+The current CNC download Engine status
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000EA.html">TestValue</a>
+
+	</td>
+	<td>
+
+Gets or sets the test value.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000EB.html">ThisDevice</a>
+
+	</td>
+	<td>
+
+A device object representing this device.  It can be used to observe device-related settings and to
+request changes to the device nickname and download-enabled permissions.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000E1.html">TrustVirtuosoTime</a>
+
+	</td>
+	<td>
+
+Gets a value indicating whether [trust CNC time].
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000E9.html">Version</a>
+
+	</td>
+	<td>
+
+Gets SDK version.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000ED.html">VirtuosoLogger</a>
+
+	</td>
+	<td>
+
+Access to the VirtuosoLogger object, which can be used as a basic system logger.
+The enclosing application is also required to use the VirtuosoLogger to record system
+events that are not detectable by the SDK, such as when asset playback starts and
+finishes.
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000E0.html">VirtuosoTime</a>
+
+	</td>
+	<td>
+
+Gets the CNC time.
+
+	</td>
+</tr>
+	
+
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
+
+
+
+
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Methods</a></span>
+		<div><hr /></div>
+	</div>
+
+	<div id="MethodsSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000102.html">DeleteAll()</a>
+
+	</td>
+	<td>
+
+Deletes all assets on the device.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000101.html">DeleteAssetAsync(IAsset)</a>
+
+	</td>
+	<td>
+
+Deletes an asset
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000106.html">DeviceUnRegister(IDevice)</a>
+
+	</td>
+	<td>
+
+Unregister user
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000F2.html">DiskStatusOKAsync()</a>
+
+	</td>
+	<td>
+
+Whether disk usage state permits downloading
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000FB.html">EnqueueFileAsync(IAsset)</a>
+
+	</td>
+	<td>
+
+Adds an asset to the download queue.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000107.html">EventList()</a>
+
+	</td>
+	<td>
+
+
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000103.html">FlushQueueAsync()</a>
+
+	</td>
+	<td>
+
+Removes all items from the download queue.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000100.html">GetAsset(Guid)</a>
+
+	</td>
+	<td>
+
+Retrieves an asset in the download queue by UUID.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000EF.html">GetStatusAsync()</a>
+
+	</td>
+	<td>
+
+The current CNC download Engine status
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000FA.html">NewAsset(string, string, string, string, List&lt;String&gt;, string, Nullable&lt;DateTime&gt;, Nullable&lt;DateTime&gt;, Nullable&lt;Int64&gt;, Nullable&lt;Int64&gt;, EAssetType)</a>
+
+	</td>
+	<td>
+
+Creates a new in-memory Asset.  To be recognized and persisted by the SDK, the Asset must be enqueued first.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000FC.html">RemoveFromQueue(IAsset)</a>
+
+	</td>
+	<td>
+
+Remove the given asset from the download queue.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000FD.html">ShowQueue()</a>
+
+	</td>
+	<td>
+
+Provides access to a collection of Assets that have not finished downloading
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000F7.html">StartupAsync(string, string, string, string, string)</a>
+
+	</td>
+	<td>
+
+You must call this method to initialize CNC before you call any other CNC method.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000F8.html">SyncWithBackplaneAsync()</a>
+
+	</td>
+	<td>
+
+Forces a manual sync with the Backplane
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000F9.html">UnregisterThisDevice()</a>
+
+	</td>
+	<td>
+
+Unregisters this device from the backplane.  Upon successful completion, the client must
+revert to the original app install state.  Typically this is a login page.  CNC will
+not function until the StartupAsync method is called again.
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000105.html">UpdateDeviceDetail(IDevice)</a>
+
+	</td>
+	<td>
+
+update user device details
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000108.html">UpdateEvent(IEvent)</a>
+
+	</td>
+	<td>
+
+
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_0000000000000104.html">UserDeviceList()</a>
+
+	</td>
+	<td>
+
+List of user devices
+
+	</td>
+</tr>
+
+
+
+
+
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Events</a></span>
+		<div><hr /></div>
+	</div>
+
+	<div id="EventsSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public event" title="Public event" src="msdn2017/pubevent.png"></img>
+
+	
+	    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000E6.html">AssetSizeValidationWarning</a>
+
+	  </td>
+	  <td>
+	
+	Fired when validation on file size is disabled and the engine detects a file size mismatch.
+	
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public event" title="Public event" src="msdn2017/pubevent.png"></img>
+
+	
+	    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000E7.html">AuthenticationUpdated</a>
+
+	  </td>
+	  <td>
+	
+	Occurs when [authentication updated].
+	
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public event" title="Public event" src="msdn2017/pubevent.png"></img>
+
+	
+	    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000E2.html">BackplanePermissionReceived</a>
+
+	  </td>
+	  <td>
+	
+	Occurs when [backplane permission received].
+	
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public event" title="Public event" src="msdn2017/pubevent.png"></img>
+
+	
+	    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000E8.html">LicenseChanged</a>
+
+	  </td>
+	  <td>
+	
+	Occurs when [license changed].
+	
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public event" title="Public event" src="msdn2017/pubevent.png"></img>
+
+	
+	    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000E3.html">RemoteWipeComplete</a>
+
+	  </td>
+	  <td>
+	
+	Fired after Virtusoo receives a remote-wipe command from Backplane and has performed the wipe.
+	
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public event" title="Public event" src="msdn2017/pubevent.png"></img>
+
+	
+	    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000E5.html">VirtuosoCcbDeviceSaved</a>
+
+	  </td>
+	  <td>
+	
+	Fired when Backplane acknowledges saving device data
+	
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public event" title="Public event" src="msdn2017/pubevent.png"></img>
+
+	
+	    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000E4.html">VirtuosoClientStatusChange</a>
+
+	  </td>
+	  <td>
+	
+	Fired when CNC's download engine changes status.
+	
+		</td>
+	</tr>
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
+
+  
+
+<!-- Classes -->
+
+<!-- Classes End -->
+
+<!-- Standard Modules -->
+
+<!-- Standard Modules End -->
+
+  
+
+
+
+
+
+
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
+		<div><hr /></div>
+	</div>
+
+	<div id="remarksSection" class="section">	
+			A singleton object that handles all download activity and monitoring conditions and settings.
+Maintains the download queue, which is a list of VirtuosoAsset objects enqueued for download.
+Receives config values from the Backplane. Monitors device state. Ensures that downloads
+only occur consistent with the current configuration.
+&lt;note type=&quot;warning&quot;&gt;
+You must never instantiate an object of this type directly.
+The VirtuosoDownloadEngine is a singleton and should only be accessed via the
+provided instance method.
+&lt;/note&gt;
+	</div>					
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Platforms</a></span>
+		<div><hr /></div>
+	</div>
+
+	<div id="platformsSection" class="section">	
+		<p>
+			Windows Phone 8.1, Windows Phone 8, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Vista SP2, Windows Server 2008 (Server Core Role not supported), Windows Server 2008 R2 (Server Core Role supported with SP1 or later; Itanium not supported)
+		</p>
+		<p>
+			The .NET Framework does not support all versions of every platform. For a list of the supported versions, see 
+			<a target="_top" href="http://msdn2.microsoft.com/en-us/library/298275e2-da1d-4618-9f74-6a3567832350.aspx">System Requirements</a>.
+		</p>
+	</div>					
+</div>
+
+
+
+  
+
+
+	
+	
+	
+	
+	
+	
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Version Information</a></span>
+		<div><hr /></div>
+	</div>
+
+	<div id="frameworksSection" class="section">	
+  <h4 class="subHeading">.NET Framework</h4>Supported in: 4.6, 4.5, 4, 3.5, 3.0, 2.0, 1.1, 1.0<br />
+
+  <h4 class="subHeading">.NET Framework Client Profile</h4>Supported in: 4, 3.5 SP1<br />
+
+
+
+
+	
+	
+	</div>					
+</div>
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">See Also</a></span>
+		<div><hr /></div>
+	</div>
+
+	<div id="seeAlsoSection" class="section">	
+		<div>
+	<a href="topic_0000000000000000.html">Penthera.VirtuosoClient.Public Namespace</a><br />
+
+
+	
+
+		</div>
+	</div>					
+</div>
+			</div>
+			</div>
+      <div id="footer">
+      	<p><span style="color: #FF0000;">Generated with unregistered version of <a target="_top" href="http://www.helixoft.com/vsdocman/overview.html">VSdocman</a></span>&nbsp;<br />Your own footer text will only be shown in registered version.</p>
+      </div>
+    </div>
+  	<script type="text/javascript">
+<!--
+	try {
+		parent.frames["vbdocswitch"].expandLinkInToc(location.href);
+	} catch (ex) {}
+//-->
+		</script>	
+  </body>
+</html>
+

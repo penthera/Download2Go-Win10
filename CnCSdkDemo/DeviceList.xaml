@@ -1,0 +1,122 @@
+﻿<Page
+    x:Class="VirtuosoClient.TestHarness.DeviceList"
+      DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VirtuosoClient.TestHarness"
+    xmlns:common="using:VirtuosoClient.TestHarness.Common"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <common:DeviceConverter x:Key="DeviceConverter"/>
+        <DataTemplate x:Key="DeviceListTemplate">
+            <StackPanel Margin="0,0,0,19">
+                <StackPanel>
+                    <TextBlock Text="{Binding NickName, Converter={StaticResource DeviceConverter} ,ConverterParameter=Nickname}" TextWrapping="Wrap" Margin="5,5,5,5" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="{Binding ThisDevice, Converter={StaticResource DeviceConverter} , ConverterParameter='CurrentDevice'}" TextWrapping="Wrap" Margin="5,5,5,5" Style="{StaticResource BodyTextBlockStyle}" />
+                    <TextBlock Text="{Binding LastModifiedDate, Converter={StaticResource DeviceConverter} , ConverterParameter='Modified'}" TextWrapping="Wrap" Margin="5,5,5,5" Style="{StaticResource BodyTextBlockStyle}" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Button Click="ShowPopupOffsetClicked" Padding="5,0,5,0" Margin="5,0,5,0" CommandParameter="{Binding  DeviceID}" VariableSizedWrapGrid.RowSpan="1">
+                        <TextBlock Text="Nickname" TextWrapping="Wrap"/>
+                    </Button>
+                    <Button  Click="DisabledClicked" Padding="5,0,5,0" Margin="10,0,5,0" CommandParameter="{Binding  DeviceID}">
+                        <TextBlock Text="{Binding DownloadEnabled, Converter={StaticResource DeviceConverter}, ConverterParameter='Enable'}" TextWrapping="Wrap"/>
+                    </Button>
+                    <Button Click="UnRegisterClicked" Padding="5,0,5,0" Margin="10,0,5,0" CommandParameter="{Binding  DeviceID}" >
+                        <TextBlock Text="Unregister" TextWrapping="Wrap"/>
+                    </Button>
+                </StackPanel>
+            </StackPanel>
+        </DataTemplate>
+    </Page.Resources>
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Grid.ChildrenTransitions>
+            <TransitionCollection>
+                <EntranceThemeTransition/>
+            </TransitionCollection>
+        </Grid.ChildrenTransitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <ListView Grid.Row="1"
+                         AutomationProperties.AutomationId="ItemListViewSection3"
+                        AutomationProperties.Name="Items In Group"
+                        SelectionMode="None"
+                        IsItemClickEnabled="True"
+                        ItemsSource="{Binding DeviceList}"
+                        ItemTemplate="{StaticResource DeviceListTemplate}"
+                        ItemClick="ListView_ItemClick"  Margin="0,0,0,15">
+        </ListView>
+        
+        <StackPanel>
+        <Grid  Width="{Binding ActualWidth, ElementName=pageRoot}">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="pageTitle" x:Uid="DeviceManagement" Text="Virtuoso Test Harness" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="0" 
+                        VerticalAlignment="Center" HorizontalAlignment="Stretch" IsHitTestVisible="false" TextWrapping="NoWrap" TextAlignment="Center"/>
+        </Grid>
+        </StackPanel>
+
+
+
+
+
+        <Popup x:Name="StandardPopup">
+            <Border BorderBrush="{StaticResource ApplicationForegroundThemeBrush}" 
+                Background="{StaticResource ApplicationPageBackgroundThemeBrush}"
+                BorderThickness="2">
+                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <TextBlock Text="Change NickName" Foreground="BlueViolet" FontSize="24.667" HorizontalAlignment="Center"/>
+                    <TextBox Name="UpdatedNickName" Text="{Binding NickName,Mode=OneWay}" Margin="5,5,5,5" />
+                    <Button Content="Apply" Click="ChangeNickname_Clicked" CommandParameter="{Binding  SelectedDeviceId}" HorizontalAlignment="Center" Margin="5,5,5,5" />
+                    <Button Content="Cancel" Click="ClosePopupClicked" HorizontalAlignment="Center"  Margin="5,5,5,5"/>
+                </StackPanel>
+            </Border>
+        </Popup>
+
+        <CommandBar Grid.Row="2" VerticalAlignment="Bottom" ClosedDisplayMode="Minimal" x:Name="Commandbar" Margin="0,0,0,15">
+            <AppBarButton x:Name="SettingButton" Icon="Setting" Label="Settings" Click="SettingButton_Click"/>
+            <AppBarButton x:Name="HomeButton"  Icon="Home" Label="Home" Click="HomeButton_Click"/>
+            <AppBarButton x:Name="PushNotification" Icon="Message"   Label="Notification" Click="PushNotification_Click"/>
+            <AppBarSeparator/>
+            <CommandBar.SecondaryCommands>
+                <AppBarButton x:Name="ForceSync" Icon="Refresh" Label="Sync" Click="ForceSync_Click"/>
+            </CommandBar.SecondaryCommands>
+        </CommandBar>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="WindowStates">
+                <VisualState x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="pageTitle.Style" Value="{StaticResource HeaderTextBlockStyle}" />
+                        <Setter Target="pageTitle.HorizontalAlignment" Value="Stretch" />
+                        <Setter Target="Commandbar.Margin"  Value="0,0,0,0" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="pageTitle.Style" Value="{StaticResource TitleTextBlockStyle}" />
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+        
+        
+    </Grid>
+
+</Page>

@@ -1,0 +1,670 @@
+{
+  "Sections": [
+    {
+      "UniqueId": "HSS_FIles",
+      "Title": "HSS Files",
+      "Tests": [
+        {
+          "UniqueId": "Taxi3_AACLC",
+          "Title": "Taxi 3 Audio",
+          "Assets": [
+            {
+              "AssetId": "Taxi3_AACLC_A",
+              "Title": "Taxi3_AUDIO",
+              "FileUrl": "https://playready.directtaps.net/smoothstreaming/ISMAAACLC/Taxi3_AACLC.ism/Manifest",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "text/xml",
+              "Metadata": null,
+              "mediaType": 5,
+              "audioMax": 128000,
+              "videoMax": 2962000
+            }
+          ]
+        },
+        {
+          "UniqueId": "Dummy_HSS",
+          "Title": "Dummy_NOT_PLAYABLE_HSS",
+          "Assets": [
+            {
+              "AssetId": "PlayReady_HSS_SS",
+              "Title": "Dummy Non-playable hss",
+              "FileUrl": "http://hsstest.s3.amazonaws.com/small/Manifest",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "text/xml",
+              "Metadata": null,
+              "mediaType": 5,
+              "audioMax": 128000,
+              "videoMax": 2962000
+            }
+          ]
+        },
+        {
+          "UniqueId": "PlayReady_HSS_SS",
+          "Title": "PlayReady HSS Super Speedway",
+          "Assets": [
+            {
+              "AssetId": "PlayReady_HSS_SS",
+              "Title": "PlayReady HSS Super Speedway",
+              "FileUrl": "http://playready.directtaps.net/smoothstreaming/SSWSS720H264/SuperSpeedway_720.ism/Manifest",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "text/xml",
+              "Metadata": null,
+              "mediaType": 5,
+              "audioMax": 128000,
+              "videoMax": 2962000
+            }
+          ]
+        },
+        {
+          "UniqueId": "PlayReady_BBB_SuperSize",
+          "Title": "Big Buck Bunny - Super Size",
+          "Assets": [
+            {
+              "AssetId": "PlayReady_BBB_SuperSize",
+              "Title": "Big Buck Bunny - Super Size",
+              "FileUrl": "https://sdk-test-dummy-hss.s3.amazonaws.com/large_download/Manifest",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "text/xml",
+              "Metadata": "Big Buck Bunny - Super Size",
+              "mediaType": 5,
+              "audioMax": -1,
+              "videoMax": -1
+            }
+          ]
+        },
+        {
+          "UniqueId": "PlayReady_HSS_SS_Enc",
+          "Title": "PlayReady HSS Super Speedway Enc",
+          "Assets": [
+            {
+              "AssetId": "PlayReady_HSS_SS_Enc",
+              "Title": "PlayReady HSS Super Speedway Enc",
+              "FileUrl": "http://playready.directtaps.net/smoothstreaming/SSWSS720H264PR/SuperSpeedway_720.ism/Manifest",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "text/xml",
+              "Metadata": null,
+              "mediaType": 5,
+              "audioMax": 128000,
+              "videoMax": 2962000
+            }
+          ]
+        },
+        {
+          "UniqueId": "PlayReady_HSS_TTL",
+          "Title": "PlayReady HSS To The Limit",
+          "Assets": [
+            {
+              "AssetId": "PlayReady_HSS_TTL",
+              "Title": "PlayReady HSS To The Limit",
+              "FileUrl": "http://playready.directtaps.net/smoothstreaming/TTLSS720VC1/To_The_Limit_720.ism/Manifest",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "text/xml",
+              "Metadata": null,
+              "mediaType": 5,
+              "audioMax": 128000,
+              "videoMax": 2962000
+            }
+          ]
+        },
+        {
+          "UniqueId": "PlayReady_HSS_TTL_ENC",
+          "Title": "PlayReady HSS To The Limit (Enc)",
+          "Assets": [
+            {
+              "AssetId": "PlayReady_HSS_TTL_ENC",
+              "Title": "PlayReady HSS To The Limit (Enc)",
+              "FileUrl": "http://playready.directtaps.net/smoothstreaming/TTLSS720VC1PR/To_The_Limit_720.ism/Manifest",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "text/xml",
+              "Metadata": null,
+              "mediaType": 5,
+              "audioMax": 128000,
+              "videoMax": 2962000
+            }
+          ]
+        },
+        {
+          "UniqueId": "Amazon_Hunger_Games",
+          "Title": "Amazon - Hunger Games",
+          "Assets": [
+            {
+              "AssetId": "Amazon_Hunger_Games",
+              "Title": "Amazon - Hunger Games",
+              "FileUrl": "http://a83avodsls3us-s.akamaihd.net/ondemand/56a9/dbbd/614a/4760-b337-093021a2509d/76d4e8b9-c455-48bf-8c71-6abf26afcdb5.ism/manifest",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "text/xml",
+              "Metadata": null,
+              "mediaType": 5,
+              "audioMax": 256000,
+              "videoMax": 2000000
+            }
+          ]
+        },
+        {
+          "UniqueId": "Amazon_DaVinci_Code",
+          "Title": "Amazon - DaVinci Code",
+          "Assets": [
+            {
+              "AssetId": "Amazon_DaVinci_Code",
+              "Title": "Amazon - DaVinci Code",
+              "FileUrl": "http://s3.lvlt.smooth.us.aiv-cdn.net/prod/3/c/2/3c23718d-465a-4995-bc7c-605267d20ee9/22f1156a-f2e2-43d8-8fba-e0117970034f.ism/manifest",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "text/xml",
+              "Metadata": null,
+              "mediaType": 5,
+              "audioMax": 256000,
+              "videoMax": 2000000
+            }
+          ]
+        },
+        {
+          "UniqueId": "LGI_TEST",
+          "Title": "LGI Test in STATES ONLY",
+          "Assets": [
+            {
+              "AssetId": "LGI_TEST",
+              "Title": "LGI Test in STATES ONLY",
+              "FileUrl": "http://wpm5-vod-de.horizon.tv/shss/b7c27f44-99b7-4d24-9012-0a4d455af455/3.ism/Manifest?start=0&amp;end=-1&amp;device=Orion-HSS",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "text/xml",
+              "Metadata": null,
+              "mediaType": 5,
+              "audioMax": -1,
+              "videoMax": -1
+            }
+          ]
+        },
+        {
+          "UniqueId": "PlayReady_BBB_SuperSize_5m",
+          "Title": "Big Buck Bunny - SS: Expires 5m",
+          "Assets": [
+            {
+              "AssetId": "PlayReady_BBB_SuperSize",
+              "Title": "Big Buck Bunny - SS: Expires 5m",
+              "FileUrl": "https://sdk-test-dummy-hss.s3.amazonaws.com/large_download/Manifest",
+              "PublishDate": null,
+              "ExpiryDate": "{Now}+300s",
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "text/xml",
+              "Metadata": "Big Buck Bunny - Super Size",
+              "mediaType": 5,
+              "audioMax": -1,
+              "videoMax": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "UniqueId": "S6",
+      "Title": "Single MP4 Files",
+      "Tests": [
+
+
+
+        {
+          "UniqueId": "S6-T1",
+          "Title": "99 byte file - NOT PLAYABLE",
+          "Assets": [
+            {
+              "AssetId": "99byte",
+              "Title": "99 byte file - NOT PLAYABLE",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/testmp4s/dummy_small_99byte.mp4?parm=true",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": null,
+              "Size": 99,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+
+        {
+          "UniqueId": "S6-T2",
+          "Title": "1.2GB MP4",
+          "Assets": [
+            {
+              "AssetId": "LARGE_MP4_1.2GB",
+              "Title": "1.2GB MP4",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/testmp4s/The_Underground-A_Hidden_Reality_and_The_True_Story_of_Phil_Schneider.mp4?parm=true",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": null,
+              "Size": 1200000000,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+
+
+
+
+        {
+          "UniqueId": "S6-T3",
+          "Title": "Sky News - Top Story MP4",
+          "Assets": [
+            {
+              "AssetId": "SNTS",
+              "Title": "Sky News - Top Story",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/Sky_News_-_Top_Story/Sky_News_Top_Story_at_14-05_22nd_May_2012_22-May-2012_13-05-00_GMT.mp4?parm=true",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": "6ff8d77185fa680d916b3b2d8404a182",
+              "Size": 25114845,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "S6-T4",
+          "Title": "Hidden Universe HD MP4",
+          "Assets": [
+            {
+              "AssetId": "HUCXMS",
+              "Title": "Hidden Universe HD",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/Hidden_Universe_HD-_NASAs_Spitzer_Space_Telescope/Cygnus_X_Marks_the_Spot_(Gallery_Explorer)_21-May-2012_00-00-00_GMT.mp4",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": "676c840bd35d62b4a56b34819b46832d",
+              "Size": 27502182,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "S6-T5",
+          "Title": "First Look HD MP4",
+          "Assets": [
+            {
+              "AssetId": "PYFG",
+              "Title": "First Look (HD)",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/First_Look_(HD)/First_Look-_Plan_your_fitness_goals_with_the_Fitbit_Aria_Sma_21-May-2012_19-49-31_GMT.mp4",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": "31e1b6319d55c68bedd624f766430617",
+              "Size": 14519121,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "S6-T6",
+          "Title": "Onion News Network MP4",
+          "Assets": [
+            {
+              "AssetId": "BPCT",
+              "Title": "Onion News Network",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/Onion_News_Network/Behind_The_Pen-_The_Chinese_Threat_21-May-2012_14-30-00_GMT.mp4",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": "c611b4e6014055f5986b188da2c41ee7",
+              "Size": 26441181,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "S6-T7",
+          "Title": "Dilbert Animated Cartoons MP4",
+          "Assets": [
+            {
+              "AssetId": "DACPB",
+              "Title": "Dilbert Animated Cartoons (Expires 10s)",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/Dilbert_Animated_Cartoons/Pirates_Booty_21-May-2012_11-00-00_GMT.mp4",
+              "PublishDate": null,
+              "ExpiryDate": "{Now}+10s",
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": "dcfbf0962347e9c5b15b7cfa88f2538b",
+              "Size": 1897934,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "DACPB_1MIN",
+          "Title": "Dilbert Expires in a Minute",
+          "Assets": [
+            {
+              "AssetId": "DACPB_1MIN",
+              "Title": "Dilbert Animated Cartoons (Expires 1 min)",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/Dilbert_Animated_Cartoons/Pirates_Booty_21-May-2012_11-00-00_GMT.mp4",
+              "PublishDate": null,
+              "ExpiryDate": "{Now}+60s",
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": "dcfbf0962347e9c5b15b7cfa88f2538b",
+              "Size": 1897934,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "S6-T8",
+          "Title": "How to Train Your Dragon MP4",
+          "Assets": [
+            {
+              "AssetId": "HTTYDM",
+              "Title": "How To Train Your Dragon MP4",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/How_To_Train_Your_Dragon/How_To_Train_Your_Dragon_12-Mar-2011_12-41-40_GMT.mp4",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": "c80c4cbeac1f68760561991a2aae991e",
+              "Size": 790870543,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "S6-T9",
+          "Title": "Client SSL Security Test",
+          "Assets": [
+            {
+              "AssetId": "SECTEST",
+              "Title": "Client SSL Certificate Security Test",
+              "FileUrl": "https://lf.penthera.com:8443/CSCA/sec/test.mp4",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": null,
+              "Size": 0,
+              "MimeTypes": null,
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "S6-T10",
+          "Title": "HTTYD - 10s Expiry Test",
+          "Assets": [
+            {
+              "AssetId": "HTTYDM",
+              "Title": "HTTYD: 10s Expiry",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/How_To_Train_Your_Dragon/How_To_Train_Your_Dragon_12-Mar-2011_12-41-40_GMT.mp4",
+              "PublishDate": null,
+              "ExpiryDate": "{Now}+10s",
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": "c80c4cbeac1f68760561991a2aae991e",
+              "Size": 790870543,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "S6-T300",
+          "Title": "HTTYD - 5m Expiry Test",
+          "Assets": [
+            {
+              "AssetId": "HTTYDM",
+              "Title": "HTTYD: 5m Expiry",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/How_To_Train_Your_Dragon/How_To_Train_Your_Dragon_12-Mar-2011_12-41-40_GMT.mp4",
+              "PublishDate": null,
+              "ExpiryDate": "{Now}+300s",
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": "c80c4cbeac1f68760561991a2aae991e",
+              "Size": 790870543,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "UniqueId": "S7",
+      "Title": "Failure Modes",
+      "Tests": [
+        {
+          "UniqueId": "S7-T1",
+          "Title": "File Returning HTTP 404",
+          "Assets": [
+            {
+              "AssetId": "DeadLink",
+              "Title": "File with 404 Error",
+              "FileUrl": "http://www.penthera.com/dead.mp4",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": null,
+              "Size": 0,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "S7-T2",
+          "Title": "File With Invalid MD5",
+          "Assets": [
+            {
+              "AssetId": "InvalidMD5",
+              "Title": "File With Invalid MD5",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/Dilbert_Animated_Cartoons/Pirates_Booty_21-May-2012_11-00-00_GMT.mp4",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": "dcf347e9c5b15b7cfa88f2538b",
+              "Size": 1897934,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "S7-T3",
+          "Title": "File With Invalid Size",
+          "Assets": [
+            {
+              "AssetId": "InvalidSize",
+              "Title": "File With Invalid Size",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/Dilbert_Animated_Cartoons/Pirates_Booty_21-May-2012_11-00-00_GMT.mp4",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": "dcfbf0962347e9c5b15b7cfa88f2538b",
+              "Size": 189,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "LargeInvalidMime",
+          "Title": "Large File With Invalid Mime",
+          "Assets": [
+            {
+              "AssetId": "LargeInvalidMime",
+              "Title": "Large File With Invalid Mime",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/How_To_Train_Your_Dragon/How_To_Train_Your_Dragon_12-Mar-2011_12-41-40_GMT.mp4",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": "c80c4cbeac1f68760561991a2aae991e",
+              "Size": 790870543,
+              "MimeTypes": "application/vnd.apple.mpegurl",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "S7-T4",
+          "Title": "File With Invalid Mime",
+          "Assets": [
+            {
+              "AssetId": "InvalidMime",
+              "Title": "File With Invalid Mime",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/Dilbert_Animated_Cartoons/Pirates_Booty_21-May-2012_11-00-00_GMT.mp4",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": "dcfbf0962347e9c5b15b7cfa88f2538b",
+              "Size": 1897934,
+              "MimeTypes": "application/vnd.apple.mpegurl",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "S7-T7",
+          "Title": "File With PublishDate 5 Minutes from Now",
+          "Assets": [
+            {
+              "AssetId": "PublishDate",
+              "Title": "File With Publish Date Now + 5m",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/Dilbert_Animated_Cartoons/Pirates_Booty_21-May-2012_11-00-00_GMT.mp4",
+              "PublishDate": "{Now}+300s",
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": "dcfbf0962347e9c5b15b7cfa88f2538b",
+              "Size": 1897934,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "S7-T8",
+          "Title": "File With ExpiryDate 5 Minutes from Now",
+          "Assets": [
+            {
+              "AssetId": "ExpiryDate",
+              "Title": "File With Expiry Date Now + 5m",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/Dilbert_Animated_Cartoons/Pirates_Booty_21-May-2012_11-00-00_GMT.mp4",
+              "PublishDate": null,
+              "ExpiryDate": "{Now}+300s",
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MD5": "dcfbf0962347e9c5b15b7cfa88f2538b",
+              "Size": 1897934,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "S7-T9",
+          "Title": "File with ExpiryAfterDownload at 5 Minutes",
+          "Assets": [
+            {
+              "AssetId": "ExpiryAfterDownload",
+              "Title": "File With Expiry After Download = 5m",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/Dilbert_Animated_Cartoons/Pirates_Booty_21-May-2012_11-00-00_GMT.mp4",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": 300,
+              "ExpiryAfterPlay": 0,
+              "MD5": "dcfbf0962347e9c5b15b7cfa88f2538b",
+              "Size": 1897934,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        },
+        {
+          "UniqueId": "S7-T9",
+          "Title": "File with ExpiryAfterPlay at 5 Minutes",
+          "Assets": [
+            {
+              "AssetId": "ExpiryAfterDownload",
+              "Title": "File With Expiry After Play = 5m",
+              "FileUrl": "http://d22oovgqp3p1ij.cloudfront.net/WVGA5/Dilbert_Animated_Cartoons/Pirates_Booty_21-May-2012_11-00-00_GMT.mp4",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": 300,
+              "MD5": "dcfbf0962347e9c5b15b7cfa88f2538b",
+              "Size": 1897934,
+              "MimeTypes": "video/mp4",
+              "Metadata": null,
+              "mediaType": 0
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

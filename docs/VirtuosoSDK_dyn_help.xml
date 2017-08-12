@@ -1,0 +1,2713 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<DynamicHelp xmlns="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd" xmlns:xsi="http://www.w3.org/2000/10/XMLSchema-instance" xsi:schemaLocation="http://msdn.microsoft.com/vsdata/xsd/vsdh.xsd">	
+   <LINKGROUP ID="VirtuosoSDK" Title="VirtuosoSDK Reference Help" Priority="2100">
+      <GLYPH Expanded="vs:/ctxhelp_show.gif" Collapsed="vs:/ctxhelp_hide.gif"/>
+   </LINKGROUP>
+
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplanePermission.Account" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000006B.html" LinkGroup="VirtuosoSDK">Account Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplanePermission.AccountMax" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000006C.html" LinkGroup="VirtuosoSDK">AccountMax Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.DeviceInfo.ApplicationName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000012B.html" LinkGroup="VirtuosoSDK">ApplicationName Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.DeviceInfo.ApplicationVersion" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000012C.html" LinkGroup="VirtuosoSDK">ApplicationVersion Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.AssetSizeValidationWarningEventArgs.Asset" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000157.html" LinkGroup="VirtuosoSDK">Asset Property {Penthera.VirtuosoClient.Public.Events.AssetSizeValidationWarningEventArgs}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.BackplanePermissionEventArgs.Asset" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000014A.html" LinkGroup="VirtuosoSDK">Asset Property {Penthera.VirtuosoClient.Public.Events.BackplanePermissionEventArgs}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplanePermission.Asset" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000006D.html" LinkGroup="VirtuosoSDK">Asset Property {Penthera.VirtuosoClient.Public.IBackplanePermission}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.AssetId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000027.html" LinkGroup="VirtuosoSDK">AssetId Property {Penthera.VirtuosoClient.Public.IAsset}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneEvent.AssetId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000063.html" LinkGroup="VirtuosoSDK">AssetId Property {Penthera.VirtuosoClient.Public.IBackplaneEvent}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplanePermission.AssetMax" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000006E.html" LinkGroup="VirtuosoSDK">AssetMax Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.AssetSizeValidationWarning" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000E6.html" LinkGroup="VirtuosoSDK">AssetSizeValidationWarning Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.AssetSizeValidationWarningEventArgs" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000156.html" LinkGroup="VirtuosoSDK">AssetSizeValidationWarningEventArgs Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.AssetSizeValidationWarningEventHandler" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000DC.html" LinkGroup="VirtuosoSDK">AssetSizeValidationWarningEventHandler Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.AssetType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000028.html" LinkGroup="VirtuosoSDK">AssetType Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.ISegmentedFileProperties.AudioBitRate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000046.html" LinkGroup="VirtuosoSDK">AudioBitRate Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.AuthenticationEventArgs" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000151.html" LinkGroup="VirtuosoSDK">AuthenticationEventArgs Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.AuthenticationStatus" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000CA.html" LinkGroup="VirtuosoSDK">AuthenticationStatus Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.AuthenticationUpdated" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000E7.html" LinkGroup="VirtuosoSDK">AuthenticationUpdated Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.Backplane" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000DF.html" LinkGroup="VirtuosoSDK">Backplane Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.BackplanePermissionEventArgs.BackplanePermission" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000149.html" LinkGroup="VirtuosoSDK">BackplanePermission Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.BackplanePermissionEventArgs" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000148.html" LinkGroup="VirtuosoSDK">BackplanePermissionEventArgs Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.BackplanePermissionEventHandler" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000D8.html" LinkGroup="VirtuosoSDK">BackplanePermissionEventHandler Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.BackplanePermissionReceived" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000E2.html" LinkGroup="VirtuosoSDK">BackplanePermissionReceived Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.BackplaneRequestArgs" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000150.html" LinkGroup="VirtuosoSDK">BackplaneRequestArgs Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.BackplaneRequestComplete" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000069.html" LinkGroup="VirtuosoSDK">BackplaneRequestComplete Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.IBackplaneRequestCompleteArgs.BackplaneResponseCode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000146.html" LinkGroup="VirtuosoSDK">BackplaneResponseCode Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplane.BackplaneSettings" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000056.html" LinkGroup="VirtuosoSDK">BackplaneSettings Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.BackplaneUrl" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000007D.html" LinkGroup="VirtuosoSDK">BackplaneUrl Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.ISegmentedFileProperties.BitRate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000045.html" LinkGroup="VirtuosoSDK">BitRate Property</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplane.ChangeDownloadEnablementAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000058_overloads--.html" LinkGroup="VirtuosoSDK">ChangeDownloadEnablementAsync Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplane.ChangeDownloadEnablementAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000059_overloads--.html" LinkGroup="VirtuosoSDK">ChangeDownloadEnablementAsync Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplane.ChangeNicknameAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000005A_overloads--.html" LinkGroup="VirtuosoSDK">ChangeNicknameAsync Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplane.ChangeNicknameAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000005B_overloads--.html" LinkGroup="VirtuosoSDK">ChangeNicknameAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.VirtuosoClientFactory.ClientInstance" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000134.html" LinkGroup="VirtuosoSDK">ClientInstance Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IDevice.ClientVersion" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000092.html" LinkGroup="VirtuosoSDK">ClientVersion Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.ISegmentedFileProperties.CompletedCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000044.html" LinkGroup="VirtuosoSDK">CompletedCount Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IDevice.CreatedDate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000098.html" LinkGroup="VirtuosoSDK">CreatedDate Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAssetDeviceDownloads.CurrentDownloads" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000078.html" LinkGroup="VirtuosoSDK">CurrentDownloads Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.CurrentSize" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000002B.html" LinkGroup="VirtuosoSDK">CurrentSize Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneEventData.Data" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000068.html" LinkGroup="VirtuosoSDK">Data Property {Penthera.VirtuosoClient.Public.IBackplaneEventData}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneEvent.Data" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000062.html" LinkGroup="VirtuosoSDK">Data Property {Penthera.VirtuosoClient.Public.IBackplaneEvent}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.DefaultExpiryAfterDownload" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000086.html" LinkGroup="VirtuosoSDK">DefaultExpiryAfterDownload Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.DefaultExpiryAfterPlay" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000087.html" LinkGroup="VirtuosoSDK">DefaultExpiryAfterPlay Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.DeleteAll" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000102.html" LinkGroup="VirtuosoSDK">DeleteAll Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.DeleteAssetAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000101.html" LinkGroup="VirtuosoSDK">DeleteAssetAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.Description" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000029.html" LinkGroup="VirtuosoSDK">Description Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAccountDeviceDownloads.Device" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000074.html" LinkGroup="VirtuosoSDK">Device Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.DeviceInfo.DeviceFirmware" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000130.html" LinkGroup="VirtuosoSDK">DeviceFirmware Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.DeviceID" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000083.html" LinkGroup="VirtuosoSDK">DeviceID Property {Penthera.VirtuosoClient.Public.IBackplaneSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IDevice.DeviceID" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000090.html" LinkGroup="VirtuosoSDK">DeviceID Property {Penthera.VirtuosoClient.Public.IDevice}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.DeviceInfo.DeviceId" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000012F.html" LinkGroup="VirtuosoSDK">DeviceId Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.DeviceInfo" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000127.html" LinkGroup="VirtuosoSDK">DeviceInfo Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.DeviceInfo.DeviceManufacturer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000012D.html" LinkGroup="VirtuosoSDK">DeviceManufacturer Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.DeviceInfo.DeviceModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000012E.html" LinkGroup="VirtuosoSDK">DeviceModel Property {Penthera.VirtuosoClient.Public.DeviceInfo}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IDevice.DeviceModel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000093.html" LinkGroup="VirtuosoSDK">DeviceModel Property {Penthera.VirtuosoClient.Public.IDevice}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.DeviceInfo.DeviceOS" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000131.html" LinkGroup="VirtuosoSDK">DeviceOS Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.DevicePushToken" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000081.html" LinkGroup="VirtuosoSDK">DevicePushToken Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.DeviceUnRegister" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000106.html" LinkGroup="VirtuosoSDK">DeviceUnRegister Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IDevice.DeviceVersion" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000094.html" LinkGroup="VirtuosoSDK">DeviceVersion Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplane.Devices" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000005C.html" LinkGroup="VirtuosoSDK">Devices Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.DiskFreeSpace" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000F3.html" LinkGroup="VirtuosoSDK">DiskFreeSpace Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.DiskStatusOK" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000F1.html" LinkGroup="VirtuosoSDK">DiskStatusOK Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.DiskStatusOKAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000F2.html" LinkGroup="VirtuosoSDK">DiskStatusOKAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplanePermission.DownloadAllowed" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000006F.html" LinkGroup="VirtuosoSDK">DownloadAllowed Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.DownloadComplete" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000025.html" LinkGroup="VirtuosoSDK">DownloadComplete Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.DownloadCompleteDateTime" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000039.html" LinkGroup="VirtuosoSDK">DownloadCompleteDateTime Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.DownloadCompleteEventHandler" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000001B.html" LinkGroup="VirtuosoSDK">DownloadCompleteEventHandler Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IDevice.DownloadEnabled" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000009A.html" LinkGroup="VirtuosoSDK">DownloadEnabled Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.DownloadError" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000030.html" LinkGroup="VirtuosoSDK">DownloadError Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.DownloadErrorCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000002E.html" LinkGroup="VirtuosoSDK">DownloadErrorCount Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoSettings.DownloadOverCell" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000011C.html" LinkGroup="VirtuosoSDK">DownloadOverCell Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.DownloadRetryCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000002F.html" LinkGroup="VirtuosoSDK">DownloadRetryCount Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.Downloaded" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000FF.html" LinkGroup="VirtuosoSDK">Downloaded Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAccountDownloads.Downloads" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000007B.html" LinkGroup="VirtuosoSDK">Downloads Property {Penthera.VirtuosoClient.Public.IAccountDownloads}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAssetDownloads.Downloads" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000072.html" LinkGroup="VirtuosoSDK">Downloads Property {Penthera.VirtuosoClient.Public.IAssetDownloads}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.DownloadsEnabled" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000082.html" LinkGroup="VirtuosoSDK">DownloadsEnabled Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.Duration" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000003F.html" LinkGroup="VirtuosoSDK">Duration Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.EAssetStatus" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000001.html" LinkGroup="VirtuosoSDK">EAssetStatus Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.EAssetType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000001C.html" LinkGroup="VirtuosoSDK">EAssetType Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.EBackplaneRequestType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000136.html" LinkGroup="VirtuosoSDK">EBackplaneRequestType Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.EDownloadError" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000011.html" LinkGroup="VirtuosoSDK">EDownloadError Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.License.ELIcenseEvent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000BC.html" LinkGroup="VirtuosoSDK">ELIcenseEvent Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.License.ELicenseState" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000B1.html" LinkGroup="VirtuosoSDK">ELicenseState Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.ESegmentType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000051.html" LinkGroup="VirtuosoSDK">ESegmentType Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.ESegmentedAssetType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000004C.html" LinkGroup="VirtuosoSDK">ESegmentedAssetType Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.EffectiveExpiryDate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000003C.html" LinkGroup="VirtuosoSDK">EffectiveExpiryDate Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.EnqueueFileAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000FB.html" LinkGroup="VirtuosoSDK">EnqueueFileAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.VirtuosoDeviceSavedEventArgs.ErrorString" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000155.html" LinkGroup="VirtuosoSDK">ErrorString Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventAppLaunch" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000009D.html" LinkGroup="VirtuosoSDK">EventAppLaunch Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventAssetDelete" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000AD.html" LinkGroup="VirtuosoSDK">EventAssetDelete Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventAssetExpire" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000A2.html" LinkGroup="VirtuosoSDK">EventAssetExpire Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventAssetRemovedFromQueue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000AA.html" LinkGroup="VirtuosoSDK">EventAssetRemovedFromQueue Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventCustom" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000A9.html" LinkGroup="VirtuosoSDK">EventCustom Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventDownloadComplete" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000A0.html" LinkGroup="VirtuosoSDK">EventDownloadComplete Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventDownloadError" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000AB.html" LinkGroup="VirtuosoSDK">EventDownloadError Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventDownloadLimitReached" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000AE.html" LinkGroup="VirtuosoSDK">EventDownloadLimitReached Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventDownloadStart" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000009F.html" LinkGroup="VirtuosoSDK">EventDownloadStart Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.EventList" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000107.html" LinkGroup="VirtuosoSDK">EventList Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventMaxErrorReset" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000AC.html" LinkGroup="VirtuosoSDK">EventMaxErrorReset Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneEvent.EventName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000064.html" LinkGroup="VirtuosoSDK">EventName Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventPlayStart" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000A4.html" LinkGroup="VirtuosoSDK">EventPlayStart Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventPlayStop" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000A5.html" LinkGroup="VirtuosoSDK">EventPlayStop Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventPlaybackInitiated" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000AF.html" LinkGroup="VirtuosoSDK">EventPlaybackInitiated Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventQueueForDownload" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000009E.html" LinkGroup="VirtuosoSDK">EventQueueForDownload Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventReset" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000A8.html" LinkGroup="VirtuosoSDK">EventReset Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventSubscribe" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000A6.html" LinkGroup="VirtuosoSDK">EventSubscribe Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventSyncWithServer" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000A3.html" LinkGroup="VirtuosoSDK">EventSyncWithServer Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventUnsubscribe" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000A7.html" LinkGroup="VirtuosoSDK">EventUnsubscribe Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent.EventUserTriggeredDelete" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000A1.html" LinkGroup="VirtuosoSDK">EventUserTriggeredDelete Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.ExpectedSize" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000002A.html" LinkGroup="VirtuosoSDK">ExpectedSize Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.Expired" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000003D.html" LinkGroup="VirtuosoSDK">Expired Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.ExpiryAfterDownload" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000038.html" LinkGroup="VirtuosoSDK">ExpiryAfterDownload Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.ExpiryAfterPlay" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000037.html" LinkGroup="VirtuosoSDK">ExpiryAfterPlay Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.ExpiryDate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000036.html" LinkGroup="VirtuosoSDK">ExpiryDate Property {Penthera.VirtuosoClient.Public.IAsset}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.License.ILicense.ExpiryDate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000C7.html" LinkGroup="VirtuosoSDK">ExpiryDate Property {Penthera.VirtuosoClient.Public.License.ILicense}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.License.ILicense.ExpiryDays" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000C8.html" LinkGroup="VirtuosoSDK">ExpiryDays Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.ExternalDeviceID" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000007F.html" LinkGroup="VirtuosoSDK">ExternalDeviceID Property {Penthera.VirtuosoClient.Public.IBackplaneSettings}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IDevice.ExternalDeviceID" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000091.html" LinkGroup="VirtuosoSDK">ExternalDeviceID Property {Penthera.VirtuosoClient.Public.IDevice}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.FilePath" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000033.html" LinkGroup="VirtuosoSDK">FilePath Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.FileUrl" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000002D.html" LinkGroup="VirtuosoSDK">FileUrl Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.FirstPlayDateTime" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000003A.html" LinkGroup="VirtuosoSDK">FirstPlayDateTime Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.FlushQueueAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000103.html" LinkGroup="VirtuosoSDK">FlushQueueAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.FractionComplete" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000002C.html" LinkGroup="VirtuosoSDK">FractionComplete Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.GetAsset" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000100.html" LinkGroup="VirtuosoSDK">GetAsset Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoLogger.GetFilesAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000114.html" LinkGroup="VirtuosoSDK">GetFilesAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.GetStatusAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000EF.html" LinkGroup="VirtuosoSDK">GetStatusAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoSettings.Headroom" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000011B.html" LinkGroup="VirtuosoSDK">Headroom Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAccountDeviceDownloads" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000073.html" LinkGroup="VirtuosoSDK">IAccountDeviceDownloads Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAccountDownloads" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000079.html" LinkGroup="VirtuosoSDK">IAccountDownloads Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000021.html" LinkGroup="VirtuosoSDK">IAsset Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAssetDeviceDownloads" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000076.html" LinkGroup="VirtuosoSDK">IAssetDeviceDownloads Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAssetDownloads" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000070.html" LinkGroup="VirtuosoSDK">IAssetDownloads Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplane" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000055.html" LinkGroup="VirtuosoSDK">IBackplane Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneEvent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000061.html" LinkGroup="VirtuosoSDK">IBackplaneEvent Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneEventData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000065.html" LinkGroup="VirtuosoSDK">IBackplaneEventData Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplanePermission" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000006A.html" LinkGroup="VirtuosoSDK">IBackplanePermission Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.IBackplaneRequestCompleteArgs" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000143.html" LinkGroup="VirtuosoSDK">IBackplaneRequestCompleteArgs Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000007C.html" LinkGroup="VirtuosoSDK">IBackplaneSettings Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IDevice" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000008F.html" LinkGroup="VirtuosoSDK">IDevice Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IEvent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000009C.html" LinkGroup="VirtuosoSDK">IEvent Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.License.ILicense" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000C5.html" LinkGroup="VirtuosoSDK">ILicense Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.License.ILicenseProvider" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000C2.html" LinkGroup="VirtuosoSDK">ILicenseProvider Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.License.ILicenseState" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000C0.html" LinkGroup="VirtuosoSDK">ILicenseState Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.ISegment" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000004A.html" LinkGroup="VirtuosoSDK">ISegment Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.ISegmentedFileProperties" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000040.html" LinkGroup="VirtuosoSDK">ISegmentedFileProperties Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IStatusProvider" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000000F.html" LinkGroup="VirtuosoSDK">IStatusProvider Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000DE.html" LinkGroup="VirtuosoSDK">IVirtuosoClient Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoLogger" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000010F.html" LinkGroup="VirtuosoSDK">IVirtuosoLogger Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoSettings" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000119.html" LinkGroup="VirtuosoSDK">IVirtuosoSettings Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoSubscriber" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000125.html" LinkGroup="VirtuosoSDK">IVirtuosoSubscriber Interface</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.Id" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000022.html" LinkGroup="VirtuosoSDK">Id Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.DeviceInfo.InstallDate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000132.html" LinkGroup="VirtuosoSDK">InstallDate Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.License.ILicense.IsValid" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000C6.html" LinkGroup="VirtuosoSDK">IsValid Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.IsWithinAvailabilityWindow" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000003B.html" LinkGroup="VirtuosoSDK">IsWithinAvailabilityWindow Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplane.LastAuthenticated" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000057.html" LinkGroup="VirtuosoSDK">LastAuthenticated Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IDevice.LastModifiedDate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000097.html" LinkGroup="VirtuosoSDK">LastModifiedDate Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IDevice.LastSyncDate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000096.html" LinkGroup="VirtuosoSDK">LastSyncDate Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.License" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000F0.html" LinkGroup="VirtuosoSDK">License Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.LicenseChanged" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000E8.html" LinkGroup="VirtuosoSDK">LicenseChanged Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.LicenseChangedEventHandler" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000DD.html" LinkGroup="VirtuosoSDK">LicenseChangedEventHandler Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.LicenseEventArgs" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000014B.html" LinkGroup="VirtuosoSDK">LicenseEventArgs Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.License.ILicenseProvider.LicenseKey" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000C3.html" LinkGroup="VirtuosoSDK">LicenseKey Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.License.ILicenseProvider.LicenseSignature" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000C4.html" LinkGroup="VirtuosoSDK">LicenseSignature Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.LicenseEventArgs.LicenseState" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000014D.html" LinkGroup="VirtuosoSDK">LicenseState Property {Penthera.VirtuosoClient.Public.Events.LicenseEventArgs}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.License.ILicenseState.LicenseState" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000C1.html" LinkGroup="VirtuosoSDK">LicenseState Property {Penthera.VirtuosoClient.Public.License.ILicenseState}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoLogger.LogPlayStart" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000115.html" LinkGroup="VirtuosoSDK">LogPlayStart Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoLogger.LogPlayStop" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000116.html" LinkGroup="VirtuosoSDK">LogPlayStop Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoLogger.LoggingLevel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000110.html" LinkGroup="VirtuosoSDK">LoggingLevel Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.MaxAssetDownloads" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000008B.html" LinkGroup="VirtuosoSDK">MaxAssetDownloads Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.MaxDownloadsAccount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000008A.html" LinkGroup="VirtuosoSDK">MaxDownloadsAccount Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.MaxPermittedDownloads" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000089.html" LinkGroup="VirtuosoSDK">MaxPermittedDownloads Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoSettings.MaxPermittedSegmentErrors" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000122.html" LinkGroup="VirtuosoSDK">MaxPermittedSegmentErrors Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.License.ILicense.MaxSdkVersion" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000C9.html" LinkGroup="VirtuosoSDK">MaxSdkVersion Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoSettings.MaxStorage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000011A.html" LinkGroup="VirtuosoSDK">MaxStorage Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.MaximumDevicesForDownload" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000084.html" LinkGroup="VirtuosoSDK">MaximumDevicesForDownload Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.MaximumOfflinePeriod" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000085.html" LinkGroup="VirtuosoSDK">MaximumOfflinePeriod Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.MediaPlayBackSource" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000023.html" LinkGroup="VirtuosoSDK">MediaPlayBackSource Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.Metadata" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000034.html" LinkGroup="VirtuosoSDK">Metadata Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoLogger.NetworkLoggingEnabled" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000111.html" LinkGroup="VirtuosoSDK">NetworkLoggingEnabled Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoLogger.NetworkLoggingIP" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000112.html" LinkGroup="VirtuosoSDK">NetworkLoggingIP Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoLogger.NetworkLoggingPort" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000113.html" LinkGroup="VirtuosoSDK">NetworkLoggingPort Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.NetworkStatusOK" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000F6.html" LinkGroup="VirtuosoSDK">NetworkStatusOK Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.NewAsset" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000FA.html" LinkGroup="VirtuosoSDK">NewAsset Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IDevice.NickName" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000009B.html" LinkGroup="VirtuosoSDK">NickName Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.Nickname" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000080.html" LinkGroup="VirtuosoSDK">Nickname Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAssetDeviceDownloads.PendingDownloads" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000077.html" LinkGroup="VirtuosoSDK">PendingDownloads Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000000.html" LinkGroup="VirtuosoSDK">Penthera.VirtuosoClient.Public Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000135.html" LinkGroup="VirtuosoSDK">Penthera.VirtuosoClient.Public.Events Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.License" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000B0.html" LinkGroup="VirtuosoSDK">Penthera.VirtuosoClient.Public.License Namespace</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.PermittedSpaceRemaining" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000F5.html" LinkGroup="VirtuosoSDK">PermittedSpaceRemaining Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.PreviousDownloadError" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000031.html" LinkGroup="VirtuosoSDK">PreviousDownloadError Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.PrivateKey" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000008C.html" LinkGroup="VirtuosoSDK">PrivateKey Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.PublicKey" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000008D.html" LinkGroup="VirtuosoSDK">PublicKey Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.PublishDate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000035.html" LinkGroup="VirtuosoSDK">PublishDate Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.Queue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000FE.html" LinkGroup="VirtuosoSDK">Queue Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.LicenseEventArgs.Reason" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000014C.html" LinkGroup="VirtuosoSDK">Reason Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplane.RegisterBackplaneEventAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000060.html" LinkGroup="VirtuosoSDK">RegisterBackplaneEventAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.ISegmentedFileProperties.RemoteBaseUrl" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000049.html" LinkGroup="VirtuosoSDK">RemoteBaseUrl Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.RemoteWipeComplete" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000E3.html" LinkGroup="VirtuosoSDK">RemoteWipeComplete Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.RemoteWipeCompleteEventHandler" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000D7.html" LinkGroup="VirtuosoSDK">RemoteWipeCompleteEventHandler Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IDevice.RemoteWipePending" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000095.html" LinkGroup="VirtuosoSDK">RemoteWipePending Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.RemoveFromQueue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000FC.html" LinkGroup="VirtuosoSDK">RemoveFromQueue Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.IBackplaneRequestCompleteArgs.RequestCompleted" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000144.html" LinkGroup="VirtuosoSDK">RequestCompleted Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.RequirePermissionOnQueue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000008E.html" LinkGroup="VirtuosoSDK">RequirePermissionOnQueue Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoSettings.ResetDownloadOverCellToDefault" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000121.html" LinkGroup="VirtuosoSDK">ResetDownloadOverCellToDefault Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.ResetErrorState" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000003E.html" LinkGroup="VirtuosoSDK">ResetErrorState Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoSettings.ResetHeadroomToDefault" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000120.html" LinkGroup="VirtuosoSDK">ResetHeadroomToDefault Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoSettings.ResetMaxStorageToDefault" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000011F.html" LinkGroup="VirtuosoSDK">ResetMaxStorageToDefault Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoSettings.ResetValidatesFileSizesToDefault" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000011E.html" LinkGroup="VirtuosoSDK">ResetValidatesFileSizesToDefault Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.IBackplaneRequestCompleteArgs.ResponseMessage" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000147.html" LinkGroup="VirtuosoSDK">ResponseMessage Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.IBackplaneRequestCompleteArgs.ResponseStatusCode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000145.html" LinkGroup="VirtuosoSDK">ResponseStatusCode Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.SDKUsedSpace" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000F4.html" LinkGroup="VirtuosoSDK">SDKUsedSpace Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoSettings.Save" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000124.html" LinkGroup="VirtuosoSDK">Save Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.ISegmentedFileProperties.SegmentErrorCount" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000043.html" LinkGroup="VirtuosoSDK">SegmentErrorCount Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoSettings.SegmentErrorHTTPCode" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000123.html" LinkGroup="VirtuosoSDK">SegmentErrorHTTPCode Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.ISegment.SegmentType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000004B.html" LinkGroup="VirtuosoSDK">SegmentType Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.ISegmentedFileProperties.SegmentedAssetType" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000041.html" LinkGroup="VirtuosoSDK">SegmentedAssetType Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.SegmentedFileProperties" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000024.html" LinkGroup="VirtuosoSDK">SegmentedFileProperties Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.Settings" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000EC.html" LinkGroup="VirtuosoSDK">Settings Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.ShowQueue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000FD.html" LinkGroup="VirtuosoSDK">ShowQueue Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoSubscriber.StartWithBackplaneAsyncPermissionCheck" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000126.html" LinkGroup="VirtuosoSDK">StartWithBackplaneAsyncPermissionCheck Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.StartupAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000F7.html" LinkGroup="VirtuosoSDK">StartupAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.AuthenticationEventArgs.Status" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000152.html" LinkGroup="VirtuosoSDK">Status Property {Penthera.VirtuosoClient.Public.Events.AuthenticationEventArgs}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.StatusChangeEventArgs.Status" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000014F.html" LinkGroup="VirtuosoSDK">Status Property {Penthera.VirtuosoClient.Public.Events.StatusChangeEventArgs}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.Status" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000032.html" LinkGroup="VirtuosoSDK">Status Property {Penthera.VirtuosoClient.Public.IAsset}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IStatusProvider.Status" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000010.html" LinkGroup="VirtuosoSDK">Status Property {Penthera.VirtuosoClient.Public.IStatusProvider}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.Status" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000EE.html" LinkGroup="VirtuosoSDK">Status Property {Penthera.VirtuosoClient.Public.IVirtuosoClient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.StatusChangeEventArgs" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000014E.html" LinkGroup="VirtuosoSDK">StatusChangeEventArgs Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.VirtuosoDeviceSavedEventArgs.Success" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000154.html" LinkGroup="VirtuosoSDK">Success Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplane.SyncAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000005D.html" LinkGroup="VirtuosoSDK">SyncAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.SyncWithBackplaneAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000F8.html" LinkGroup="VirtuosoSDK">SyncWithBackplaneAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.DeviceInfo.SystemArchitecture" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000012A.html" LinkGroup="VirtuosoSDK">SystemArchitecture Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.DeviceInfo.SystemFamily" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000128.html" LinkGroup="VirtuosoSDK">SystemFamily Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.DeviceInfo.SystemVersion" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000129.html" LinkGroup="VirtuosoSDK">SystemVersion Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.ISegmentedFileProperties.TargetDuration" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000047.html" LinkGroup="VirtuosoSDK">TargetDuration Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.TestValue" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000EA.html" LinkGroup="VirtuosoSDK">TestValue Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IDevice.ThisDevice" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000099.html" LinkGroup="VirtuosoSDK">ThisDevice Property {Penthera.VirtuosoClient.Public.IDevice}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.ThisDevice" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000EB.html" LinkGroup="VirtuosoSDK">ThisDevice Property {Penthera.VirtuosoClient.Public.IVirtuosoClient}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAccountDeviceDownloads.TotalDownloads" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000075.html" LinkGroup="VirtuosoSDK">TotalDownloads Property {Penthera.VirtuosoClient.Public.IAccountDeviceDownloads}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAccountDownloads.TotalDownloads" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000007A.html" LinkGroup="VirtuosoSDK">TotalDownloads Property {Penthera.VirtuosoClient.Public.IAccountDownloads}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAssetDownloads.TotalDownloads" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000071.html" LinkGroup="VirtuosoSDK">TotalDownloads Property {Penthera.VirtuosoClient.Public.IAssetDownloads}</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.ISegmentedFileProperties.TotalSegments" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000042.html" LinkGroup="VirtuosoSDK">TotalSegments Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.TrustVirtuosoTime" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000E1.html" LinkGroup="VirtuosoSDK">TrustVirtuosoTime Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplane.UnregisterAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000005E.html" LinkGroup="VirtuosoSDK">UnregisterAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplane.UnregisterDeviceAsync" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000005F.html" LinkGroup="VirtuosoSDK">UnregisterDeviceAsync Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.UnregisterThisDevice" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000F9.html" LinkGroup="VirtuosoSDK">UnregisterThisDevice Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.UpdateDeviceDetail" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000105.html" LinkGroup="VirtuosoSDK">UpdateDeviceDetail Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.UpdateEvent" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000108.html" LinkGroup="VirtuosoSDK">UpdateEvent Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.UsedDeviceQuota" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000088.html" LinkGroup="VirtuosoSDK">UsedDeviceQuota Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.UserDeviceList" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000104.html" LinkGroup="VirtuosoSDK">UserDeviceList Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneSettings.UserID" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000007E.html" LinkGroup="VirtuosoSDK">UserID Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IAsset.Uuid" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000026.html" LinkGroup="VirtuosoSDK">Uuid Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoSettings.ValidateFileSizes" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_000000000000011D.html" LinkGroup="VirtuosoSDK">ValidateFileSizes Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.Version" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000E9.html" LinkGroup="VirtuosoSDK">Version Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.ISegmentedFileProperties.VideoBitRate" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000048.html" LinkGroup="VirtuosoSDK">VideoBitRate Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.VirtuosoCcbDeviceSaved" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000E5.html" LinkGroup="VirtuosoSDK">VirtuosoCcbDeviceSaved Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.VirtuosoCcbDeviceSavedEventHandler" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000DB.html" LinkGroup="VirtuosoSDK">VirtuosoCcbDeviceSavedEventHandler Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.VirtuosoClientAuthenticationUpdatedHandler" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000DA.html" LinkGroup="VirtuosoSDK">VirtuosoClientAuthenticationUpdatedHandler Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.VirtuosoClientFactory" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000133.html" LinkGroup="VirtuosoSDK">VirtuosoClientFactory Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.VirtuosoClientStatus" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000CD.html" LinkGroup="VirtuosoSDK">VirtuosoClientStatus Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.VirtuosoClientStatusChange" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000E4.html" LinkGroup="VirtuosoSDK">VirtuosoClientStatusChange Event</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.VirtuosoClientStatusChangeEventHandler" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000D9.html" LinkGroup="VirtuosoSDK">VirtuosoClientStatusChangeEventHandler Delegate</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.Events.VirtuosoDeviceSavedEventArgs" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000153.html" LinkGroup="VirtuosoSDK">VirtuosoDeviceSavedEventArgs Class</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.VirtuosoLogger" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000ED.html" LinkGroup="VirtuosoSDK">VirtuosoLogger Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.VirtuosoLoggingLevel" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000109.html" LinkGroup="VirtuosoSDK">VirtuosoLoggingLevel Enumeration</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="VirtuosoSDK Reference" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000159.html" LinkGroup="VirtuosoSDK">VirtuosoSDK Reference</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoClient.VirtuosoTime" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_00000000000000E0.html" LinkGroup="VirtuosoSDK">VirtuosoTime Property</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoLogger.WriteLine" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000117_overloads--.html" LinkGroup="VirtuosoSDK">WriteLine Method</LItem>
+      </Links>
+   </Context>
+   
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IVirtuosoLogger.WriteLine" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000118_overloads--.html" LinkGroup="VirtuosoSDK">WriteLine Method</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneEventData.lData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000066.html" LinkGroup="VirtuosoSDK">lData Property</LItem>
+      </Links>
+   </Context>
+   
+
+   <Context>
+      <Keywords>
+         <KItem Name="Penthera.VirtuosoClient.Public.IBackplaneEventData.sData" />
+      </Keywords>
+      <Links>
+         <LItem URL="ms-its:VirtuosoSDK.chm::/topic_0000000000000067.html" LinkGroup="VirtuosoSDK">sData Property</LItem>
+      </Links>
+   </Context>
+   
+
+</DynamicHelp>
+

@@ -1,0 +1,273 @@
+﻿<Page
+    x:Class="VirtuosoClient.TestHarness.EventPage"
+    DataContext="{Binding DefaultViewModel, RelativeSource={RelativeSource Self}}"
+     xmlns:local="using:VirtuosoClient.TestHarness"
+     xmlns:Common="using:VirtuosoClient.TestHarness.Common"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+    <Page.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.ThemeDictionaries>
+                <ResourceDictionary x:Key="Default">
+                    <ImageBrush x:Key="HubBackgroundImageBrush" ImageSource="Assets/HubBackground.png"/>
+                </ResourceDictionary>
+                <ResourceDictionary x:Key="HighContrast">
+                    <ImageBrush x:Key="HubBackgroundImageBrush" ImageSource="{x:Null}"/>
+                </ResourceDictionary>
+            </ResourceDictionary.ThemeDictionaries>
+
+            <Common:VirtuosoClientStatusFormatter x:Key="VirtuosoClientStatusFormatter"/>
+            <Common:VirtuosoClientEnvironmentStatusFormatter x:Key="VirtuosoClientEnvironmentStatusFormatter"/>
+            <Common:DiskStorageFormatter x:Key="DiskStorageFormatter"/>
+            <Common:UnlimitedFormatter x:Key="UnlimitedFormatter"/>
+
+        </ResourceDictionary>
+    </Page.Resources>
+
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Width="{Binding ActualWidth, ElementName=pageRoot}">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock x:Name="pageTitle" x:Uid="pageTitle" Text="Virtuoso Test Harness" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="0" 
+                        VerticalAlignment="Center" HorizontalAlignment="Stretch" IsHitTestVisible="false" TextWrapping="NoWrap" TextAlignment="Center"/>
+        </Grid>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" Grid.Row="1" Margin="0,0,0,20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Grid Grid.Column="0"  Margin="30,0,0,20" >
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="18"/>
+                            <Setter Property="Padding" Value="5,10,5,5" />
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition />
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock x:Name="EventHeading" Grid.Row="0" Grid.Column="0" Text="Event Details" FontWeight="Bold" FontSize="25" Foreground="{ThemeResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Margin="0,10,10,10" />
+                    <TextBlock Name="AppLaunch" Grid.Row="1" Grid.Column="0" Text="App Launch Event" />
+                    <CheckBox Name="EventAppLaunch" Grid.Row="1" Grid.Column="1" IsChecked="{Binding Events.EventAppLaunch, Mode=TwoWay}" />
+                    <TextBlock Name="UserTriggeredDelete" Grid.Row="2" Grid.Column="0" Text="User Triggered Delete Event" />
+                    <CheckBox Name="EventUserTriggeredDelete" Grid.Row="2" Grid.Column="1" IsChecked="{Binding Events.EventUserTriggeredDelete, Mode=TwoWay}" />
+                    <TextBlock Name="AssetExpire" Grid.Row="3" Grid.Column="0" Text="Asset Expire Event" />
+                    <CheckBox Name="EventAssetExpire" Grid.Row="3" Grid.Column="1" IsChecked="{Binding Events.EventAssetExpire, Mode=TwoWay}" />
+                    <TextBlock Name="SyncWithServer" Grid.Row="4" Grid.Column="0" Text="Sync With Server Event" />
+                    <CheckBox Name="EventSyncWithServer" Grid.Row="4" Grid.Column="1" IsChecked="{Binding Events.EventSyncWithServer, Mode=TwoWay}" />
+                    <TextBlock Name="Subscribe" Grid.Row="5" Grid.Column="0" Text="Subscribe Event" />
+                    <CheckBox Name="EventSubscribe" Grid.Row="5" Grid.Column="1" IsChecked="{Binding Events.EventSubscribe, Mode=TwoWay}" />
+                    <TextBlock Name="QueueForDownload" Grid.Row="6" Grid.Column="0" Text="Queue For Download Event" />
+                    <CheckBox Name="EventQueueForDownload" Grid.Row="6" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventQueueForDownload, Mode=TwoWay}" />
+                    <TextBlock Name="DownloadStart"  Grid.Row="7" Grid.Column="0" Text="Download Start Event" />
+                    <CheckBox Name="EventDownloadStart"  Grid.Row="7" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventDownloadStart, Mode=TwoWay}" />
+                    <TextBlock Name="DownloadComplete"   Grid.Row="8" Grid.Column="0" Text="Download Complete Event" />
+                    <CheckBox Name="EventDownloadComplete"  Grid.Row="8" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventDownloadComplete, Mode=TwoWay}" />
+                    <TextBlock Name="PlayStart"  Grid.Row="9" Grid.Column="0" Text="Play Start Event" />
+                    <CheckBox Name="EventPlayStart"  Grid.Row="9" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventPlayStart, Mode=TwoWay}" />
+                    <TextBlock Name="PlayStop"  Grid.Row="10" Grid.Column="0"  Text="Play Stop Event" />
+                    <CheckBox Name="EventPlayStop"  Grid.Row="10" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventPlayStop, Mode=TwoWay}" />
+                    <StackPanel Grid.Row="11" Grid.Column="0" Orientation="Horizontal" Margin="0,15,0,0">
+                        <!--<Button Click="SaveClick_Click"  Name="Btn_SettingSave">Save</Button>-->
+                        <Button Click="Save_Click"  Name="Btn_SettingSave">Save</Button>
+                    </StackPanel>
+                </Grid>
+                <Grid Grid.Column="1"  Margin="30,0,40,0" >
+                    <Grid.Resources>
+                        <Style TargetType="TextBlock">
+                            <Setter Property="FontSize" Value="18"/>
+                            <Setter Property="Padding" Value="5,10,5,5" />
+                        </Style>
+                    </Grid.Resources>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <TextBlock Grid.Row="0" Grid.Column="0" Text="" Margin="0,10,10,10"  />
+                    <TextBlock x:Name="Unsubscribe" Grid.Row="1" Grid.Column="0" Text="Unsubscribe Event" />
+                    <CheckBox x:Name="EventUnsubscribe" Grid.Row="1" Grid.Column="1" IsChecked="{Binding Events.EventUnsubscribe, Mode=TwoWay}" />
+                    <TextBlock x:Name="AssetDelete" Grid.Row="2" Grid.Column="0" Text="Asset Delete Event" />
+                    <CheckBox x:Name="EventAssetDelete" Grid.Row="2" Grid.Column="1" IsChecked="{Binding Events.EventAssetDelete, Mode=TwoWay}" />
+
+
+                    <TextBlock x:Name="Custom" Grid.Row="3" Grid.Column="0" Text="Custom Event" />
+                    <CheckBox x:Name="EventCustom" Grid.Row="3" Grid.Column="1" IsChecked="{Binding Events.EventCustom, Mode=TwoWay}" />
+                    <TextBlock x:Name="AssetRemovedFromQueue" Grid.Row="4" Grid.Column="0" Text="Asset Removed From Queue Event" />
+                    <CheckBox x:Name="EventAssetRemovedFromQueue" Grid.Row="4" Grid.Column="1" IsChecked="{Binding Events.EventAssetRemovedFromQueue, Mode=TwoWay}" />
+                    <TextBlock x:Name="MaxErrorReset" Grid.Row="5" Grid.Column="0" Text="Max Error Reset Event" />
+                    <CheckBox x:Name="EventMaxErrorReset" Grid.Row="5" Grid.Column="1" IsChecked="{Binding Events.EventMaxErrorReset, Mode=TwoWay}" />
+                    <TextBlock x:Name="DownloadError" Grid.Row="6" Grid.Column="0" Text="Download Error Event" />
+                    <CheckBox x:Name="EventDownloadError" Grid.Row="6" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventDownloadError, Mode=TwoWay}" />
+                    <TextBlock x:Name="Reset" Grid.Row="7" Grid.Column="0" Text="Reset Event" />
+                    <CheckBox x:Name="EventReset" Grid.Row="7" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventReset, Mode=TwoWay}" />
+                    <TextBlock x:Name="DownloadLimitReached" Grid.Row="8" Grid.Column="0" Text="Download Limit Reached Event" />
+                    <CheckBox x:Name="EventDownloadLimitReached" Grid.Row="8" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventDownloadLimitReached, Mode=TwoWay}" />
+                    <TextBlock x:Name="PlaybackInitiated" Grid.Row="9" Grid.Column="0" Text="Play back Initiated Event" />
+                    <CheckBox x:Name="EventPlaybackInitiated" Grid.Row="9" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventPlaybackInitiated, Mode=TwoWay}" />
+                </Grid>
+            </Grid>
+
+        </ScrollViewer>
+
+        <CommandBar Grid.Row="2" VerticalAlignment="Bottom" x:Name="Commandbar" ClosedDisplayMode="Minimal" Margin="0,0,0,20">
+            <AppBarButton x:Name="DeviceButton" Icon="CellPhone"  Label="Devices" Click="DeviceButton_Click" />
+            <AppBarButton x:Name="HomeButton"  Icon="Home" Label="Home" Click="HomeButton_Click"/>
+            <AppBarButton x:Name="SettingButton" Icon="Setting" Label="Settings" Click="SettingButton_Click"/>
+            <AppBarSeparator/>
+        </CommandBar>
+
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="WindowStates">
+                <VisualState x:Name="WideState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="600" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="pageTitle.Style" Value="{StaticResource HeaderTextBlockStyle}" />
+                        <Setter Target="Commandbar.Margin"  Value="0,0,0,0" />
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="NarrowState">
+                    <VisualState.StateTriggers>
+                        <AdaptiveTrigger MinWindowWidth="0" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="pageTitle.Style" Value="{StaticResource TitleTextBlockStyle}" />
+                        <Setter Target="EventHeading.Padding" Value="0,0,0,10"/>
+                        <Setter Target="EventHeading.FontSize" Value="13"/>
+                        <Setter Target="AppLaunch.Padding" Value="0,0,10,0"/>
+                        <Setter Target="AppLaunch.FontSize" Value="13"/>
+                        <Setter Target="EventAppLaunch.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventAppLaunch.FontSize" Value="14"/>
+                        <Setter Target="UserTriggeredDelete.Padding" Value="0,2,10,2"/>
+                        <Setter Target="UserTriggeredDelete.FontSize" Value="14"/>
+                        <Setter Target="EventUserTriggeredDelete.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventUserTriggeredDelete.FontSize" Value="14"/>
+                        <Setter Target="AssetExpire.Padding" Value="0,2,10,2"/>
+                        <Setter Target="AssetExpire.FontSize" Value="14"/>
+
+                        <Setter Target="EventAssetExpire.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventAssetExpire.FontSize" Value="14"/>
+                        <Setter Target="SyncWithServer.Padding" Value="0,2,10,2"/>
+                        <Setter Target="SyncWithServer.FontSize" Value="14"/>
+                        <Setter Target="EventSyncWithServer.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventSyncWithServer.FontSize" Value="14"/>
+                        <Setter Target="Subscribe.Padding" Value="0,2,10,2"/>
+                        <Setter Target="Subscribe.FontSize" Value="14"/>
+                        <Setter Target="EventSubscribe.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventSubscribe.FontSize" Value="14"/>
+                        <Setter Target="QueueForDownload.Padding" Value="0,2,10,2"/>
+                        <Setter Target="QueueForDownload.FontSize" Value="14"/>
+                        <Setter Target="EventQueueForDownload.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventQueueForDownload.FontSize" Value="14"/>
+                        <Setter Target="DownloadStart.Padding" Value="0,2,10,2"/>
+                        <Setter Target="DownloadStart.FontSize" Value="14"/>
+                        <Setter Target="EventDownloadComplete.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventDownloadComplete.FontSize" Value="14"/>
+                        <Setter Target="DownloadComplete.Padding" Value="0,2,10,2"/>
+                        <Setter Target="DownloadComplete.FontSize" Value="14"/>
+                        <Setter Target="PlayStart.Padding" Value="0,2,10,2"/>
+                        <Setter Target="PlayStart.FontSize" Value="14"/>
+                        <Setter Target="EventPlayStop.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventPlayStop.FontSize" Value="14"/>
+                        <Setter Target="PlayStop.Padding" Value="0,2,10,2"/>
+                        <Setter Target="PlayStop.FontSize" Value="14"/>
+                        <Setter Target="EventPlayStart.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventPlayStart.FontSize" Value="14"/>
+
+
+                        <Setter Target="Unsubscribe.Padding" Value="0,2,10,2"/>
+                        <Setter Target="Unsubscribe.FontSize" Value="14"/>
+                        <Setter Target="EventUnsubscribe.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventUnsubscribe.FontSize" Value="14"/>
+                        <Setter Target="AssetDelete.Padding" Value="0,2,10,2"/>
+                        <Setter Target="AssetDelete.FontSize" Value="14"/>
+                        <Setter Target="EventAssetDelete.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventAssetDelete.FontSize" Value="14"/>
+                        <Setter Target="Custom.Padding" Value="0,2,10,2"/>
+                        <Setter Target="Custom.FontSize" Value="14"/>
+                        <Setter Target="EventCustom.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventCustom.FontSize" Value="14"/>
+                        <Setter Target="AssetRemovedFromQueue.Padding" Value="0,2,10,2"/>
+                        <Setter Target="AssetRemovedFromQueue.FontSize" Value="14"/>
+                        <Setter Target="EventAssetRemovedFromQueue.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventAssetRemovedFromQueue.FontSize" Value="14"/>
+                        <Setter Target="MaxErrorReset.Padding" Value="0,2,10,2"/>
+                        <Setter Target="MaxErrorReset.FontSize" Value="14"/>
+                        <Setter Target="EventMaxErrorReset.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventMaxErrorReset.FontSize" Value="14"/>
+                        <Setter Target="DownloadError.Padding" Value="0,2,10,2"/>
+                        <Setter Target="DownloadError.FontSize" Value="14"/>
+                        <Setter Target="EventDownloadError.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventDownloadError.FontSize" Value="14"/>
+
+                        <Setter Target="Reset.Padding" Value="0,2,10,2"/>
+                        <Setter Target="Reset.FontSize" Value="14"/>
+                        <Setter Target="EventReset.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventReset.FontSize" Value="14"/>
+                        <Setter Target="DownloadLimitReached.Padding" Value="0,2,10,2"/>
+                        <Setter Target="DownloadLimitReached.FontSize" Value="14"/>
+                        <Setter Target="EventDownloadLimitReached.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventDownloadLimitReached.FontSize" Value="14"/>
+                        <Setter Target="PlaybackInitiated.Padding" Value="0,2,10,2"/>
+                        <Setter Target="PlaybackInitiated.FontSize" Value="14"/>
+                        <Setter Target="EventPlaybackInitiated.Padding" Value="0,2,10,2"/>
+                        <Setter Target="EventPlaybackInitiated.FontSize" Value="14"/>
+
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+
+    </Grid>
+
+</Page>

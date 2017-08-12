@@ -1,0 +1,67 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Index</title>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type">
+	<style>
+		html,body {
+			margin: 0; padding: 0px;
+			height:100%; 
+			min-height:100%;
+			background-color: rgb(233,232,220);
+			font-family: Verdana, Arial, Helvetica, sans-serif;
+			font-style: normal;
+			font-weight: normal;
+			color: black;
+		}
+
+		body {font-size:75%;position:relative; margin-top:-1px; border-style: solid solid solid solid;	border-color: rgb(172,168,153);	border-width: 0px 0px 1px 0px;}
+		a { text-decoration:none; color:#06c }
+		form {padding:5px; margin:0px;}
+	</style>
+</head>
+<body style="direction: ltr;">
+	<form>
+	Look for:<br /><input style="width:100%" onKeyDown="check_input(this.value,get_match)" onKeyUp="check_input(this.value,get_match)"/>
+	</form>
+
+	<script>
+		var words = new Array(
+"Account Property","AccountMax Property","ApplicationName Property","ApplicationVersion Property","Asset Property {Penthera.VirtuosoClient.Public.Events.AssetSizeValidationWarningEventArgs}","Asset Property {Penthera.VirtuosoClient.Public.Events.BackplanePermissionEventArgs}","Asset Property {Penthera.VirtuosoClient.Public.IBackplanePermission}","AssetId Property {Penthera.VirtuosoClient.Public.IAsset}","AssetId Property {Penthera.VirtuosoClient.Public.IBackplaneEvent}","AssetMax Property","AssetSizeValidationWarning Event","AssetSizeValidationWarningEventArgs Class","AssetSizeValidationWarningEventHandler Delegate","AssetType Property","AudioBitRate Property","AuthenticationEventArgs Class","AuthenticationStatus Enumeration","AuthenticationUpdated Event","Backplane Property","BackplanePermission Property","BackplanePermissionEventArgs Class","BackplanePermissionEventHandler Delegate","BackplanePermissionReceived Event","BackplaneRequestArgs Class","BackplaneRequestComplete Delegate","BackplaneResponseCode Property","BackplaneSettings Property","BackplaneUrl Property","BitRate Property","ChangeDownloadEnablementAsync (Boolean) Method","ChangeDownloadEnablementAsync (Boolean, IDevice) Method","ChangeNicknameAsync (String) Method","ChangeNicknameAsync (String, IDevice) Method","ClientInstance Method","ClientVersion Property","CompletedCount Property","CreatedDate Property","CurrentDownloads Property","CurrentSize Property","Data Property {Penthera.VirtuosoClient.Public.IBackplaneEventData}","Data Property {Penthera.VirtuosoClient.Public.IBackplaneEvent}","DefaultExpiryAfterDownload Property","DefaultExpiryAfterPlay Property","DeleteAll Method","DeleteAssetAsync Method","Description Property","Device Property","DeviceFirmware Property","DeviceID Property {Penthera.VirtuosoClient.Public.IBackplaneSettings}","DeviceID Property {Penthera.VirtuosoClient.Public.IDevice}","DeviceId Property","DeviceInfo Class","DeviceManufacturer Property","DeviceModel Property {Penthera.VirtuosoClient.Public.DeviceInfo}","DeviceModel Property {Penthera.VirtuosoClient.Public.IDevice}","DeviceOS Property","DevicePushToken Property","DeviceUnRegister Method","DeviceVersion Property","Devices Method","DiskFreeSpace Property","DiskStatusOK Property","DiskStatusOKAsync Method","DownloadAllowed Property","DownloadComplete Event","DownloadCompleteDateTime Property","DownloadCompleteEventHandler Delegate","DownloadEnabled Property","DownloadError Property","DownloadErrorCount Property","DownloadOverCell Property","DownloadRetryCount Property","Downloaded Property","Downloads Property {Penthera.VirtuosoClient.Public.IAccountDownloads}","Downloads Property {Penthera.VirtuosoClient.Public.IAssetDownloads}","DownloadsEnabled Property","Duration Property","EAssetStatus Enumeration","EAssetType Enumeration","EBackplaneRequestType Enumeration","EDownloadError Enumeration","ELIcenseEvent Enumeration","ELicenseState Enumeration","ESegmentType Enumeration","ESegmentedAssetType Enumeration","EffectiveExpiryDate Method","EnqueueFileAsync Method","ErrorString Property","EventAppLaunch Property","EventAssetDelete Property","EventAssetExpire Property","EventAssetRemovedFromQueue Property","EventCustom Property","EventDownloadComplete Property","EventDownloadError Property","EventDownloadLimitReached Property","EventDownloadStart Property","EventList Method","EventMaxErrorReset Property","EventName Property","EventPlayStart Property","EventPlayStop Property","EventPlaybackInitiated Property","EventQueueForDownload Property","EventReset Property","EventSubscribe Property","EventSyncWithServer Property","EventUnsubscribe Property","EventUserTriggeredDelete Property","ExpectedSize Property","Expired Property","ExpiryAfterDownload Property","ExpiryAfterPlay Property","ExpiryDate Property {Penthera.VirtuosoClient.Public.IAsset}","ExpiryDate Property {Penthera.VirtuosoClient.Public.License.ILicense}","ExpiryDays Property","ExternalDeviceID Property {Penthera.VirtuosoClient.Public.IBackplaneSettings}","ExternalDeviceID Property {Penthera.VirtuosoClient.Public.IDevice}","FilePath Property","FileUrl Property","FirstPlayDateTime Property","FlushQueueAsync Method","FractionComplete Property","GetAsset Method","GetFilesAsync Method","GetStatusAsync Method","Headroom Property","IAccountDeviceDownloads Interface","IAccountDownloads Interface","IAsset Interface","IAssetDeviceDownloads Interface","IAssetDownloads Interface","IBackplane Interface","IBackplaneEvent Interface","IBackplaneEventData Interface","IBackplanePermission Interface","IBackplaneRequestCompleteArgs Interface","IBackplaneSettings Interface","IDevice Interface","IEvent Interface","ILicense Interface","ILicenseProvider Interface","ILicenseState Interface","ISegment Interface","ISegmentedFileProperties Interface","IStatusProvider Interface","IVirtuosoClient Interface","IVirtuosoLogger Interface","IVirtuosoSettings Interface","IVirtuosoSubscriber Interface","Id Property","InstallDate Property","IsValid Property","IsWithinAvailabilityWindow Method","LastAuthenticated Property","LastModifiedDate Property","LastSyncDate Property","License Property","LicenseChanged Event","LicenseChangedEventHandler Delegate","LicenseEventArgs Class","LicenseKey Property","LicenseSignature Property","LicenseState Property {Penthera.VirtuosoClient.Public.Events.LicenseEventArgs}","LicenseState Property {Penthera.VirtuosoClient.Public.License.ILicenseState}","LogPlayStart Method","LogPlayStop Method","LoggingLevel Property","MaxAssetDownloads Property","MaxDownloadsAccount Property","MaxPermittedDownloads Property","MaxPermittedSegmentErrors Property","MaxSdkVersion Property","MaxStorage Property","MaximumDevicesForDownload Property","MaximumOfflinePeriod Property","MediaPlayBackSource Property","Metadata Property","NetworkLoggingEnabled Property","NetworkLoggingIP Property","NetworkLoggingPort Property","NetworkStatusOK Property","NewAsset Method","NickName Property","Nickname Property","PendingDownloads Property","Penthera.VirtuosoClient.Public Namespace","Penthera.VirtuosoClient.Public.Events Namespace","Penthera.VirtuosoClient.Public.License Namespace","PermittedSpaceRemaining Property","PreviousDownloadError Property","PrivateKey Property","PublicKey Property","PublishDate Property","Queue Property","Reason Property","RegisterBackplaneEventAsync Method","RemoteBaseUrl Property","RemoteWipeComplete Event","RemoteWipeCompleteEventHandler Delegate","RemoteWipePending Property","RemoveFromQueue Method","RequestCompleted Property","RequirePermissionOnQueue Property","ResetDownloadOverCellToDefault Method","ResetErrorState Method","ResetHeadroomToDefault Method","ResetMaxStorageToDefault Method","ResetValidatesFileSizesToDefault Method","ResponseMessage Property","ResponseStatusCode Property","SDKUsedSpace Property","Save Method","SegmentErrorCount Property","SegmentErrorHTTPCode Property","SegmentType Property","SegmentedAssetType Property","SegmentedFileProperties Property","Settings Property","ShowQueue Method","StartWithBackplaneAsyncPermissionCheck Method","StartupAsync Method","Status Property {Penthera.VirtuosoClient.Public.Events.AuthenticationEventArgs}","Status Property {Penthera.VirtuosoClient.Public.Events.StatusChangeEventArgs}","Status Property {Penthera.VirtuosoClient.Public.IAsset}","Status Property {Penthera.VirtuosoClient.Public.IStatusProvider}","Status Property {Penthera.VirtuosoClient.Public.IVirtuosoClient}","StatusChangeEventArgs Class","Success Property","SyncAsync Method","SyncWithBackplaneAsync Method","SystemArchitecture Property","SystemFamily Property","SystemVersion Property","TargetDuration Property","TestValue Property","ThisDevice Property {Penthera.VirtuosoClient.Public.IDevice}","ThisDevice Property {Penthera.VirtuosoClient.Public.IVirtuosoClient}","TotalDownloads Property {Penthera.VirtuosoClient.Public.IAccountDeviceDownloads}","TotalDownloads Property {Penthera.VirtuosoClient.Public.IAccountDownloads}","TotalDownloads Property {Penthera.VirtuosoClient.Public.IAssetDownloads}","TotalSegments Property","TrustVirtuosoTime Property","UnregisterAsync Method","UnregisterDeviceAsync Method","UnregisterThisDevice Method","UpdateDeviceDetail Method","UpdateEvent Method","UsedDeviceQuota Property","UserDeviceList Method","UserID Property","Uuid Property","ValidateFileSizes Property","Version Property","VideoBitRate Property","VirtuosoCcbDeviceSaved Event","VirtuosoCcbDeviceSavedEventHandler Delegate","VirtuosoClientAuthenticationUpdatedHandler Delegate","VirtuosoClientFactory Class","VirtuosoClientStatus Enumeration","VirtuosoClientStatusChange Event","VirtuosoClientStatusChangeEventHandler Delegate","VirtuosoDeviceSavedEventArgs Class","VirtuosoLogger Property","VirtuosoLoggingLevel Enumeration","VirtuosoSDK Reference","VirtuosoTime Property","WriteLine (VirtuosoLoggingLevel, String) Method","WriteLine (VirtuosoLoggingLevel, String, Object()) Method","lData Property","sData Property"
+		);
+		
+		
+		var oldHighlight = 0;
+		var oldKey = "";
+		
+		function get_match(text) {
+		    var ltext = text.toLowerCase();
+		    for(i in words) {
+		        if(words[i].toLowerCase().indexOf(ltext) == "0") {
+		            return words[i];
+		        }
+		    }
+		    return "";
+		}
+		
+		function highlight(keyword) {
+		    if(oldHighlight) oldHighlight.className = "";
+		    var el = parent.frames['zindex'].document.getElementById("w_"+keyword);
+		    el.className="highlighted";
+		    oldHighlight = el;
+		}
+		
+		function check_input(text, matchfun) {
+		    if(text!=oldKey) {
+		        var keyword = matchfun(text);
+		        if(keyword) {       
+		            highlight(keyword);
+		            parent.frames['zindex'].document.getElementById('w_'+keyword).scrollIntoView();
+		        }
+		        oldKey = text;
+		    }
+		}
+	</script>
+</body>
+</html>
+
