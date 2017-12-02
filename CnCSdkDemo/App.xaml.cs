@@ -11,8 +11,10 @@ using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
-
-
+using Windows.Networking.PushNotifications;
+using Windows.UI.Popups;
+//using Windows.Data.Xml.Dom;
+using System.Xml;
 // The Universal Hub Application project template is documented at http://go.microsoft.com/fwlink/?LinkID=391955
 
 namespace VirtuosoClient.TestHarness
@@ -28,6 +30,14 @@ namespace VirtuosoClient.TestHarness
 #if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
 #endif
+
+        protected override void OnBackgroundActivated(BackgroundActivatedEventArgs args)
+        {
+            //Todo Remove if not being used once onCompleted  has been tested
+            base.OnBackgroundActivated(args);
+            VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "++ Asset.CompleteCallback(DownloadOperation downloadOperation)");
+            VClient.OnBackgroundActivated(args);
+        }
 
         /// <summary>
         /// Initializes the singleton instance of the <see cref="App"/> class. This is the first line of authored code
@@ -49,6 +59,7 @@ namespace VirtuosoClient.TestHarness
         protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
             //var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
+            await InitNotificationsAsync();
 
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
@@ -133,6 +144,48 @@ namespace VirtuosoClient.TestHarness
             Window.Current.Activate();
         }
 
+        private string _devicePushToken;
+        private async Task InitNotificationsAsync()
+        {
+            // Get a channel URI from WNS.
+            var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
+            channel.PushNotificationReceived += PushNotificationReceived;
+            VClient.Backplane.backplaneSettings.DevicePushToken = channel.Uri;
+            _devicePushToken = channel.Uri;
+           
+            
+        }
+
+        private void PushNotificationReceived(object sender, PushNotificationReceivedEventArgs e)
+        {
+            var payload = "";
+            if (e.NotificationType == PushNotificationType.Toast)
+            {
+                payload = e.ToastNotification.Content.GetXml();
+                Windows.UI.Notifications.ToastNotification toast = e.ToastNotification;
+                toast.SuppressPopup = true;
+                XmlDocument xml = new XmlDocument();
+                xml.LoadXml(payload);
+
+                string command = xml.InnerText;
+
+                var dialog = new MessageDialog("Your settings have been saved.");
+                dialog.ShowAsync();
+                switch (command)
+                {
+                    case "DownloadsAvailable":
+                        //VClient.re
+                        break;
+                    case "BackplaneSync":
+                        VClient.SyncWithBackplaneAsync();
+                        break;
+                    default:
+                        break;
+                }
+            }
+
+        }
+
         private void onNavigated(object sender, NavigationEventArgs e)
         {
             Debug.WriteLine("Navigation {0} from {1}", e.Uri, e.SourcePageType.FullName);
@@ -174,7 +227,7 @@ namespace VirtuosoClient.TestHarness
             client.BackplanePermissionReceived += Client_BackplanePermissionReceived;
             client.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug,
                 "App setting start page.");
-            String user = client.Backplane.BackplaneSettings.UserID;
+            String user = client.Backplane.backplaneSettings.UserID;
             VirtuosoClientStatus status = client.Status;
             if (status == VirtuosoClientStatus.kVC_AuthenticationFailure || status == VirtuosoClientStatus.kVC_Unknown || user == null)
             {
@@ -182,10 +235,10 @@ namespace VirtuosoClient.TestHarness
             }
             // call startup and direct to main app page
             await client.StartupAsync(
-                                      client.Backplane.BackplaneSettings.BackplaneUrl,
+                                      client.Backplane.backplaneSettings.BackplaneUrl,
                                       user,
-                                      client.Backplane.BackplaneSettings.ExternalDeviceID,
-                                      Config.PRIVATE_KEY, Config.PUBLIC_KEY);
+                                      client.Backplane.backplaneSettings.ExternalDeviceID,
+                                      Config.PRIVATE_KEY, Config.PUBLIC_KEY, _devicePushToken);
             return typeof(HubPage);
         }
 

@@ -67,6 +67,18 @@ namespace VirtuosoClient.TestHarness
 
             //handle license changed
             VClient.LicenseChanged += Instance_LicenseChanged;
+
+            VClient.AuthenticationUpdated += Instance_BackplaneUpdated;
+        }
+
+        /// <summary>
+        /// Backplane authentication has completed.  Updated view with potentially new data.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Instance_BackplaneUpdated(object sender, AuthenticationEventArgs e)
+        {
+            NavigationHelper_LoadState(sender, null);
         }
 
         /// <summary>
@@ -107,9 +119,9 @@ namespace VirtuosoClient.TestHarness
 
             DefaultViewModel["Settings"] = client.Settings;
 
-            DefaultViewModel["BackplaneSettings"] = client.Backplane.BackplaneSettings;
-            DefaultViewModel["Moff"] = client.Backplane.BackplaneSettings.MaximumOfflinePeriod == DateTime.MaxValue.Ticks ? "Unlimited" : client.Backplane.BackplaneSettings.MaximumOfflinePeriod.ToString();
-            DefaultViewModel["MDD"] = client.Backplane.BackplaneSettings.MaximumDevicesForDownload == long.MaxValue ? "Unlimited" : client.Backplane.BackplaneSettings.MaximumDevicesForDownload.ToString();
+            DefaultViewModel["BackplaneSettings"] = client.Backplane.backplaneSettings;
+            DefaultViewModel["Moff"] = client.Backplane.backplaneSettings.MaximumOfflinePeriod == DateTime.MaxValue.Ticks ? "Unlimited" : client.Backplane.backplaneSettings.MaximumOfflinePeriod.ToString();
+            DefaultViewModel["MDD"] = client.Backplane.backplaneSettings.MaximumDevicesForDownload == long.MaxValue ? "Unlimited" : client.Backplane.backplaneSettings.MaximumDevicesForDownload.ToString();
 
             DefaultViewModel["Device"] = client.ThisDevice;
 
@@ -122,6 +134,12 @@ namespace VirtuosoClient.TestHarness
             DefaultViewModel["SystemClock"] = DateTime.UtcNow;
             DefaultViewModel["TrustVirtuosoTime"] = client.TrustVirtuosoTime;
             DefaultViewModel["HttpCodeErrorSegment"] = client.Settings.SegmentErrorHTTPCode;
+
+            bool overrideSync = false;
+            if (ApplicationData.Current.LocalSettings.Values.ContainsKey("OverrideSyncLimit"))
+                overrideSync = (bool)ApplicationData.Current.LocalSettings.Values["OverrideSyncLimit"];
+
+            DefaultViewModel["OverrideSyncLimit"] = overrideSync;
         }
 
         /// <summary>
@@ -202,6 +220,13 @@ namespace VirtuosoClient.TestHarness
             this.Frame.Navigate(typeof(DeviceList));
         }
 
+        private void OverrideSyncLimit_Click(object sender, RoutedEventArgs e)
+        {
+            CheckBox overrideBox = (CheckBox)sender;
+            ApplicationData.Current.LocalSettings.Values["OverrideSyncLimit"] = overrideBox.IsChecked;
+            DefaultViewModel["OverrideSyncLimit"] = overrideBox.IsChecked;
+        }
+
         /// <summary>
         /// Handles the VirtuosoCcbDeviceSaved event of the Instance control.
         /// </summary>
@@ -224,6 +249,8 @@ namespace VirtuosoClient.TestHarness
         private async void SettingSave_ItemClick(object sender, RoutedEventArgs e)
         {
             client.Settings.Save();
+            var dialog = new MessageDialog("Your settings have been saved.");
+            await dialog.ShowAsync();
 
             VirtuosoClientFactory.ClientInstance().VirtuosoLogger.NetworkLoggingIP = (String)DefaultViewModel["NetworkLoggingIP"];
             VirtuosoClientFactory.ClientInstance().VirtuosoLogger.NetworkLoggingPort = (String)DefaultViewModel["NetworkLoggingPort"];

@@ -5,13 +5,13 @@
       "Title": "HSS Files",
       "Tests": [
         {
-          "UniqueId": "Taxi3_AACLC",
-          "Title": "Taxi 3 Audio",
+          "UniqueId": "MISSING_SEGS",
+          "Title": "Missing Segments",
           "Assets": [
             {
-              "AssetId": "Taxi3_AACLC_A",
-              "Title": "Taxi3_AUDIO",
-              "FileUrl": "https://playready.directtaps.net/smoothstreaming/ISMAAACLC/Taxi3_AACLC.ism/Manifest",
+              "AssetId": "MISSING_SEGS",
+              "Title": "Missing Segments",
+              "FileUrl": "http://sdk-test-dummy-hss.s3.amazonaws.com/missing_segments/Manifest",
               "PublishDate": null,
               "ExpiryDate": null,
               "ExpiryAfterDownload": null,
@@ -26,12 +26,12 @@
         },
         {
           "UniqueId": "Dummy_HSS",
-          "Title": "Dummy_NOT_PLAYABLE_HSS",
+          "Title": "Dummy10seg_NOT_PLAYABLE_HSS",
           "Assets": [
             {
-              "AssetId": "PlayReady_HSS_SS",
-              "Title": "Dummy Non-playable hss",
-              "FileUrl": "http://hsstest.s3.amazonaws.com/small/Manifest",
+              "AssetId": "Dummy10seg_NOT_PLAYABLE_HSS",
+              "Title": "Dummy 10 seg Non-playable hss",
+              "FileUrl": "http://sdk-test-dummy-hss.s3.amazonaws.com/tiny_download/Manifest",
               "PublishDate": null,
               "ExpiryDate": null,
               "ExpiryAfterDownload": null,

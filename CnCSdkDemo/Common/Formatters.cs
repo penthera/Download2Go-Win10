@@ -324,7 +324,83 @@ namespace VirtuosoClient.TestHarness.Common
         /// <returns>System.Object.</returns>
         public object Convert(object value, Type targetType, object parameter, string language)
         {
-            return ((long)value == -1) ? "Unlimited" : value.ToString();
+            return ((long)value <= -1 || (long)value == long.MaxValue) ? "Unlimited" : value.ToString();
+        }
+
+        /// <summary>
+        /// Converts back.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <param name="targetType">Type of the target.</param>
+        /// <param name="parameter">The parameter.</param>
+        /// <param name="language">The language.</param>
+        /// <returns>System.Object.</returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    /// <summary>
+    /// Class ExpirySpanFormatter.
+    /// Converts invalid values to 'Never' object string
+    /// </summary>
+    /// <seealso cref="Windows.UI.Xaml.Data.IValueConverter" />
+    public class ExpirySpanFormatter : IValueConverter
+    {
+        /// <summary>
+        /// Converts invalid values to 'Unlimited'
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <param name="targetType">Type of the target.</param>
+        /// <param name="parameter">The parameter.</param>
+        /// <param name="language">The language.</param>
+        /// <returns>System.Object.</returns>
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            return ((long)value <= -1 || (long)value == long.MaxValue) ? "Never" : value.ToString()+" sec";
+        }
+
+        /// <summary>
+        /// Converts back.
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <param name="targetType">Type of the target.</param>
+        /// <param name="parameter">The parameter.</param>
+        /// <param name="language">The language.</param>
+        /// <returns>System.Object.</returns>
+        /// <exception cref="NotImplementedException"></exception>
+        public object ConvertBack(object value, Type targetType, object parameter, string language)
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+    /// <summary>
+    /// Class ExpiryFormatter.
+    /// Converts invalid values to 'Never' object string
+    /// </summary>
+    /// <seealso cref="Windows.UI.Xaml.Data.IValueConverter" />
+    public class ExpiryFormatter : IValueConverter
+    {
+        /// <summary>
+        /// Converts invalid values to 'Unlimited'
+        /// </summary>
+        /// <param name="value">The value.</param>
+        /// <param name="targetType">Type of the target.</param>
+        /// <param name="parameter">The parameter.</param>
+        /// <param name="language">The language.</param>
+        /// <returns>System.Object.</returns>
+        public object Convert(object value, Type targetType, object parameter, string language)
+        {
+            if ((DateTime)value == DateTime.MaxValue || value == null)
+                return "Never";
+
+            TimeZoneInfo tz = System.TimeZoneInfo.Local;
+            DateTime localTime = System.TimeZoneInfo.ConvertTime((DateTime)value, tz);
+            string retVal = localTime.ToString();
+            return retVal;
         }
 
         /// <summary>

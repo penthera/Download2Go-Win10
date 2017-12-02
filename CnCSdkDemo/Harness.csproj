@@ -20,9 +20,9 @@
     <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
     <AppxBundle>Always</AppxBundle>
     <AppxBundlePlatforms>arm</AppxBundlePlatforms>
-    <PackageCertificateThumbprint>44FCFA57C8288DE6B6180E985DF1DB0D1875725F</PackageCertificateThumbprint>
+    <PackageCertificateThumbprint>182F49B22E78933427EF3D710343EF3E6967A7D1</PackageCertificateThumbprint>
     <AppxSymbolPackageEnabled>True</AppxSymbolPackageEnabled>
-    <PackageCertificateKeyFile>Harness_TemporaryKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateKeyFile>Harness_StoreKey.pfx</PackageCertificateKeyFile>
     <AppxPackageDir>C:\Build Packages\</AppxPackageDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
@@ -35,6 +35,8 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>false</UseDotNetNativeToolchain>
+    <Optimize>false</Optimize>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
     <OutputPath>bin\x86\Release\</OutputPath>
@@ -82,6 +84,7 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <ErrorReport>prompt</ErrorReport>
     <Prefer32Bit>true</Prefer32Bit>
+    <UseDotNetNativeToolchain>true</UseDotNetNativeToolchain>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
     <OutputPath>bin\x64\Release\</OutputPath>
@@ -196,6 +199,8 @@
     <PRIResource Include="Strings\en-US\Resources.resw" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Harness_StoreKey.pfx" />
+    <None Include="Package.StoreAssociation.xml" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -234,27 +239,27 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
-      <Version>5.3.4</Version>
+      <Version>5.4.0</Version>
     </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>10.0.3</Version>
     </PackageReference>
   </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
   <!--<ItemGroup>
     <Analyzer Include="..\SDK\lib\SQLite.Net.dll" />
   </ItemGroup>-->
   <ItemGroup>
-    <None Include="Harness_TemporaryKey.pfx" />
-  </ItemGroup>
-  <ItemGroup>
-    <Reference Include="CnCWindowsSDK" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
-      <HintPath>..\lib\x64\Debug\CnCWindowsSDK.dll</HintPath>
-    </Reference>
     <Reference Include="CnCWindowsSDK" Condition="'$(Configuration)|$(Platform)' == 'Debug|arm'">
       <HintPath>..\lib\ARM\Debug\CnCWindowsSDK.dll</HintPath>
     </Reference>
     <Reference Include="CnCWindowsSDK" Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
       <HintPath>..\lib\x86\Debug\CnCWindowsSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="CnCWindowsSDK" Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+      <HintPath>..\lib\x64\Debug\CnCWindowsSDK.dll</HintPath>
     </Reference>
     <Reference Include="CnCWindowsSDK" Condition="'$(Configuration)|$(Platform)' == 'Release|arm'">
       <HintPath>..\lib\ARM\Release\CnCWindowsSDK.dll</HintPath>
@@ -267,8 +272,20 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <SDKReference Include="SQLite.UWP.2015, Version=3.20.0">
+    <SDKReference Include="Microsoft.PlayerFramework.Xaml.Adaptive.UWP, Version=3.0.0.4">
+      <Name>Microsoft Player Framework Adaptive Streaming Plugin</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.PlayerFramework.Xaml.UWP, Version=3.0.0.4">
+      <Name>Microsoft Player Framework</Name>
+    </SDKReference>
+    <SDKReference Include="Microsoft.PlayerFramework.Xaml.WebVTT.UWP, Version=3.0.0.4">
+      <Name>Microsoft Player Framework WebVTT Plugin</Name>
+    </SDKReference>
+    <SDKReference Include="SQLite.UWP.2015, Version=3.20.1">
       <Name>SQLite for Universal Windows Platform</Name>
+    </SDKReference>
+    <SDKReference Include="Universal Smooth Streaming Client SDK, Version=1.0">
+      <Name>Microsoft Universal Smooth Streaming Client SDK</Name>
     </SDKReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

@@ -67,7 +67,7 @@ namespace VirtuosoClient.TestHarness
             VirtuosoClientStatus status = VClient.Status;
             if (status == VirtuosoClientStatus.kVC_AuthenticationFailure)
                 setAuthenticationFailure();
-            else if (status != VirtuosoClientStatus.kVC_Unknown && VClient.Backplane.BackplaneSettings.UserID != null)
+            else if (status != VirtuosoClientStatus.kVC_Unknown && VClient.Backplane.backplaneSettings.UserID != null)
             {
                 //handle returning to the page should not happen. Page should be removed from backstack
             }
@@ -83,6 +83,7 @@ namespace VirtuosoClient.TestHarness
         /// serializable state.</param>
         private void navigationHelper_SaveState(object sender, SaveStateEventArgs e)
         {
+            var a = 0;
         }
 
         #region NavigationHelper registration
@@ -119,13 +120,12 @@ namespace VirtuosoClient.TestHarness
         private bool _loggingIn = false;
         private void Login_Btn_Click(object sender, RoutedEventArgs e)
         {
-            if (_loggingIn)
-            {
+            if (_loggingIn) {
                 Login_Btn.IsEnabled = true;
                 return;
             }
 
-
+            // disable the button; should replace the button with progress "please wait..." status to the user
             Login_Btn.IsEnabled = false;
             _loggingIn = true;
 
@@ -133,11 +133,12 @@ namespace VirtuosoClient.TestHarness
             VClient.AuthenticationUpdated += Client_AuthenticationChanged;
             VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "Registered status change event handler");
             VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "calling startup");
+            var pushToken = VClient.Backplane.backplaneSettings.DevicePushToken;
             VClient.StartupAsync(
                                 (string)DefaultViewModel["default_url"],
                                 (string)DefaultViewModel["default_user"],
-                                "default_external_id",
-                                Config.PRIVATE_KEY, Config.PUBLIC_KEY).AsAsyncAction().Completed = (isender, iargs) =>
+                                "",
+                                Config.PRIVATE_KEY, Config.PUBLIC_KEY, pushToken).AsAsyncAction().Completed = (isender, iargs) =>
                                     {
                                         _loggingIn = false;
                                     };
@@ -151,8 +152,7 @@ namespace VirtuosoClient.TestHarness
         /// <exception cref="Exception"></exception>
         private void Client_AuthenticationChanged(object sender, AuthenticationEventArgs e)
         {
-            VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug,
-                "Login.VirtuosoClientStatusChange [{0}]", e.Status);
+            VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "Login.VirtuosoClientStatusChange [{0}]", e.Status);
             switch (e.Status)
             {
                 case AuthenticationStatus.Authentication_Failure:

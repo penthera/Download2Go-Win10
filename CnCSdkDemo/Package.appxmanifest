@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest" xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10" xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3" IgnorableNamespaces="uap mp uap3">
-  <Identity Name="Penthera" Publisher="CN=Penthera" Version="1.0.49.0" />
-  <mp:PhoneIdentity PhoneProductId="9b6f188a-6969-44c8-b3d8-964cb2ae7fe7" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
+  <Identity Name="Penthera.VirtuosoSDKTestHarness" Publisher="CN=977C8F41-C4A7-4E3C-966A-76EEA9F41D15" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="84178a2b-4e9c-4553-9a6a-e0cd934d26f3" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>Penthera</DisplayName>
-    <PublisherDisplayName>Penthera</PublisherDisplayName>
+    <DisplayName>Virtuoso SDK Test Harness</DisplayName>
+    <PublisherDisplayName>Penthera Partners Inc.</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
   <Dependencies>
@@ -36,6 +36,9 @@
   </Applications>
   <Capabilities>
     <Capability Name="internetClient" />
+    <Capability Name="internetClientServer" />
+    <Capability Name="privateNetworkClientServer" />
     <uap3:Capability Name="backgroundMediaPlayback" />
+    <uap:Capability Name="phoneCall" />
   </Capabilities>
 </Package>

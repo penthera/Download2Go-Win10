@@ -82,13 +82,14 @@
             </Border>
         </Popup>
 
-        <CommandBar Grid.Row="2" VerticalAlignment="Bottom" ClosedDisplayMode="Minimal" x:Name="Commandbar" Margin="0,0,0,15">
+        <CommandBar Grid.Row="1" VerticalAlignment="Bottom" ClosedDisplayMode="Minimal" x:Name="Commandbar" >
             <AppBarButton x:Name="SettingButton" Icon="Setting" Label="Settings" Click="SettingButton_Click"/>
             <AppBarButton x:Name="HomeButton"  Icon="Home" Label="Home" Click="HomeButton_Click"/>
             <AppBarButton x:Name="PushNotification" Icon="Message"   Label="Notification" Click="PushNotification_Click"/>
             <AppBarSeparator/>
             <CommandBar.SecondaryCommands>
                 <AppBarButton x:Name="ForceSync" Icon="Refresh" Label="Sync" Click="ForceSync_Click"/>
+                <AppBarButton x:Name="DeleteSync" Icon="Refresh" Label="Delete All" Click="Public_Delete_All"/>
             </CommandBar.SecondaryCommands>
         </CommandBar>
 

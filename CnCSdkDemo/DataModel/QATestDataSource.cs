@@ -76,9 +76,31 @@ namespace VirtuosoClient.TestHarness.Data
             _mediaType = other._mediaType;
         }
 
+        // NOTE: Unknown Flat File = 0
+        //       Flat Audio File (Mp3) = 1
+        //       Flat Video File (Mp4) = 2
+        //       HLS Video = 3
+        //       HSS Video = 5
+        //       DASH Video = 6
         private int _mediaType;
         public EQualityLevel Quality { get; set; }
-        public EAssetType AssetType { get { return _mediaType == 0 ? EAssetType.Single : EAssetType.Segmented; } }
+        public EAssetType AssetType { get { return _mediaType <= 2 ? EAssetType.Single : EAssetType.Segmented; } }
+        public ESegmentedAssetType SegmentedAssetType { get
+            {
+                switch (_mediaType)
+                { 
+                case 5:
+                    return ESegmentedAssetType.HSS;
+                case 3:
+                    return ESegmentedAssetType.HLS;
+                case 6:
+                    return ESegmentedAssetType.MPD;
+                default:
+                    return ESegmentedAssetType.NONE;
+                }
+            }
+        }
+
         private long CalcQuality(long? max)
         {
             if (max.HasValue)
@@ -260,6 +282,8 @@ namespace VirtuosoClient.TestHarness.Data
         private static readonly QATestDataSource _qaTestDataSource = new QATestDataSource();
         private readonly ObservableCollection<QATestSection> _sections = new ObservableCollection<QATestSection>();
 
+        #region Sections
+
         public ObservableCollection<QATestSection> Sections
         {
             get { return _sections; }
@@ -272,113 +296,6 @@ namespace VirtuosoClient.TestHarness.Data
                 await _qaTestDataSource.GetSectionDataAsync();
             }
             return _qaTestDataSource.Sections;
-        }
-
-        public ObservableCollection<QATest> PendingTests
-        {
-            get
-            {
-                if (_pendingTests == null) _pendingTests = new ObservableCollection<QATest>();
-                return _pendingTests;
-            }
-        }
-        private ObservableCollection<QATest> _pendingTests = new ObservableCollection<QATest>();
-
-        public static IEnumerable<QATest> GetPendingTests()
-        {
-            return _qaTestDataSource.PendingTests;
-        }
-
-        public ObservableCollection<IAsset> QueuedAssets
-        {
-            get
-            {
-                _queuedAssets = GetQueuedAssetsAsync().Result;
-                return _queuedAssets;
-            }
-        }
-        private ObservableCollection<IAsset> _queuedAssets;
-
-        public async static Task<ObservableCollection<IAsset>> GetQueuedAssetsAsync()
-        {
-            ObservableCollection<IAsset> queue = null;
-            await Windows.System.Threading.ThreadPool.RunAsync(
-                (workitem) => queue = VirtuosoClientFactory.ClientInstance().ShowQueue());
-            return queue;
-        }
-
-        public ObservableCollection<IAsset> PendingAssets
-        {
-            get
-            {
-                _pendingAssets = GetPendingAssetsAsync().Result;
-                return _pendingAssets;
-            }
-        }
-        private ObservableCollection<IAsset> _pendingAssets;
-
-        public async static Task<ObservableCollection<IAsset>> GetPendingAssetsAsync()
-        {
-            App.VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "++ QATestDataSource.GetPendingAssetsAsync");
-            ObservableCollection<IAsset> collection = null;
-            await Windows.System.Threading.ThreadPool.RunAsync(
-                (workitem) =>
-                {
-                    App.VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "++ QATestDataSource.get q");
-                    collection = VirtuosoClientFactory.ClientInstance().Queue;
-                }
-                );
-            return collection;
-        }
-        public ObservableCollection<IAsset> CompletedAssets
-        {
-            get
-            {
-                _completedAssets = GetCompletedAssetsAsync().Result;
-                return _completedAssets;
-            }
-        }
-        private ObservableCollection<IAsset> _completedAssets;
-
-        public async static Task<ObservableCollection<IAsset>> GetCompletedAssetsAsync()
-        {
-            ObservableCollection<IAsset> collection = null;
-            await Windows.System.Threading.ThreadPool.RunAsync(
-                (workitem) => collection = VirtuosoClientFactory.ClientInstance().Downloaded);
-            return collection;
-        }
-
-        public async static Task<IAsset> GetAssetAsync(Guid uuid)
-        {
-            IAsset asset = null;
-            await Windows.System.Threading.ThreadPool.RunAsync(
-                (workitem) => asset = VirtuosoClientFactory.ClientInstance().GetAsset(uuid));
-            return asset;
-        }
-
-        public ObservableCollection<QATest> CompletedTests
-        {
-            get { return _completedTests ?? (_completedTests = new ObservableCollection<QATest>()); }
-        }
-        private ObservableCollection<QATest> _completedTests = new ObservableCollection<QATest>();
-
-        public static IEnumerable<QATest> GetCompletedTests()
-        {
-            return _qaTestDataSource.CompletedTests;
-        }
-
-        public static async Task<QATestSection> GetSectionAsync(string uniqueId)
-        {
-            await _qaTestDataSource.GetSectionDataAsync();
-            var matches = _qaTestDataSource.Sections.Where((section) => section.UniqueId.Equals(uniqueId));
-            return matches.Count() == 1 ? matches.First() : null;
-        }
-
-        public static async Task<QATest> GetTestAsync(string uniqueId)
-        {
-            var matches = _qaTestDataSource.Sections.SelectMany(section => section.Tests)
-                                                    .Where((test) => test.UniqueId.Equals(uniqueId));
-            return matches.Count() == 1 ? matches.First() : null;
         }
 
         private async Task GetSectionDataAsync()
@@ -425,6 +342,46 @@ namespace VirtuosoClient.TestHarness.Data
                 Sections.Add(section);
             }
         }
+
+        #endregion
+        
+        public async static Task<ObservableCollection<IAsset>> GetPendingAssetsAsync()
+        {
+            App.VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "++ QATestDataSource.GetPendingAssetsAsync");
+            ObservableCollection<IAsset> collection = null;
+            await Windows.System.Threading.ThreadPool.RunAsync(
+                (workitem) =>
+                {
+                    App.VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "++ QATestDataSource.get q");
+                    collection = VirtuosoClientFactory.ClientInstance().Queue;
+                });
+            return collection;
+        }
+
+        public async static Task<ObservableCollection<IAsset>> GetCompletedAssetsAsync()
+        {
+            ObservableCollection<IAsset> collection = null;
+            await Windows.System.Threading.ThreadPool.RunAsync(
+                (workitem) => collection = VirtuosoClientFactory.ClientInstance().Downloaded);
+            return collection;
+        }
+
+        public async static Task<ObservableCollection<IAsset>> GetExpiredAssetsAsync()
+        {
+            ObservableCollection<IAsset> collection = null;
+            await Windows.System.Threading.ThreadPool.RunAsync(
+                (workitem) => collection = VirtuosoClientFactory.ClientInstance().Expired);
+            return collection;
+        }
+
+        public async static Task<IAsset> GetAssetAsync(Guid uuid)
+        {
+            IAsset asset = null;
+            await Windows.System.Threading.ThreadPool.RunAsync(
+                (workitem) => asset = VirtuosoClientFactory.ClientInstance().GetAsset(uuid));
+            return asset;
+        }
+        
         private string GetString(JsonObject value, string propertyName, string defaultValue)
         {
             string ret = null;

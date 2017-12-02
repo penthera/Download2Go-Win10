@@ -1,4 +1,4 @@
-﻿<Page
+<Page
     x:Name="pageRoot"
     x:Class="VirtuosoClient.TestHarness.AssetPage"
     DataContext="{Binding DefaultModel, RelativeSource={RelativeSource Self}}"
@@ -8,6 +8,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:playerFramework="using:Microsoft.PlayerFramework"
     mc:Ignorable="d">
 
     <Page.Resources>
@@ -15,6 +16,8 @@
         <common:AssetStatusFormatter   x:Key="AssetStatusFormatter"/>
         <common:DiskStorageFormatter x:Key="DiskStorageFormatter"/>
         <common:AssetErrorFormatter   x:Key="AssetErrorFormatter"/>
+        <common:ExpiryFormatter x:Key="ExpiryFormatter"/>
+        <common:ExpirySpanFormatter x:Key="ExpirySpanFormatter"/>
     </Page.Resources>
 
     <Grid 
@@ -100,20 +103,17 @@
             </Grid>
         </Grid>
 
-        <Grid Grid.Row="1" Grid.Column="0" x:Name="mediaRow"><!-- HorizontalAlignment="Stretch" -->
-          <!--   <MediaElement x:Name="mediaPlayerElement" VariableSizedWrapGrid.ColumnSpan="1"
-              AutoPlay="False" AreTransportControlsEnabled="True" VerticalAlignment="Stretch"
-              HorizontalAlignment="Stretch"/>-->
-            <MediaElement x:Name="mediaPlayerElement" 
-              AutoPlay="False" AreTransportControlsEnabled="True"/>
-            <!-- VariableSizedWrapGrid.ColumnSpan="1" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" -->
+        <Grid Grid.Row="1" Grid.Column="0" x:Name="mediaRow">
+            <playerFramework:MediaPlayer x:Name="Player" AutoPlay="False"/>
         </Grid>
 
         <Grid Grid.Row="2" Grid.Column="0" x:Name="detailRow">
             <Grid x:Name="details" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="auto" />
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
@@ -129,34 +129,30 @@
                 </Grid.RowDefinitions>
 
                 <TextBlock Grid.Row="0" Grid.Column="0" Text="Asset ID: " />
-                <TextBlock Grid.Row="0" Grid.Column="1" Text="{Binding AssetId}" TextWrapping="Wrap" HorizontalAlignment="Right" />
+                <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="1" Text="{Binding AssetId}" TextWrapping="Wrap" HorizontalAlignment="Right" />
 
                 <TextBlock Grid.Row="1" Grid.Column="0" Text="Progress: " />
-                <TextBlock Grid.Row="1" Grid.Column="1" Text="{Binding FractionComplete, Converter={StaticResource AssetPercentFormatter}}" HorizontalAlignment="Right"/>
+                <TextBlock Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1" Text="{Binding FractionComplete, Converter={StaticResource AssetPercentFormatter}}" HorizontalAlignment="Right"/>
 
                 <TextBlock Grid.Row="2" Grid.Column="0" Text="Status: "/>
-                <TextBlock Grid.Row="2" Grid.Column="1"  Text="{Binding Status, Converter={StaticResource AssetStatusFormatter}}" HorizontalAlignment="Right" />
+                <TextBlock Grid.Row="2" Grid.ColumnSpan="3" Grid.Column="1"  Text="{Binding Status, Converter={StaticResource AssetStatusFormatter}}" HorizontalAlignment="Right" />
 
                 <TextBlock Grid.Row="3" Grid.Column="0" Text="Size: "/>
-                <TextBlock Grid.Row="3" Grid.Column="1"  Text="{Binding CurrentSize, Converter={StaticResource DiskStorageFormatter}}" HorizontalAlignment="Right"  />
+                <TextBlock Grid.Row="3" Grid.ColumnSpan="3" Grid.Column="1"  Text="{Binding CurrentSize, Converter={StaticResource DiskStorageFormatter}}" HorizontalAlignment="Right"  />
 
                 <TextBlock Grid.Row="4" Grid.Column="0" Text="Last Error: "/>
-                <TextBlock Grid.Row="4" Grid.Column="1"  Text="{Binding DownloadError, Converter={StaticResource AssetErrorFormatter}}" HorizontalAlignment="Right" />
+                <TextBlock Grid.Row="4" Grid.ColumnSpan="3" Grid.Column="1"  Text="{Binding DownloadError, Converter={StaticResource AssetErrorFormatter}}" HorizontalAlignment="Right" />
 
                 <TextBlock Grid.Row="5" Grid.Column="0" Text="Error Count: " />
-                <TextBlock Grid.Row="5" Grid.Column="1" Text="{Binding DownloadRetryCount}" HorizontalAlignment="Right" />
+                <TextBlock Grid.Row="5" Grid.ColumnSpan="3" Grid.Column="1" Text="{Binding DownloadRetryCount}" HorizontalAlignment="Right" />
 
-                <TextBlock Grid.Row="6" Grid.Column="0" Text="Expiry After Download: " />
-                <TextBlock Grid.Row="6" Grid.Column="1"  Text="{Binding DownloadRetryCount}" HorizontalAlignment="Right" />
+                <TextBlock Grid.Row="6" Grid.Column="0" Text="Effective Expiry: " />
+                <TextBlock Grid.Row="6" Grid.ColumnSpan="3" Grid.Column="1" Text="{Binding EffectiveExpiryDate, Converter={StaticResource ExpiryFormatter}}" HorizontalAlignment="Right" />
 
-                <TextBlock Grid.Row="7" Grid.Column="0" Text="Expiry After Play: " />
-                <TextBlock Grid.Row="7" Grid.Column="1" Text="{Binding DownloadRetryCount}" HorizontalAlignment="Right" />
-
-                <TextBlock Grid.Row="8" Grid.Column="0" Text="Expiry: " />
-                <TextBlock Grid.Row="8" Grid.Column="1" Text="{Binding DownloadRetryCount}" HorizontalAlignment="Right" />
-
-                <Button Grid.Row="9" Grid.Column="0" Content="Reset"  Click="Reset_Errors_Click" HorizontalAlignment="Center" />
-                <Button Grid.Row="9" Grid.Column="1" Content="Delete"  Click="Delete_Asset_Click" HorizontalAlignment="Center" />
+                <Button Grid.Row="9"  Content="Reset" Grid.Column="0"  Click="Reset_Errors_Click"  />
+                <Button Grid.Row="9" Content="Delete" Grid.Column="1"  Click="Delete_Asset_Click" />
+                <Button Grid.Row="9"  Content="Pause" Grid.Column="2"  Click="Pause_Asset_Click" />
+                <Button Grid.Row="9" Content="Resume" Grid.Column="3" Click="Resume_Asset_Click" />
 
             </Grid>
         </Grid>

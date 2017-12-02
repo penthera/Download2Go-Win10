@@ -82,25 +82,23 @@
                     <TextBlock x:Name="EventHeading" Grid.Row="0" Grid.Column="0" Text="Event Details" FontWeight="Bold" FontSize="25" Foreground="{ThemeResource ListViewItemOverlaySecondaryForegroundThemeBrush}" Margin="0,10,10,10" />
                     <TextBlock Name="AppLaunch" Grid.Row="1" Grid.Column="0" Text="App Launch Event" />
                     <CheckBox Name="EventAppLaunch" Grid.Row="1" Grid.Column="1" IsChecked="{Binding Events.EventAppLaunch, Mode=TwoWay}" />
-                    <TextBlock Name="UserTriggeredDelete" Grid.Row="2" Grid.Column="0" Text="User Triggered Delete Event" />
-                    <CheckBox Name="EventUserTriggeredDelete" Grid.Row="2" Grid.Column="1" IsChecked="{Binding Events.EventUserTriggeredDelete, Mode=TwoWay}" />
-                    <TextBlock Name="AssetExpire" Grid.Row="3" Grid.Column="0" Text="Asset Expire Event" />
-                    <CheckBox Name="EventAssetExpire" Grid.Row="3" Grid.Column="1" IsChecked="{Binding Events.EventAssetExpire, Mode=TwoWay}" />
-                    <TextBlock Name="SyncWithServer" Grid.Row="4" Grid.Column="0" Text="Sync With Server Event" />
-                    <CheckBox Name="EventSyncWithServer" Grid.Row="4" Grid.Column="1" IsChecked="{Binding Events.EventSyncWithServer, Mode=TwoWay}" />
-                    <TextBlock Name="Subscribe" Grid.Row="5" Grid.Column="0" Text="Subscribe Event" />
-                    <CheckBox Name="EventSubscribe" Grid.Row="5" Grid.Column="1" IsChecked="{Binding Events.EventSubscribe, Mode=TwoWay}" />
-                    <TextBlock Name="QueueForDownload" Grid.Row="6" Grid.Column="0" Text="Queue For Download Event" />
-                    <CheckBox Name="EventQueueForDownload" Grid.Row="6" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventQueueForDownload, Mode=TwoWay}" />
-                    <TextBlock Name="DownloadStart"  Grid.Row="7" Grid.Column="0" Text="Download Start Event" />
-                    <CheckBox Name="EventDownloadStart"  Grid.Row="7" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventDownloadStart, Mode=TwoWay}" />
-                    <TextBlock Name="DownloadComplete"   Grid.Row="8" Grid.Column="0" Text="Download Complete Event" />
-                    <CheckBox Name="EventDownloadComplete"  Grid.Row="8" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventDownloadComplete, Mode=TwoWay}" />
-                    <TextBlock Name="PlayStart"  Grid.Row="9" Grid.Column="0" Text="Play Start Event" />
-                    <CheckBox Name="EventPlayStart"  Grid.Row="9" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventPlayStart, Mode=TwoWay}" />
-                    <TextBlock Name="PlayStop"  Grid.Row="10" Grid.Column="0"  Text="Play Stop Event" />
-                    <CheckBox Name="EventPlayStop"  Grid.Row="10" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventPlayStop, Mode=TwoWay}" />
-                    <StackPanel Grid.Row="11" Grid.Column="0" Orientation="Horizontal" Margin="0,15,0,0">
+                    <TextBlock Name="AssetExpire" Grid.Row="2" Grid.Column="0" Text="Asset Expire Event" />
+                    <CheckBox Name="EventAssetExpire" Grid.Row="2" Grid.Column="1" IsChecked="{Binding Events.EventAssetExpire, Mode=TwoWay}" />
+                    <TextBlock Name="SyncWithServer" Grid.Row="3" Grid.Column="0" Text="Sync With Server Event" />
+                    <CheckBox Name="EventSyncWithServer" Grid.Row="3" Grid.Column="1" IsChecked="{Binding Events.EventSyncWithServer, Mode=TwoWay}" />
+                    <TextBlock Name="Subscribe" Grid.Row="4" Grid.Column="0" Text="Subscribe Event" />
+                    <CheckBox Name="EventSubscribe" Grid.Row="4" Grid.Column="1" IsChecked="{Binding Events.EventSubscribe, Mode=TwoWay}" />
+                    <TextBlock Name="QueueForDownload" Grid.Row="5" Grid.Column="0" Text="Queue For Download Event" />
+                    <CheckBox Name="EventQueueForDownload" Grid.Row="5" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventQueueForDownload, Mode=TwoWay}" />
+                    <TextBlock Name="DownloadStart"  Grid.Row="6" Grid.Column="0" Text="Download Start Event" />
+                    <CheckBox Name="EventDownloadStart"  Grid.Row="6" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventDownloadStart, Mode=TwoWay}" />
+                    <TextBlock Name="DownloadComplete"   Grid.Row="7" Grid.Column="0" Text="Download Complete Event" />
+                    <CheckBox Name="EventDownloadComplete"  Grid.Row="7" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventDownloadComplete, Mode=TwoWay}" />
+                    <TextBlock Name="PlayStart"  Grid.Row="8" Grid.Column="0" Text="Play Start Event" />
+                    <CheckBox Name="EventPlayStart"  Grid.Row="8" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventPlayStart, Mode=TwoWay}" />
+                    <TextBlock Name="PlayStop"  Grid.Row="9" Grid.Column="0"  Text="Play Stop Event" />
+                    <CheckBox Name="EventPlayStop"  Grid.Row="9" Grid.Column="1" IsEnabled="False" IsChecked="{Binding Events.EventPlayStop, Mode=TwoWay}" />
+                    <StackPanel Grid.Row="10" Grid.Column="0" Orientation="Horizontal" Margin="0,15,0,0">
                         <!--<Button Click="SaveClick_Click"  Name="Btn_SettingSave">Save</Button>-->
                         <Button Click="Save_Click"  Name="Btn_SettingSave">Save</Button>
                     </StackPanel>
@@ -156,7 +154,7 @@
 
         </ScrollViewer>
 
-        <CommandBar Grid.Row="2" VerticalAlignment="Bottom" x:Name="Commandbar" ClosedDisplayMode="Minimal" Margin="0,0,0,20">
+        <CommandBar Grid.Row="1" VerticalAlignment="Bottom" x:Name="Commandbar" ClosedDisplayMode="Minimal" >
             <AppBarButton x:Name="DeviceButton" Icon="CellPhone"  Label="Devices" Click="DeviceButton_Click" />
             <AppBarButton x:Name="HomeButton"  Icon="Home" Label="Home" Click="HomeButton_Click"/>
             <AppBarButton x:Name="SettingButton" Icon="Setting" Label="Settings" Click="SettingButton_Click"/>

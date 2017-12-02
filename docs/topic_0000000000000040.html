@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="GENERATOR" content="VSdocman - documentation generator; http://www.helixoft.com" />
-	<title>ISegmentedFileProperties Interface</title>
+	<title>IAsset.ExpiryAfterDownload Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2017/msdn2017.css"></link>
 	<script src="msdn2017/msdn2017.js" type="text/javascript"></script>
@@ -59,7 +59,7 @@ function replaceTitleAndUrl(win, title, url) {
 <!--HEADER START-->
   <div id="header">
   	<div id="runningHeaderText">VirtuosoSDK Reference</div>
-  	<h1 class="title">ISegmentedFileProperties Interface</h1>
+  	<h1 class="title">IAsset.ExpiryAfterDownload Property</h1>
   	<div id="headerLinks">
 
 	<a href="#seeAlsoSection">See Also</a>
@@ -73,7 +73,8 @@ function replaceTitleAndUrl(win, title, url) {
       <div id="mainBody">
         <p />
        
-        Aditional data related to Segmented Assets
+        After the asset has completed download, as soon as possible after 'expiryAfterDownload' time has elapsed,
+CNC automatically deletes the asset.
 
 
         <p /><strong>Namespace:</strong>
@@ -132,7 +133,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Interface ISegmentedFileProperties</pre>			
+					<pre xml:space="preserve" class="brush: vb">Property ExpiryAfterDownload() As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>(Of <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">Long</a>)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -168,7 +169,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public interface ISegmentedFileProperties</pre>			
+					<pre xml:space="preserve" class="brush: csharp"><a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a>&gt; ExpiryAfterDownload {get; set;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -204,7 +205,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public interface class ISegmentedFileProperties</pre>			
+					<pre xml:space="preserve" class="brush: cpp">&nbsp;<br />property <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a>&gt; ExpiryAfterDownload {&nbsp;<br /> <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a>&gt; get( );&nbsp;<br /> void set(&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a>&gt; value&nbsp;<br /> );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -240,7 +241,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public interface ISegmentedFileProperties</pre>			
+					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -252,6 +253,11 @@ function replaceTitleAndUrl(win, title, url) {
 
 
 
+	<h4 class="subHeading">
+		Property Value</h4>
+	Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a>&gt; 
+	
+
 
 
 
@@ -266,278 +272,21 @@ function replaceTitleAndUrl(win, title, url) {
 
 	</div>
 </div>
+
 
 
 
 
 <div class="section_container">
 	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Properties</a></span>
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
 		<div><hr /></div>
 	</div>
 
-	<div id="PropertiesSection" class="section">	
-  <table class="memberListTable">
-    <tr>
-      <th></th>
-      <th>
-        Name
-      </th>
-      <th>
-        Description
-      </th>
-    </tr>
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000046.html">AudioBitRate</a>
-
-	</td>
-	<td>
-
-Audio bitrate of this asset
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000045.html">BitRate</a>
-
-	</td>
-	<td>
-
-Bitrate of this asset
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000044.html">CompletedCount</a>
-
-	</td>
-	<td>
-
-Number of segments already downloaded
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000049.html">RemoteBaseUrl</a>
-
-	</td>
-	<td>
-
-Remote base URL of this asset.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000043.html">SegmentErrorCount</a>
-
-	</td>
-	<td>
-
-Number of segments that errored during download.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000041.html">SegmentedAssetType</a>
-
-	</td>
-	<td>
-
-Gets the type of the segmented asset.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000047.html">TargetDuration</a>
-
-	</td>
-	<td>
-
-The total duration of this asset in seconds.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000042.html">TotalSegments</a>
-
-	</td>
-	<td>
-
-Number of segments contained within this asset
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000048.html">VideoBitRate</a>
-
-	</td>
-	<td>
-
-Video bitrate of this asset.
-
-	</td>
-</tr>
-	
-
-
-  </table>
-
-  <a href="#mainBody">
-    Top
-  </a>
-
+	<div id="remarksSection" class="section">	
+			A value of zero or null means the asset never expires.
 	</div>					
 </div>
-
-
-
-
-
-
-  
-
-<!-- Classes -->
-
-<!-- Classes End -->
-
-<!-- Standard Modules -->
-
-<!-- Standard Modules End -->
-
-  
-
-
-
-
-
-
-
-
 
 
 
@@ -564,7 +313,7 @@ Video bitrate of this asset.
 
 	<div id="platformsSection" class="section">	
 		<p>
-			Windows Phone 8.1, Windows Phone 8, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Vista SP2, Windows Server 2008 (Server Core Role not supported), Windows Server 2008 R2 (Server Core Role supported with SP1 or later; Itanium not supported)
+			Universal Windows
 		</p>
 		<p>
 			The .NET Framework does not support all versions of every platform. For a list of the supported versions, see 
@@ -612,10 +361,18 @@ Video bitrate of this asset.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-	<a href="topic_0000000000000000.html">Penthera.VirtuosoClient.Public Namespace</a><br />
+			<a href="topic_0000000000000023.html">IAsset Interface</a><br />
 
 
-	
+
+<a href="topic_0000000000000000.html">Penthera.VirtuosoClient.Public Namespace</a><br />
+
+
+			
+<a href="topic_0000000000000041.html">DownloadCompleteDateTime</a>
+<br />
+<a href="topic_000000000000003F.html">ExpiryAfterPlay</a>
+<br />
 
 		</div>
 	</div>					
@@ -623,7 +380,7 @@ Video bitrate of this asset.
 			</div>
 			</div>
       <div id="footer">
-      	<p><span style="color: #FF0000;">Generated with unregistered version of <a target="_top" href="http://www.helixoft.com/vsdocman/overview.html">VSdocman</a></span>&nbsp;<br />Your own footer text will only be shown in registered version.</p>
+      	<p>VirtuosoSDK Version 3.13.1.8</p>
       </div>
     </div>
   	<script type="text/javascript">

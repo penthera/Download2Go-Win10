@@ -11,7 +11,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    
+
     <Page.Resources>
         <ResourceDictionary>
             <ResourceDictionary.ThemeDictionaries>
@@ -29,6 +29,7 @@
             <common:VirtuosoClientStatusFormatter x:Key="VirtuosoClientStatusFormatter"/>
             <common:AssetErrorFormatter x:Key="AssetErrorFormatter"/>
             <common:UnlimitedFormatter x:Key="UnlimitedFormatter"/>
+            <common:ExpiryFormatter x:Key="ExpiryFormatter"/>
             <common:AssetPercentFormatter x:Key="AssetPercentFormatter"/>
 
             <DataTemplate x:Key="QueueListTemplate">
@@ -44,6 +45,18 @@
                     <TextBlock Text="{Binding Status}"/>
                 </StackPanel>
             </DataTemplate>
+
+            <DataTemplate x:Key="StandardExpiredListTemplate">
+                <StackPanel Margin="0,0,0,19">
+                    <TextBlock Text="{Binding Metadata}"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Expired on: "/>
+                        <TextBlock Text="{Binding EffectiveExpiryDate, Converter={StaticResource ExpiryFormatter}}" HorizontalAlignment="Right" />
+                    </StackPanel>
+                </StackPanel>
+            </DataTemplate>
+
+
 
             <DataTemplate x:Key="QueuedAssetTemplate">
                 <StackPanel Margin="0,0,0,19">
@@ -63,7 +76,7 @@
                     </StackPanel>
                     <StackPanel Orientation="Horizontal">
                         <TextBlock />
-                        
+
                     </StackPanel>
                 </StackPanel>
             </DataTemplate>
@@ -117,8 +130,8 @@
             <RowDefinition Height="auto"/>
         </Grid.RowDefinitions>
         <VisualStateManager.VisualStateGroups>
-                    <VisualStateGroup x:Name="VisualStateGroup">
-                        <VisualState x:Name="phone">
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="phone">
                     <VisualState.StateTriggers>
                         <AdaptiveTrigger MinWindowWidth="0"/>
                     </VisualState.StateTriggers>
@@ -144,13 +157,13 @@
             </TransitionCollection>
         </Grid.ChildrenTransitions>
 
-            <Hub>
+        <Hub>
             <Hub.Header>
                 <Grid Width="{Binding ActualWidth, ElementName=pageRoot}">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-                        <!--<Button Grid.Column="0" x:Name="backButton" Style="{StaticResource NavigationBackButtonNormalStyle}"
+                    </Grid.ColumnDefinitions>
+                    <!--<Button Grid.Column="0" x:Name="backButton" Style="{StaticResource NavigationBackButtonNormalStyle}"
                         VerticalAlignment="Top" HorizontalAlignment="Stretch"
                         Command="{Binding NavigationHelper.GoBackCommand, ElementName=pageRoot}"
                         AutomationProperties.Name="Back"
@@ -158,11 +171,13 @@
                         AutomationProperties.ItemType="Navigation Button"/>-->
                     <TextBlock x:Name="pageTitle" x:Uid="HubPage" Text="Virtuoso Test Harness" Style="{StaticResource HeaderTextBlockStyle}" Grid.Column="0" 
                         VerticalAlignment="Center" HorizontalAlignment="Stretch" IsHitTestVisible="false" TextWrapping="NoWrap" TextAlignment="Center"/>
-                    </Grid>
- 
+                </Grid>
+
             </Hub.Header>
             <!--<Hub.Header>
-                --><!-- Back button and page title --><!--
+                -->
+            <!-- Back button and page title -->
+            <!--
                 
                 <Grid HorizontalAlignment="Stretch">
                         <Grid.ColumnDefinitions>
@@ -181,7 +196,7 @@
                     </Grid>
             
             </Hub.Header>-->
-             
+
             <HubSection x:Uid="QUEUEDSection" Header="QUEUED" HorizontalAlignment="Center"  MinWidth="360">
                 <DataTemplate>
                     <ListView 
@@ -208,27 +223,45 @@
                     </ListView>
                 </DataTemplate>
             </HubSection>
-            <HubSection x:Uid="AvailableTestsHeader" Header="AVAILABLE TESTS" HorizontalContentAlignment="Center"  MinWidth="300">
+            <HubSection x:Uid="ExpiredSection" Header="EXPIRED" HorizontalContentAlignment="Center"  MinWidth="350">
                 <DataTemplate>
                     <ListView 
                         AutomationProperties.AutomationId="ItemListViewSection4"
+                        AutomationProperties.Name="Items In Group"
+                        SelectionMode="None"
+                        IsItemClickEnabled="True"
+                        ItemsSource="{Binding ExpiredTests}"
+                        ItemTemplate="{StaticResource StandardExpiredListTemplate}"
+                        ItemClick="ItemView_ItemClick">
+                    </ListView>
+                </DataTemplate>
+            </HubSection>
+            <HubSection x:Uid="AvailableTestsHeader" Header="AVAILABLE TESTS" HorizontalContentAlignment="Center"  MinWidth="300">
+                <DataTemplate>
+                    <ListView 
+                        AutomationProperties.AutomationId="ItemListViewSection5"
                         AutomationProperties.Name="Items In Group"
                         SelectionMode="None"
                         ItemsSource="{Binding Sections}"     
                         ItemTemplate="{StaticResource SectionedTestListTemplate}"/>
                 </DataTemplate>
             </HubSection>
-            
+
         </Hub>
-        <CommandBar Grid.Row="1" VerticalAlignment="Bottom"   ClosedDisplayMode="Minimal">
+        <CommandBar Grid.Row="2" VerticalAlignment="Bottom"   ClosedDisplayMode="Minimal">
 
             <AppBarButton x:Name="ClearQueue" Icon="Clear" Label="ClearQueue" Click="ClearQueue_Click"/>
             <AppBarButton x:Name="SettingButton" Icon="Setting" Label="Settings" Click="SettingButton_Click"/>
             <AppBarButton x:Name="DeviceButton" Icon="CellPhone" Label="Devices" Click="DeviceButton_Click" />
             <AppBarButton x:Name="EventButton" Icon="Calendar" Label="Events" Click="EventButton_Click" />
+            <AppBarButton x:Name="LogoutButton"  Label="Logout" Click="LogoutButton_Click"/>
+            <AppBarButton x:Name="GetChannelUri"  Label="Display Uri" Click="GetChannelUriButton_Click"/>
             <AppBarSeparator/>
             <CommandBar.SecondaryCommands>
                 <AppBarButton x:Name="ForceSync" Icon="Refresh" Label="Sync" Click="ForceSync_Click"/>
+                <AppBarButton x:Name="DeleteSync" Icon="Refresh" Label="Delete All" Click="Public_Delete_All"/>
+                <AppBarButton x:Name="OutputLogTrace" Icon="Refresh" Label="Perf Trace" Click="OutputLogTrace_Click"/>
+                <AppBarButton x:Name="ClearLogTrace" Icon="Refresh" Label="Clear Trace" Click="ClearLogTrace_Click"/>
             </CommandBar.SecondaryCommands>
 
         </CommandBar>

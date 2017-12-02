@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="GENERATOR" content="VSdocman - documentation generator; http://www.helixoft.com" />
-	<title>IVirtuosoSubscriber.StartWithBackplaneAsyncPermissionCheck Method</title>
+	<title>IVirtuosoClient.NewAsset (String, String, String, Int64, Int64, String, Nullable&lt;DateTime&gt;, Nullable&lt;DateTime&gt;, Nullable&lt;Int64&gt;, Nullable&lt;Int64&gt;) Method</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2017/msdn2017.css"></link>
 	<script src="msdn2017/msdn2017.js" type="text/javascript"></script>
@@ -59,7 +59,7 @@ function replaceTitleAndUrl(win, title, url) {
 <!--HEADER START-->
   <div id="header">
   	<div id="runningHeaderText">VirtuosoSDK Reference</div>
-  	<h1 class="title">IVirtuosoSubscriber.StartWithBackplaneAsyncPermissionCheck Method</h1>
+  	<h1 class="title">IVirtuosoClient.NewAsset (String, String, String, Int64, Int64, String, Nullable&lt;DateTime&gt;, Nullable&lt;DateTime&gt;, Nullable&lt;Int64&gt;, Nullable&lt;Int64&gt;) Method</h1>
   	<div id="headerLinks">
 
 	<a href="#seeAlsoSection">See Also</a>
@@ -73,7 +73,7 @@ function replaceTitleAndUrl(win, title, url) {
       <div id="mainBody">
         <p />
        
-        You must call this method to initialize CNC before you call any other CNC method.
+        Creates a new in-memory Asset for HSS video download.  To be recognized and persisted by the SDK, the Asset must be enqueued first.
 
 
         <p /><strong>Namespace:</strong>
@@ -132,7 +132,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Function StartWithBackplaneAsyncPermissionCheck( _&nbsp;<br />   ByVal <i>assets</i> As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a> _&nbsp;<br />) As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/dd321424.aspx">Task</a>(Of <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.boolean.aspx">Boolean</a>)</pre>			
+					<pre xml:space="preserve" class="brush: vb">Function NewAsset( _&nbsp;<br />   ByVal <i>assetId</i> As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>, _&nbsp;<br />   ByVal <i>description</i> As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>, _&nbsp;<br />   ByVal <i>manifestUrl</i> As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>, _&nbsp;<br />   ByVal <i>maximumVideoBitrate</i> As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">Long</a>, _&nbsp;<br />   ByVal <i>maximumAudioBitrate</i> As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">Long</a>, _&nbsp;<br />   ByVal <i>metadata</i> As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>, _&nbsp;<br />   ByVal <i>publishDate</i> As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>(Of <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.datetime.aspx">Date</a>), _&nbsp;<br />   ByVal <i>expiryDate</i> As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>(Of <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.datetime.aspx">Date</a>), _&nbsp;<br />   ByVal <i>expiryAfterPlay</i> As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>(Of <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">Long</a>), _&nbsp;<br />   ByVal <i>expiryAfterDownload</i> As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>(Of <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">Long</a>) _&nbsp;<br />) As <a target="_top" href="topic_0000000000000023.html" onclick="this.target='';return true;">IAsset</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -168,7 +168,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp"><a target="_top" href="http://msdn2.microsoft.com/en-us/library/dd321424.aspx">Task</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.boolean.aspx">bool</a>&gt; StartWithBackplaneAsyncPermissionCheck(&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">string</a> <i>assets</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp"><a target="_top" href="topic_0000000000000023.html" onclick="this.target='';return true;">IAsset</a> NewAsset(&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">string</a> <i>assetId</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">string</a> <i>description</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">string</a> <i>manifestUrl</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a> <i>maximumVideoBitrate</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a> <i>maximumAudioBitrate</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">string</a> <i>metadata</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.datetime.aspx">DateTime</a>&gt; <i>publishDate</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.datetime.aspx">DateTime</a>&gt; <i>expiryDate</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a>&gt; <i>expiryAfterPlay</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a>&gt; <i>expiryAfterDownload</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -204,7 +204,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">&nbsp;<br /><a target="_top" href="http://msdn2.microsoft.com/en-us/library/dd321424.aspx">Task</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.boolean.aspx">bool</a>&gt;^ StartWithBackplaneAsyncPermissionCheck(&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>^ <i>assets</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">&nbsp;<br /><a target="_top" href="topic_0000000000000023.html" onclick="this.target='';return true;">IAsset</a>^ NewAsset(&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>^ <i>assetId</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>^ <i>description</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>^ <i>manifestUrl</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a> <i>maximumVideoBitrate</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a> <i>maximumAudioBitrate</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>^ <i>metadata</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.datetime.aspx">DateTime</a>&gt; <i>publishDate</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.datetime.aspx">DateTime</a>&gt; <i>expiryDate</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a>&gt; <i>expiryAfterPlay</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a>&gt; <i>expiryAfterDownload</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -252,16 +252,140 @@ function replaceTitleAndUrl(win, title, url) {
 
 
 <h4 class="subHeading">
-	Parameters</h4><dl paramName="assets">
+	Parameters</h4><dl paramName="assetId">
 	<dt>
 		<span class="parameter">
-			assets
+			assetId
 		</span>
 	</dt>
 	<dd>
 		Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">string</a> 
 		<p>
-			 
+			(Required) A unique identifier for the asset. Used in all log events. 
+		</p>
+	</dd>
+</dl>
+<dl paramName="description">
+	<dt>
+		<span class="parameter">
+			description
+		</span>
+	</dt>
+	<dd>
+		Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">string</a> 
+		<p>
+			(Required) A description of the asset.  CNC only uses this in log output. 
+		</p>
+	</dd>
+</dl>
+<dl paramName="manifestUrl">
+	<dt>
+		<span class="parameter">
+			manifestUrl
+		</span>
+	</dt>
+	<dd>
+		Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">string</a> 
+		<p>
+			(Required) The remote URL for the HSS manifest. 
+		</p>
+	</dd>
+</dl>
+<dl paramName="maximumVideoBitrate">
+	<dt>
+		<span class="parameter">
+			maximumVideoBitrate
+		</span>
+	</dt>
+	<dd>
+		Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a> 
+		<p>
+			(Required) For manifests containing multiple profiles, the SDK will download the highest bitrate
+                                  profile that does not exceed this value. A value of 1 means &quot;use the lowest&quot;.  A value of long.MaxValue
+                                  means &quot;use the highest&quot;. 
+		</p>
+	</dd>
+</dl>
+<dl paramName="maximumAudioBitrate">
+	<dt>
+		<span class="parameter">
+			maximumAudioBitrate
+		</span>
+	</dt>
+	<dd>
+		Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a> 
+		<p>
+			(Required) For manifests containing multiple profiles, the SDK will download the highest bitrate
+                                  profile that does not exceed this value. A value of 1 means &quot;use the lowest&quot;.  A value of long.MaxValue
+                                  means &quot;use the highest&quot;. 
+		</p>
+	</dd>
+</dl>
+<dl paramName="metadata">
+	<dt>
+		<span class="parameter">
+			metadata
+		</span>
+	</dt>
+	<dd>
+		Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">string</a> 
+		<p>
+			(Optional) A convenience field allowing you to associate arbitrary data with an asset.
+CNC will serialize this data and store it, but not explicitly use this data. 
+		</p>
+	</dd>
+</dl>
+<dl paramName="publishDate">
+	<dt>
+		<span class="parameter">
+			publishDate
+		</span>
+	</dt>
+	<dd>
+		Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.datetime.aspx">DateTime</a>&gt; 
+		<p>
+			(Optional) CNC will not provide API access to the asset until this date. Null means &quot;now.&quot; 
+		</p>
+	</dd>
+</dl>
+<dl paramName="expiryDate">
+	<dt>
+		<span class="parameter">
+			expiryDate
+		</span>
+	</dt>
+	<dd>
+		Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.datetime.aspx">DateTime</a>&gt; 
+		<p>
+			(Optional) CNC will delete the asset after this date. Null means no expiry. 
+		</p>
+	</dd>
+</dl>
+<dl paramName="expiryAfterPlay">
+	<dt>
+		<span class="parameter">
+			expiryAfterPlay
+		</span>
+	</dt>
+	<dd>
+		Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a>&gt; 
+		<p>
+			(Optional) Amount of time after the asset is first played that CNC will delete the asset.
+In seconds. Less than or equal to 0.0 means no expiry. 
+		</p>
+	</dd>
+</dl>
+<dl paramName="expiryAfterDownload">
+	<dt>
+		<span class="parameter">
+			expiryAfterDownload
+		</span>
+	</dt>
+	<dd>
+		Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/b3h38hb0.aspx">Nullable</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.int64.aspx">long</a>&gt; 
+		<p>
+			(Optional) Amount of time after CNC completes download of file that CNC will delete
+the file. In seconds. Less than or equal to 0.0 means no expiry. 
 		</p>
 	</dd>
 </dl>
@@ -270,9 +394,9 @@ function replaceTitleAndUrl(win, title, url) {
 
 	<h4 class="subHeading">
 		Return Value</h4>
-	Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/dd321424.aspx">Task</a>&lt;<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.boolean.aspx">bool</a>&gt; 
+	Type: <a target="_top" href="topic_0000000000000023.html" onclick="this.target='';return true;">IAsset</a> 
 		<p>
-		An awaitable Task that finishes when startup is complete 
+		A new Asset object, initialized with the provided values 
 	</p>
 	
 
@@ -295,21 +419,6 @@ function replaceTitleAndUrl(win, title, url) {
 
 
 
-<div class="section_container">
-	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
-		<div><hr /></div>
-	</div>
-
-	<div id="remarksSection" class="section">	
-			Sets up CNC for use with a Backplane instance.
-<p>
-NOTE: Except as otherwise documented, if you attempt to call other methods before
-this one, you'll get an exception. If you catch and ignore the exceptions,
-CNC behavior will be undefined.
-</p>
-	</div>					
-</div>
 
 
 
@@ -336,7 +445,7 @@ CNC behavior will be undefined.
 
 	<div id="platformsSection" class="section">	
 		<p>
-			Windows Phone 8.1, Windows Phone 8, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Vista SP2, Windows Server 2008 (Server Core Role not supported), Windows Server 2008 R2 (Server Core Role supported with SP1 or later; Itanium not supported)
+			Universal Windows
 		</p>
 		<p>
 			The .NET Framework does not support all versions of every platform. For a list of the supported versions, see 
@@ -384,7 +493,7 @@ CNC behavior will be undefined.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_0000000000000125.html">IVirtuosoSubscriber Interface</a><br />
+			<a href="topic_0000000000000105.html">IVirtuosoClient Interface</a><br />
 
 
 
@@ -392,6 +501,8 @@ CNC behavior will be undefined.
 
 
 			
+<a href="topic_0000000000000127.html">EnqueueFileAsync</a>
+<br />
 
 		</div>
 	</div>					
@@ -399,7 +510,7 @@ CNC behavior will be undefined.
 			</div>
 			</div>
       <div id="footer">
-      	<p><span style="color: #FF0000;">Generated with unregistered version of <a target="_top" href="http://www.helixoft.com/vsdocman/overview.html">VSdocman</a></span>&nbsp;<br />Your own footer text will only be shown in registered version.</p>
+      	<p>VirtuosoSDK Version 3.13.1.8</p>
       </div>
     </div>
   	<script type="text/javascript">

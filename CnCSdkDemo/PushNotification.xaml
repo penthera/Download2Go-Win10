@@ -18,7 +18,7 @@
             </StackPanel>
         </Border>
 
-        <CommandBar Grid.Row="2" Height="54" VerticalAlignment="Bottom" ClosedDisplayMode="Minimal">
+        <CommandBar Grid.Row="1" VerticalAlignment="Bottom" ClosedDisplayMode="Minimal">
 
             <AppBarButton x:Name="DeviceButton" Icon="CellPhone"  Label="Devices" Click="DeviceButton_Click" />
             <AppBarButton x:Name="HomeButton"  Icon="Home" Label="Home" Click="HomeButton_Click"/>

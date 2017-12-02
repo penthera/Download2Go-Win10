@@ -185,23 +185,25 @@
                     <CheckBox  x:Name="NetworkLoggingEnabledValue" Grid.Row="5" Grid.Column="1" IsChecked="{Binding NetworkLoggingEnabled, Mode=TwoWay}" />
                     <TextBlock  x:Name="NetworkLoggingIP" Grid.Row="6" Grid.Column="0" Text="Net Log IP" />
                     <TextBox  x:Name="NetworkLoggingIPValue" Grid.Row="6" Grid.Column="1" Text="{Binding NetworkLoggingIP, Mode=TwoWay}" Width="160"  HorizontalAlignment="Left" Margin="0,10,0,0" />
-                    <TextBlock  x:Name="NetworkLoggingPort" Grid.Row="7" Grid.Column="0" Text="Nickname" />
+                    <TextBlock  x:Name="NetworkLoggingPort" Grid.Row="7" Grid.Column="0" Text="Net Log Port" />
                     <TextBox  x:Name="NetworkLoggingPortValue" Grid.Row="7" Grid.Column="1" Text="{Binding NetworkLoggingPort,Mode=TwoWay}" Width="160"  HorizontalAlignment="Left" Margin="0,10,0,0" />
-                    <TextBlock  x:Name="Headroom" Grid.Row="8" Grid.Column="0" Text="Storage Headroom (MB)" />
-                    <TextBox  x:Name="HeadroomValue" Grid.Row="8" Grid.Column="1" Text="{Binding Settings.Headroom, Mode=TwoWay}" HorizontalAlignment="Left"  Width="160" />
-                    <TextBlock  x:Name="AllowableStorage" Grid.Row="9" Grid.Column="0" Text="Allowable Storage (MB)" />
-                    <TextBox  x:Name="AllowableStorageValue" Grid.Row="9" Grid.Column="1" Text="{Binding Settings.MaxStorage, Mode=TwoWay}" Width="160"  HorizontalAlignment="Left" Margin="0,10,0,0" />
-                    <TextBlock  x:Name="NickName" Grid.Row="10" Grid.Column="0" Text="Nickname" />
-                    <TextBox  x:Name="NickNameValue" Grid.Row="10" Grid.Column="1" Text="{Binding Device.NickName,Mode=TwoWay}" Width="160"  HorizontalAlignment="Left" Margin="0,10,0,0" />
-                    <TextBlock  x:Name="Segment" Grid.Row="11" Grid.Column="0" Text="Max Permitted Segment Errors" />
-                    <TextBox  x:Name="SegmentValue" Grid.Row="11" Grid.Column="1"  Text="{Binding Settings.MaxPermittedSegmentErrors, Mode=TwoWay}"   Width="160"  HorizontalAlignment="Left" Margin="0,10,0,0" />
-                    <TextBlock  x:Name="HttpCode" Grid.Row="12" Grid.Column="0" Text="HTTP Code error Segment" />
-                    <ComboBox   Grid.Row="12" Grid.Column="1" x:Name="CodeSegment_Combo" SelectedIndex="{Binding HttpCodeErrorSegment}" SelectionChanged="Selector_CodeError" Width="160"  Margin="0,10,0,0" >
+                    <TextBlock  x:Name="LogEventOverride" Grid.Row="8" Grid.Column="0" Text="Override Log Filter" />
+                    <CheckBox  x:Name="LogEventOverrideValue" Grid.Row="8" Grid.Column="1" IsChecked="{Binding OverrideSyncLimit}" Click="OverrideSyncLimit_Click" />
+                    <TextBlock  x:Name="Headroom" Grid.Row="9" Grid.Column="0" Text="Storage Headroom (MB)" />
+                    <TextBox  x:Name="HeadroomValue" Grid.Row="9" Grid.Column="1" Text="{Binding Settings.Headroom, Mode=TwoWay}" HorizontalAlignment="Left"  Width="160" />
+                    <TextBlock  x:Name="AllowableStorage" Grid.Row="10" Grid.Column="0" Text="Allowable Storage (MB)" />
+                    <TextBox  x:Name="AllowableStorageValue" Grid.Row="10" Grid.Column="1" Text="{Binding Settings.MaxStorage, Mode=TwoWay}" Width="160"  HorizontalAlignment="Left" Margin="0,10,0,0" />
+                    <TextBlock  x:Name="NickName" Grid.Row="11" Grid.Column="0" Text="Nickname" />
+                    <TextBox  x:Name="NickNameValue" Grid.Row="11" Grid.Column="1" Text="{Binding Device.NickName,Mode=TwoWay}" Width="160"  HorizontalAlignment="Left" Margin="0,10,0,0" />
+                    <TextBlock  x:Name="Segment" Grid.Row="12" Grid.Column="0" Text="Max Permitted Segment Errors" />
+                    <TextBox  x:Name="SegmentValue" Grid.Row="12" Grid.Column="1"  Text="{Binding Settings.MaxPermittedSegmentErrors, Mode=TwoWay}"   Width="160"  HorizontalAlignment="Left" Margin="0,10,0,0" />
+                    <TextBlock  x:Name="HttpCode" Grid.Row="13" Grid.Column="0" Text="HTTP Code error Segment" />
+                    <ComboBox   Grid.Row="13" Grid.Column="1" x:Name="CodeSegment_Combo" SelectedIndex="{Binding HttpCodeErrorSegment}" SelectionChanged="Selector_CodeError" Width="160"  Margin="0,10,0,0" >
                         <ComboBoxItem Tag="0" HorizontalContentAlignment="Center">OK</ComboBoxItem>
                         <ComboBoxItem Tag="1" HorizontalContentAlignment="Center">Not found</ComboBoxItem>
                     </ComboBox>
 
-                    <StackPanel  Name="buttonpanel"  Grid.Row="13" Grid.Column="0" Orientation="Horizontal" Margin="0,25,0,0">
+                    <StackPanel  Name="buttonpanel"  Grid.Row="14" Grid.Column="0" Orientation="Horizontal" Margin="0,25,0,0">
                         <Button Click="SettingSave_ItemClick"  Name="Btn_SettingSave">Save</Button>
                         <Button Click="Mail_ItemClick"  Name="Btn_Mail" Margin="10,0,0,0">Send Mail</Button>
                         <Button Click="HyperlinkButton_Click"  Name="Btn_Device" Margin="10,0,0,0">User Device</Button>
@@ -211,7 +213,7 @@
 
         </ScrollViewer>
 
-        <CommandBar Grid.Row="2" VerticalAlignment="Bottom"  ClosedDisplayMode="Minimal" x:Name="Commandbar" Margin="0,0,0,20">
+        <CommandBar Grid.Row="1" VerticalAlignment="Bottom"  ClosedDisplayMode="Minimal" x:Name="Commandbar" >
 
             <AppBarButton x:Name="DeviceButton" Icon="CellPhone"  Label="Devices" Click="DeviceButton_Click" />
             <AppBarButton x:Name="HomeButton"  Icon="Home" Label="Home" Click="HomeButton_Click"/>

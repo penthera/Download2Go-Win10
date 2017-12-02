@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="GENERATOR" content="VSdocman - documentation generator; http://www.helixoft.com" />
-	<title>IBackplaneSettings Interface</title>
+	<title>IAccountDeviceDownloads.Device Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2017/msdn2017.css"></link>
 	<script src="msdn2017/msdn2017.js" type="text/javascript"></script>
@@ -59,7 +59,7 @@ function replaceTitleAndUrl(win, title, url) {
 <!--HEADER START-->
   <div id="header">
   	<div id="runningHeaderText">VirtuosoSDK Reference</div>
-  	<h1 class="title">IBackplaneSettings Interface</h1>
+  	<h1 class="title">IAccountDeviceDownloads.Device Property</h1>
   	<div id="headerLinks">
 
 	<a href="#seeAlsoSection">See Also</a>
@@ -73,7 +73,7 @@ function replaceTitleAndUrl(win, title, url) {
       <div id="mainBody">
         <p />
        
-        This are the settings governed by the Backplane
+        Gets the device.
 
 
         <p /><strong>Namespace:</strong>
@@ -132,7 +132,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Interface IBackplaneSettings&nbsp;<br />    Inherits <a target="_top" href="topic_00000000000000C2.html" onclick="this.target='';return true;">ILicenseProvider</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">ReadOnly Property Device() As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -168,7 +168,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public interface IBackplaneSettings : <a target="_top" href="topic_00000000000000C2.html" onclick="this.target='';return true;">ILicenseProvider</a></pre>			
+					<pre xml:space="preserve" class="brush: csharp"><a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">string</a> Device {get;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -204,7 +204,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public interface class IBackplaneSettings : public <a target="_top" href="topic_00000000000000C2.html" onclick="this.target='';return true;">ILicenseProvider</a>^</pre>			
+					<pre xml:space="preserve" class="brush: cpp">&nbsp;<br />property <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>^ Device {&nbsp;<br /> <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>^ get( );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -240,7 +240,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public interface IBackplaneSettings&nbsp;<br />   implements <a target="_top" href="topic_00000000000000C2.html" onclick="this.target='';return true;">ILicenseProvider</a></pre>			
+					<pre xml:space="preserve" class="brush: js">function get Device() : <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>;</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -252,6 +252,11 @@ function replaceTitleAndUrl(win, title, url) {
 
 
 
+	<h4 class="subHeading">
+		Property Value</h4>
+	Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">string</a> 
+	
+
 
 
 
@@ -266,543 +271,6 @@ function replaceTitleAndUrl(win, title, url) {
 
 	</div>
 </div>
-
-
-
-
-<div class="section_container">
-	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Properties</a></span>
-		<div><hr /></div>
-	</div>
-
-	<div id="PropertiesSection" class="section">	
-  <table class="memberListTable">
-    <tr>
-      <th></th>
-      <th>
-        Name
-      </th>
-      <th>
-        Description
-      </th>
-    </tr>
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000007D.html">BackplaneUrl</a>
-
-	</td>
-	<td>
-
-Gets the backplane URL.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000086.html">DefaultExpiryAfterDownload</a>
-
-	</td>
-	<td>
-
-The amount of time after download that an asset can exist on the device, in seconds (Default: Forever)
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000087.html">DefaultExpiryAfterPlay</a>
-
-	</td>
-	<td>
-
-The amount of time the after initial playback that an asset can exist on the device, in seconds  (Default: Forever)
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000083.html">DeviceID</a>
-
-	</td>
-	<td>
-
-Gets the device identifier.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000081.html">DevicePushToken</a>
-
-	</td>
-	<td>
-
-Gets the device push token.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000082.html">DownloadsEnabled</a>
-
-	</td>
-	<td>
-
-Whether or not the client will download.  This is a client-side option that allows the user to manually
-pause/resume downloads, independent of other internal business rules.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000007F.html">ExternalDeviceID</a>
-
-	</td>
-	<td>
-
-Gets the external device identifier.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-inheritedMember 
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000000C3.html">LicenseKey</a>
-
-	</td>
-	<td>
-
-Gets the license key.
-(inherited from <a target="_top" href="topic_00000000000000C2.html" onclick="this.target='';return true;">ILicenseProvider</a>).
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-inheritedMember 
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000000C4.html">LicenseSignature</a>
-
-	</td>
-	<td>
-
-Gets the license signature.
-(inherited from <a target="_top" href="topic_00000000000000C2.html" onclick="this.target='';return true;">ILicenseProvider</a>).
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000008B.html">MaxAssetDownloads</a>
-
-	</td>
-	<td>
-
-Resets the MaxAssetDownloads setting to the internal default value.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000008A.html">MaxDownloadsAccount</a>
-
-	</td>
-	<td>
-
-The amount of time after download that an asset can exist on the device, in seconds (Default: Forever)
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000089.html">MaxPermittedDownloads</a>
-
-	</td>
-	<td>
-
-Resets the MaxAssetDownloads setting to the internal default value.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000084.html">MaximumDevicesForDownload</a>
-
-	</td>
-	<td>
-
-The number of devices that can be enabled for download simultaneously (Default: 5)
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000085.html">MaximumOfflinePeriod</a>
-
-	</td>
-	<td>
-
-The amount of time the device can be disconnected from the backplane before assets
-become unavailable, in seconds (Default: 7 days)
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000080.html">Nickname</a>
-
-	</td>
-	<td>
-
-User assigned name for Device.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000008C.html">PrivateKey</a>
-
-	</td>
-	<td>
-
-A string with the Private Key for connection.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000008D.html">PublicKey</a>
-
-	</td>
-	<td>
-
-A string with the Public Key for connection
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000008E.html">RequirePermissionOnQueue</a>
-
-	</td>
-	<td>
-
-Gets a value indicating whether [require permission on queue].
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000088.html">UsedDeviceQuota</a>
-
-	</td>
-	<td>
-
-The number of devices currently enabled for download (Default: 0)
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000007E.html">UserID</a>
-
-	</td>
-	<td>
-
-Gets the user identifier.
-
-	</td>
-</tr>
-	
-
-
-  </table>
-
-  <a href="#mainBody">
-    Top
-  </a>
-
-	</div>					
-</div>
-
-
-
-
-
-
-  
-
-<!-- Classes -->
-
-<!-- Classes End -->
-
-<!-- Standard Modules -->
-
-<!-- Standard Modules End -->
-
-  
-
-
-
 
 
 
@@ -834,7 +302,7 @@ Gets the user identifier.
 
 	<div id="platformsSection" class="section">	
 		<p>
-			Windows Phone 8.1, Windows Phone 8, Windows 8.1, Windows Server 2012 R2, Windows 8, Windows Server 2012, Windows 7, Windows Vista SP2, Windows Server 2008 (Server Core Role not supported), Windows Server 2008 R2 (Server Core Role supported with SP1 or later; Itanium not supported)
+			Universal Windows
 		</p>
 		<p>
 			The .NET Framework does not support all versions of every platform. For a list of the supported versions, see 
@@ -882,10 +350,14 @@ Gets the user identifier.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-	<a href="topic_0000000000000000.html">Penthera.VirtuosoClient.Public Namespace</a><br />
+			<a href="topic_000000000000007B.html">IAccountDeviceDownloads Interface</a><br />
 
 
-	
+
+<a href="topic_0000000000000000.html">Penthera.VirtuosoClient.Public Namespace</a><br />
+
+
+			
 
 		</div>
 	</div>					
@@ -893,7 +365,7 @@ Gets the user identifier.
 			</div>
 			</div>
       <div id="footer">
-      	<p><span style="color: #FF0000;">Generated with unregistered version of <a target="_top" href="http://www.helixoft.com/vsdocman/overview.html">VSdocman</a></span>&nbsp;<br />Your own footer text will only be shown in registered version.</p>
+      	<p>VirtuosoSDK Version 3.13.1.8</p>
       </div>
     </div>
   	<script type="text/javascript">
