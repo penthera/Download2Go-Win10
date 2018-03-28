@@ -4,6 +4,7 @@ using Penthera.VirtuosoClient.Utilities;
 using System;
 using System.Threading.Tasks;
 using System.Threading;
+using System.Collections.ObjectModel;
 using VirtuosoClient.TestHarness.Common;
 using VirtuosoClient.TestHarness.Data;
 using Windows.Foundation;
@@ -15,6 +16,9 @@ using Windows.UI.Xaml.Navigation;
 using Windows.ApplicationModel.DataTransfer;
 
 namespace VirtuosoClient.TestHarness {
+    using Windows.UI.Xaml.Input;
+    using Windows.UI.Xaml.Media;
+
     /// <summary>
     /// A page that displays a grouped collection of items.
     /// </summary>
@@ -30,7 +34,7 @@ namespace VirtuosoClient.TestHarness {
         IAsyncOperation<IUICommand> PopUpCommand = null;
         private Object _setupPadlock = new Object();
         public string license_status = "";
-
+        private MenuFlyout menuFlyout;
         /// <summary>
         /// Gets the NavigationHelper used to aid in navigation and process lifetime management.
         /// </summary>
@@ -51,6 +55,8 @@ namespace VirtuosoClient.TestHarness {
         public HubPage() {
             this.InitializeComponent();
 
+            //menuFlyout = (MenuFlyout)Resources["contextMenu"];
+
             this.navigationHelper = new NavigationHelper(this);
             this.navigationHelper.LoadState += this.NavigationHelper_LoadState;
 
@@ -60,8 +66,35 @@ namespace VirtuosoClient.TestHarness {
             //handle backplane permission
             VClient.BackplanePermissionReceived += Client_BackplanePermissionReceived;
 
-            var autoEvent = new System.Threading.AutoResetEvent(false);
-            Timer timer = new Timer(new TimerCallback(RunSyncAsync), autoEvent, (int)VClient.Settings.MinimumBackplaneSyncInterval * 60000, 60);
+            // *******************************//
+            // This is for periodic backplane
+            // syncs for whne the app is open.
+            ThreadPoolTimer timer2 = ThreadPoolTimer.CreatePeriodicTimer((t) => {
+                if (VClient.Settings.MinimumBackplaneSyncInterval >= 60)
+                {
+                    VClient.SyncWithBackplaneAsync();
+                    VClient.Settings.LastSyncDateTime = DateTime.UtcNow;
+                }
+            }, TimeSpan.FromMinutes(60));
+            // *******************************//
+
+            // *******************************//
+            // This is for moving expired content 
+            // from the completed list to the 
+            // expired list in the UI.
+            ThreadPoolTimer timer = ThreadPoolTimer.CreatePeriodicTimer((t) =>
+            {
+                ObservableCollection<IAsset> _assets = QATestDataSource.GetCompletedAssetsAsync().Result;
+                foreach (var asset in _assets)
+                {
+                    this.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, () =>
+                    {
+                        if(!VClient.Expired.Contains(asset) && asset.Expired)
+                        VClient.Expired.Add(asset);
+                    });
+                }
+            }, TimeSpan.FromSeconds(59));
+            // *******************************//
         }
 
         /// <summary>
@@ -96,6 +129,7 @@ namespace VirtuosoClient.TestHarness {
             VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "++ Harness.Refresh Pending Tests");
             var pending = await QATestDataSource.GetPendingAssetsAsync();
             DefaultViewModel["PendingTests"] = pending;
+            
         }
         
         /// <summary>
@@ -116,6 +150,7 @@ namespace VirtuosoClient.TestHarness {
             VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "++ Harness.Refresh Expired Tests");
             var expired = await QATestDataSource.GetExpiredAssetsAsync();
             DefaultViewModel["ExpiredTests"] = expired;
+            VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "-- Harness.Refresh Expired Tests");
         }
 
         /// <summary>
@@ -127,7 +162,8 @@ namespace VirtuosoClient.TestHarness {
             for (var i = 0; i < test.Assets.Count; i++) {
                 var testAsset = test.Assets[i];
                 IAsset asset = null;
-                if (testAsset.SegmentedAssetType == ESegmentedAssetType.NONE) {
+                if (testAsset.SegmentedAssetType == ESegmentedAssetType.NONE)
+                {
                     // Download an MP4.  
 
                     asset = App.VClient.NewAsset(
@@ -140,7 +176,9 @@ namespace VirtuosoClient.TestHarness {
                               testAsset.ExpiryAfterPlay,
                               testAsset.ExpiryAfterDownload
                         );
-                } else if (testAsset.SegmentedAssetType == ESegmentedAssetType.HSS) {
+                }
+                else if (testAsset.SegmentedAssetType == ESegmentedAssetType.HSS)
+                {
                     asset = App.VClient.NewAsset(
                               testAsset.AssetId,
                               testAsset.Title,
@@ -153,7 +191,24 @@ namespace VirtuosoClient.TestHarness {
                               testAsset.ExpiryAfterPlay,
                               testAsset.ExpiryAfterDownload
                         );
-                } else {
+                }
+                else if (testAsset.SegmentedAssetType == ESegmentedAssetType.HLS)
+                {
+                    asset = App.VClient.NewAsset(
+                              testAsset.AssetId,
+                              testAsset.Title,
+                              testAsset.FileUrl,
+                              long.MaxValue,
+                              long.MaxValue,
+                              testAsset.Title,
+                              testAsset.PublishDate,
+                              testAsset.ExpiryDate,
+                              testAsset.ExpiryAfterPlay,
+                              testAsset.ExpiryAfterDownload
+                        );
+                }
+                else
+                {
                     // UNSUPPORTED ASSET TYPE
                 }
 
@@ -249,12 +304,25 @@ namespace VirtuosoClient.TestHarness {
         /// <param name="sender">The GridView or ListView
         /// displaying the item clicked.</param>
         /// <param name="e">Event data that describes the item clicked.</param>
-        void ItemView_ItemClick(object sender, ItemClickEventArgs e) {
+        void ItemView_ItemClick(object sender, ItemClickEventArgs e)
+        {
             // Navigate to the appropriate destination page, configuring the new page
             // by passing required information as a navigation parameter
-            var itemId = ((IAsset)e.ClickedItem).Uuid;
-            this.Frame.Navigate(typeof(AssetPage), itemId);
+            asset_id = ((IAsset)e.ClickedItem).Uuid;
+            MessageDialog msgbox = new MessageDialog("What do you want to do ?");
+            msgbox.Commands.Add(new UICommand("Play the Video", new UICommandInvokedHandler(PlayAssetHandler), asset_id));
+            msgbox.Commands.Add(new UICommand("View Statistics", new UICommandInvokedHandler(ViewAssetHandler), asset_id));
+            msgbox.ShowAsync();
+
+
+
+
+            //var itemId = ((IAsset)e.ClickedItem).Uuid;
+            //this.Frame.Navigate(typeof(AssetPage), itemId);
         }
+
+        Guid asset_id;
+
 
         /// <summary>
         /// Handles the OnItemClick event.
@@ -291,6 +359,16 @@ namespace VirtuosoClient.TestHarness {
         private async void SegmentHandler(IUICommand command) {
             SelectedQuality = (EQualityLevel)command.Id;
         }
+
+        private async void ViewAssetHandler(IUICommand command) {
+            this.Frame.Navigate(typeof(AssetInfoView), asset_id);
+        }
+
+        private async void PlayAssetHandler(IUICommand command)
+        {
+            this.Frame.Navigate(typeof(AssetPage),asset_id);
+        }
+
 
         /// <summary>
         /// 
@@ -410,6 +488,61 @@ namespace VirtuosoClient.TestHarness {
             VClient.ClearTraceLog();
         }
 
+        #endregion
+
+        #region Menu Flyout 
+
+   
+        private void ListView_ContextRequested(UIElement sender, ContextRequestedEventArgs e)
+        {
+            // Walk up the tree to find the ListViewItem.
+            // There may not be one if the click wasn't on an item.
+            var view = (ListView)sender;
+            //view.
+            var item = view.DataContext;
+            ObservableDictionary dict = (ObservableDictionary)item;
+            IAsset asset = (IAsset)dict["CompletedTests"];
+
+            MessageDialog diag = new MessageDialog(asset.Uuid.ToString());
+            diag.ShowAsync();
+
+            var requestedElement = (FrameworkElement)e.OriginalSource;
+            while ((requestedElement != sender) && !(requestedElement is ListViewItem))
+            {
+                requestedElement = (FrameworkElement)VisualTreeHelper.GetParent(requestedElement);
+            }
+            if (requestedElement != sender)
+            {
+                Point point;
+                if (e.TryGetPosition(requestedElement, out point))
+                {
+                    menuFlyout.ShowAt(requestedElement, point);
+                }
+                else
+                {
+                    menuFlyout.ShowAt(requestedElement);
+                }
+                e.Handled = true;
+            }
+        }
+
+        private void ListView_ContextCanceled(UIElement sender, RoutedEventArgs args) {
+            menuFlyout.Hide();
+        }
+
+
+        private void ViewAssetInfo_Click(object sender, RoutedEventArgs e)
+        {
+            //var itemId = ((IAsset)e.OriginalSource).Uuid;
+            this.Frame.Navigate(typeof(AssetInfoView), asset_id);
+        }
+
+        private void PlayAsset_Click(object sender, RoutedEventArgs e)
+        {
+            //var itemId = ((IAsset)e.OriginalSource).Uuid;
+            //this.Frame.Navigate(typeof(AssetPage), itemId);
+            this.Frame.Navigate(typeof(AssetPage), asset_id);
+        }
         #endregion
     }
 }

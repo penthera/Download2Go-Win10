@@ -1,0 +1,350 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="GENERATOR" content="VSdocman - documentation generator; http://www.helixoft.com" />
+	<title>EAssetStatus Enumeration</title>
+
+	<link rel="stylesheet" type="text/css" href="msdn2017/msdn2017.css"></link>
+	<script src="msdn2017/msdn2017.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushFSharp.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushCpp.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushJScript.js" type="text/javascript"></script>
+	<link href="SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
+	<link href="SyntaxHighlighter/styles/shThemeMsdnLW.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript">
+		SyntaxHighlighter.all();
+	</script>				
+
+	<script type="text/javascript">
+<!--
+if (self.name != "vbdocright") {
+	if (location.search != "?toc=no") {
+		var filename = location.pathname.replace(/\\/g, "/");
+		filename = filename.substring(filename.lastIndexOf('/')+1);
+		location.replace("index.html#" + filename);
+	} 
+}
+
+function replaceTitleAndUrl(win, title, url) {
+	if(history.replaceState) {
+		win.history.replaceState(null, title, url);
+	} else {
+		win.document.title = document.title;
+		win.location.replace(url);
+	}
+}
+//-->
+	</script>	
+</head>
+
+<body style="direction: ltr;">
+	<script type="text/javascript">
+		try {
+			if (location.search != "?toc=no") {
+				parent.document.title = document.title;
+				var filename = location.pathname.replace(/\\/g, "/");
+				filename = filename.substring(filename.lastIndexOf('/')+1);
+				if (window.parent.location.search == null || window.parent.location.search != "?" + filename) {
+					if (window.parent.location.hash == null || window.parent.location.hash != "#" + filename) {
+						replaceTitleAndUrl(window.parent, document.title, "index.html#" + filename);
+					}
+				}
+			}
+		} catch (ex) {}
+	</script>
+	<div id="topic">
+<!--HEADER START-->
+  <div id="header">
+  	<div id="runningHeaderText">VirtuosoSDK Reference</div>
+  	<h1 class="title">EAssetStatus Enumeration</h1>
+  	<div id="headerLinks">
+
+	<a href="#seeAlsoSection">See Also</a>
+
+		</div>
+		<hr />
+	</div>
+<!--HEADER END-->
+    
+		<div id="mainSection">
+      <div id="mainBody">
+        <p />
+       
+        /// Allowable states that a CNC asset can be in.  Returned via the 'Status' property on an Asset.
+    ///
+
+        <p>This enumeration has a   <a target="_top" href="http://msdn2.microsoft.com/en-US/library/System.FlagsAttribute">FlagsAttribute</a> attribute that allows a bitwise combination of its member values.</p>
+
+        <p /><strong>Namespace:</strong>
+<a href="topic_0000000000000001.html">Penthera.VirtuosoClient.Public</a>
+
+
+
+
+        <br /><strong>Assembly:</strong> CnCWindowsSDK (in CnCWindowsSDK.dll)
+
+
+
+
+
+
+
+
+	
+	
+	<div id="syntaxCodeBlocks">
+		
+
+
+		
+		
+	</div>
+
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Members</a></span>
+		<div><hr /></div>
+	</div>
+
+<div id="membersSection" class="section">
+	<table>
+		<tr>
+			<th>&nbsp;
+			</th>
+			<th>
+				Member name
+			</th>
+			<th>
+				Description
+			</th>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				KVDE_Download_Error
+			</td>
+			<td>
+				/// CNC has marked this asset Error
+        ///
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				kVDE_Download_Active
+			</td>
+			<td>
+				/// Download is in progress for this asset
+        ///
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				kVDE_Download_Attaching
+			</td>
+			<td>
+				/// Asset is preparing to download.
+        ///
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				kVDE_Download_Blocked
+			</td>
+			<td>
+				/// Asset is blocked
+        ///
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				kVDE_Download_Complete
+			</td>
+			<td>
+				/// Download is complete; asset is stored locally
+        ///
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				kVDE_Download_Deleted
+			</td>
+			<td>
+				/// CNC has deleted this asset
+        ///
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				kVDE_Download_Expired
+			</td>
+			<td>
+				/// CNC has marked this asset as expired
+        ///
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				kVDE_Download_None
+			</td>
+			<td>
+				/// Asset exists, but is not in the download queue
+        ///
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				kVDE_Download_NotAvailable
+			</td>
+			<td>
+				/// Asset has a publish date in the future, and thus not available
+        ///
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				kVDE_Download_Paused_Stopped
+			</td>
+			<td>
+				/// Asset is Paused or Stopped
+        ///
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				kVDE_Download_Pending
+			</td>
+			<td>
+				/// Asset is in download queue, waiting its turn
+        ///
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				kVDE_Download_Preparing
+			</td>
+			<td>
+				/// Asset is preparing to download.
+        ///
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				kVDE_Download_Ready
+			</td>
+			<td>
+				/// Asset is ready to download
+        ///
+			</td>
+		</tr>
+		<tr>
+			<td>
+			</td>
+			<td>
+				kVDE_Download_Resuming
+			</td>
+			<td>
+				 
+			</td>
+		</tr>
+		
+	</table>
+</div>					
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">See Also</a></span>
+		<div><hr /></div>
+	</div>
+
+	<div id="seeAlsoSection" class="section">	
+		<div>
+			
+<a href="topic_0000000000000001.html">Penthera.VirtuosoClient.Public Namespace</a><br />
+
+
+			
+<a href="topic_000000000000003C.html">Status</a>
+<br />
+
+		</div>
+	</div>					
+</div>
+			</div>
+			</div>
+      <div id="footer">
+      	<p>Generated with <a target="_top" href="http://www.helixoft.com/vsdocman/overview.html">VSdocman</a></p>
+      </div>
+    </div>
+  	<script type="text/javascript">
+<!--
+	try {
+		parent.frames["vbdocswitch"].expandLinkInToc(location.href);
+	} catch (ex) {}
+//-->
+		</script>	
+  </body>
+</html>

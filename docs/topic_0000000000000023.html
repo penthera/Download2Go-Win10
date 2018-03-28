@@ -3,13 +3,14 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="GENERATOR" content="VSdocman - documentation generator; http://www.helixoft.com" />
-	<title>IAsset Interface</title>
+	<title>ExpireEventHandler Delegate</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2017/msdn2017.css"></link>
 	<script src="msdn2017/msdn2017.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushFSharp.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCpp.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushJScript.js" type="text/javascript"></script>
 	<link href="SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
@@ -59,7 +60,7 @@ function replaceTitleAndUrl(win, title, url) {
 <!--HEADER START-->
   <div id="header">
   	<div id="runningHeaderText">VirtuosoSDK Reference</div>
-  	<h1 class="title">IAsset Interface</h1>
+  	<h1 class="title">ExpireEventHandler Delegate</h1>
   	<div id="headerLinks">
 
 	<a href="#seeAlsoSection">See Also</a>
@@ -73,16 +74,18 @@ function replaceTitleAndUrl(win, title, url) {
       <div id="mainBody">
         <p />
        
-        Parent interface for all CNC assets.
+        /// Sent when expire of an Asset occurs
+    ///
 
 
         <p /><strong>Namespace:</strong>
-<a href="topic_0000000000000000.html">Penthera.VirtuosoClient.Public</a>
+<a href="topic_0000000000000005.html">Penthera.VirtuosoClient.Public</a>
 
 
 
 
         <br /><strong>Assembly:</strong> CnCWindowsSDK (in CnCWindowsSDK.dll)
+
 
 
 
@@ -114,6 +117,9 @@ function replaceTitleAndUrl(win, title, url) {
 				<div class="codeSnippetTab csNaTab codeCsharp">
 					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
 				</div>
+				<div class="codeSnippetTab csNaTab codeFsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Fsharp');">F#</a>
+				</div>
 				<div class="codeSnippetTab csNaTab codeCpp">
 					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
 				</div>
@@ -132,7 +138,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Interface IAsset&nbsp;<br />    Inherits <a target="_top" href="http://msdn2.microsoft.com/en-us/library/4d7sx9hd.aspx">IComparable</a>(Of <a target="_top" href="topic_0000000000000023.html" onclick="this.target='';return true;">IAsset</a>), _&nbsp;<br />             <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged.aspx">INotifyPropertyChanged</a>, _&nbsp;<br />             <a target="_top" href="topic_000000000000000F.html" onclick="this.target='';return true;">IStatusProvider</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">Public Delegate Sub ExpireEventHandler( _&nbsp;<br />   ByVal <i>sender</i> As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.object.aspx">Object</a>, _&nbsp;<br />   ByVal <i>e</i> As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.eventargs.aspx">EventArgs</a> _&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -149,6 +155,9 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				<div class="codeSnippetTab csActiveTab codeCsharp">
 					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeFsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Fsharp');">F#</a>
 				</div>
 				<div class="codeSnippetTab csNaTab codeCpp">
 					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
@@ -168,13 +177,14 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public interface IAsset : <a target="_top" href="http://msdn2.microsoft.com/en-us/library/4d7sx9hd.aspx">IComparable</a>&lt;<a target="_top" href="topic_0000000000000023.html" onclick="this.target='';return true;">IAsset</a>&gt;,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged.aspx">INotifyPropertyChanged</a>,&nbsp;<br />   <a target="_top" href="topic_000000000000000F.html" onclick="this.target='';return true;">IStatusProvider</a></pre>			
+					<pre xml:space="preserve" class="brush: csharp">public delegate <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.void.aspx">void</a> ExpireEventHandler(&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.object.aspx">object</a> <i>sender</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.eventargs.aspx">EventArgs</a> <i>e</i>&nbsp;<br />)</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
 				</div>
 			</div>
 		</div>
+
 
 		<div class="codeSnippetContainer">
 			<div class="codeSnippetTabs">
@@ -185,6 +195,9 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				<div class="codeSnippetTab csNaTab codeCsharp">
 					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeFsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Fsharp');">F#</a>
 				</div>
 				<div class="codeSnippetTab csActiveTab codeCpp">
 					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
@@ -204,7 +217,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public interface class IAsset : public <a target="_top" href="http://msdn2.microsoft.com/en-us/library/4d7sx9hd.aspx">IComparable</a>&lt;<a target="_top" href="topic_0000000000000023.html" onclick="this.target='';return true;">IAsset</a>^&gt;^,&nbsp;<br />   public <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.componentmodel.inotifypropertychanged.aspx">INotifyPropertyChanged</a>^,&nbsp;<br />   public <a target="_top" href="topic_000000000000000F.html" onclick="this.target='';return true;">IStatusProvider</a>^</pre>			
+					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />delegate <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.void.aspx">void</a> ExpireEventHandler(&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.object.aspx">object</a>^ <i>sender</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.eventargs.aspx">EventArgs</a>^ <i>e</i>&nbsp;<br />) </pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -221,6 +234,9 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				<div class="codeSnippetTab csNaTab codeCsharp">
 					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeFsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Fsharp');">F#</a>
 				</div>
 				<div class="codeSnippetTab csNaTab codeCpp">
 					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
@@ -240,7 +256,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">JScript does not support generic types and methods.</pre>			
+					<pre xml:space="preserve" class="brush: js">JScript supports the use of delegates, but not the declaration of new ones.</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -251,1065 +267,86 @@ function replaceTitleAndUrl(win, title, url) {
 	</div>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-	</div>
-</div>
-
-
-
-
-<div class="section_container">
-	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Properties</a></span>
-		<div><hr /></div>
-	</div>
-
-	<div id="PropertiesSection" class="section">	
-  <table class="memberListTable">
-    <tr>
-      <th></th>
-      <th>
-        Name
-      </th>
-      <th>
-        Description
-      </th>
-    </tr>
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000002E.html">AssetId</a>
-
-	</td>
-	<td>
-
-An unique identifier that you provide when instantiating this asset
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000002F.html">AssetType</a>
-
-	</td>
-	<td>
-
-The type of Asset.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000025.html">ChannelURI</a>
-
-	</td>
-	<td>
-
-
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000032.html">CurrentSize</a>
-
-	</td>
-	<td>
-
-The current size of this asset CNC has already downloaded
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000030.html">Description</a>
-
-	</td>
-	<td>
-
-A human-readable description for this asset
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000041.html">DownloadCompleteDateTime</a>
-
-	</td>
-	<td>
-
-When CNC finished downloading this asset.  Null if CNC hasn't completed the download yet.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000038.html">DownloadError</a>
-
-	</td>
-	<td>
-
-The most recent download-related error this asset encountered.  If the download
-has not encountered an error, will be kVDE_Download_No_Error.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000036.html">DownloadErrorCount</a>
-
-	</td>
-	<td>
-
-The number of times this file has failed during the current pass.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000037.html">DownloadRetryCount</a>
-
-	</td>
-	<td>
-
-How many passes CNC has made attempting to download this file
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000047.html">Duration</a>
-
-	</td>
-	<td>
-
-The total duration of this asset in seconds.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000044.html">EffectiveExpiryDate</a>
-
-	</td>
-	<td>
-
-When CNC predicts this asset will expire.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000031.html">ExpectedSize</a>
-
-	</td>
-	<td>
-
-Expected size of this asset, in bytes
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000045.html">Expired</a>
-
-	</td>
-	<td>
-
-Is this asset already expired?
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000040.html">ExpiryAfterDownload</a>
-
-	</td>
-	<td>
-
-After the asset has completed download, as soon as possible after 'expiryAfterDownload' time has elapsed,
-CNC automatically deletes the asset.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000003F.html">ExpiryAfterPlay</a>
-
-	</td>
-	<td>
-
-After the asset is first played, as soon as possible after 'expiryAfterPlay' time has elapsed,
-CNC automatically deletes the asset.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000003E.html">ExpiryDate</a>
-
-	</td>
-	<td>
-
-As soon as possible after 'expiryDate' has passed, CNC automatically deletes the asset.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000035.html">FQFileName</a>
-
-	</td>
-	<td>
-
-
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000003B.html">FilePath</a>
-
-	</td>
-	<td>
-
-The on-disk file path for this file. Will be nil if CNC hasn't completed downloading this file yet,
-or if the file is unavailable due to SDK business rules (e.g. it's outside of its availability window).
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000034.html">FileUrl</a>
-
-	</td>
-	<td>
-
-Where this file exists on the Internet
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000042.html">FirstPlayDateTime</a>
-
-	</td>
-	<td>
-
-When this asset was first played.  Null if CNC is not aware of this asset being played yet.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000033.html">FractionComplete</a>
-
-	</td>
-	<td>
-
-How much of this asset CNC has already downloaded, as a fraction between 0.0 and 1.0
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000024.html">Id</a>
-
-	</td>
-	<td>
-
-An unique autoincrement identifier of the asset
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000026.html">MediaRandomAccessStream</a>
-
-	</td>
-	<td>
-
-
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000003C.html">Metadata</a>
-
-	</td>
-	<td>
-
-Metadata provided by Client.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000039.html">PreviousDownloadError</a>
-
-	</td>
-	<td>
-
-The most recent download-related error this asset encountered.  If the download
-has not encountered an error, will be kVDE_Download_No_Error.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000003D.html">PublishDate</a>
-
-	</td>
-	<td>
-
-When this asset should become available
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000029.html">ReceivedMime</a>
-
-	</td>
-	<td>
-
-
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000002A.html">SegmentedFileProperties</a>
-
-	</td>
-	<td>
-
-Aditional data related to Segmented Assets
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000003A.html">Status</a>
-
-	</td>
-	<td>
-
-Indicates the current status of the asset.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_000000000000002D.html">Uuid</a>
-
-	</td>
-	<td>
-
-A universally unique identifier (UUID) that CNC generates when it created this asset.
-
-	</td>
-</tr>
-	
-
-
-  </table>
-
-  <a href="#mainBody">
-    Top
-  </a>
-
-	</div>					
-</div>
-
-
-
-
-
-
-<div class="section_container">
-	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Methods</a></span>
-		<div><hr /></div>
-	</div>
-
-	<div id="MethodsSection" class="section">	
-  <table class="memberListTable">
-    <tr>
-      <th></th>
-      <th>
-        Name
-      </th>
-      <th>
-        Description
-      </th>
-    </tr>
-
-
-
-
-	<tr class="
-
-
-">
-	<td>
-<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000028.html">CleanupAfterPlayback()</a>
-
-	</td>
-	<td>
-
-
-
-	</td>
-</tr>
-
-
-
-
-
-
-
-
-	<tr class="
-
-
-">
-	<td>
-<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000043.html">IsWithinAvailabilityWindow()</a>
-
-	</td>
-	<td>
-
-Is this asset within its availability window?
-
-	</td>
-</tr>
-
-
-
-
-
-
-
-
-	<tr class="
-
-
-">
-	<td>
-<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000027.html">PrepareForPlaybackInPlayer(MediaPlayer)</a>
-
-	</td>
-	<td>
-
-
-
-	</td>
-</tr>
-
-
-
-
-
-
-
-
-	<tr class="
-
-
-">
-	<td>
-<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_0000000000000046.html">ResetErrorState()</a>
-
-	</td>
-	<td>
-
-Clears this asset's internal retry count, so CNC will retry downloading it
-
-	</td>
-</tr>
-
-
-
-
-
-
-  </table>
-
-  <a href="#mainBody">
-    Top
-  </a>
-
-	</div>					
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="section_container">
-	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Events</a></span>
-		<div><hr /></div>
-	</div>
-
-	<div id="EventsSection" class="section">	
-  <table class="memberListTable">
-    <tr>
-      <th></th>
-      <th>
-        Name
-      </th>
-      <th>
-        Description
-      </th>
-    </tr>
-
-	<tr class="
-	
-	
-	">
-	  <td>
-    <img alt="Public event" title="Public event" src="msdn2017/pubevent.png"></img>
-
-	
-	    
-	  </td>
-	  <td>
-	    <a href="topic_000000000000002B.html">DownloadComplete</a>
-
-	  </td>
-	  <td>
-	
-	Called when this asset successfully finishes download
-	
-		</td>
-	</tr>
-	<tr class="
-	
-	
-	">
-	  <td>
-    <img alt="Public event" title="Public event" src="msdn2017/pubevent.png"></img>
-
-	
-	    
-	  </td>
-	  <td>
-	    <a href="topic_000000000000002C.html">ExpireHandler</a>
-
-	  </td>
-	  <td>
-	
-	
-	
-		</td>
-	</tr>
-
-  </table>
-
-  <a href="#mainBody">
-    Top
-  </a>
-
-	</div>					
-</div>
-
-  
-
-<!-- Classes -->
-
-<!-- Classes End -->
-
-<!-- Standard Modules -->
-
-<!-- Standard Modules End -->
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="section_container">
-	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Platforms</a></span>
-		<div><hr /></div>
-	</div>
-
-	<div id="platformsSection" class="section">	
+<h4 class="subHeading">
+	Parameters</h4><dl paramName="sender">
+	<dt>
+		<span class="parameter">
+			sender
+		</span>
+	</dt>
+	<dd>
+		Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.object.aspx">object</a> 
 		<p>
-			Universal Windows
+			The sender. 
 		</p>
+	</dd>
+</dl>
+<dl paramName="e">
+	<dt>
+		<span class="parameter">
+			e
+		</span>
+	</dt>
+	<dd>
+		Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.eventargs.aspx">EventArgs</a> 
 		<p>
-			The .NET Framework does not support all versions of every platform. For a list of the supported versions, see 
-			<a target="_top" href="http://msdn2.microsoft.com/en-us/library/298275e2-da1d-4618-9f74-6a3567832350.aspx">System Requirements</a>.
+			The <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.eventargs.aspx">EventArgs</a> instance containing the event data. 
 		</p>
-	</div>					
+	</dd>
+</dl>
+
+<p />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
   
 
 
-	
+
+
+
+
+
 	
 	
 	
@@ -1318,14 +355,18 @@ Clears this asset's internal retry count, so CNC will retry downloading it
 
 <div class="section_container">
 	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Version Information</a></span>
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Applies to</a></span>
 		<div><hr /></div>
 	</div>
 
 	<div id="frameworksSection" class="section">	
-  <h4 class="subHeading">.NET Framework</h4>Supported in: 4.6, 4.5, 4, 3.5, 3.0, 2.0, 1.1, 1.0<br />
+  <h4 class="subHeading">.NET Framework</h4>Supported in: 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1<br />
 
-  <h4 class="subHeading">.NET Framework Client Profile</h4>Supported in: 4, 3.5 SP1<br />
+
+
+
+
+
 
 
 
@@ -1343,10 +384,11 @@ Clears this asset's internal retry count, so CNC will retry downloading it
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-	<a href="topic_0000000000000000.html">Penthera.VirtuosoClient.Public Namespace</a><br />
+			
+<a href="topic_0000000000000005.html">Penthera.VirtuosoClient.Public Namespace</a><br />
 
 
-	
+			
 
 		</div>
 	</div>					
@@ -1354,7 +396,7 @@ Clears this asset's internal retry count, so CNC will retry downloading it
 			</div>
 			</div>
       <div id="footer">
-      	<p>VirtuosoSDK Version 3.13.1.8</p>
+      	<p><span style="color: #FF0000;">Generated with unregistered version of <a target="_top" href="http://www.helixoft.com/vsdocman/overview.html">VSdocman</a></span>&nbsp;<br />Your own footer text will only be shown in registered version.</p>
       </div>
     </div>
   	<script type="text/javascript">
@@ -1366,4 +408,3 @@ Clears this asset's internal retry count, so CNC will retry downloading it
 		</script>	
   </body>
 </html>
-

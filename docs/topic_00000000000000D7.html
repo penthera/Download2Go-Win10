@@ -3,13 +3,14 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="GENERATOR" content="VSdocman - documentation generator; http://www.helixoft.com" />
-	<title>ImplementationProviderAttribute(String, String) Constructor</title>
+	<title>ImplementationProviderAttribute Class</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2017/msdn2017.css"></link>
 	<script src="msdn2017/msdn2017.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushFSharp.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCpp.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushJScript.js" type="text/javascript"></script>
 	<link href="SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
@@ -59,7 +60,7 @@ function replaceTitleAndUrl(win, title, url) {
 <!--HEADER START-->
   <div id="header">
   	<div id="runningHeaderText">VirtuosoSDK Reference</div>
-  	<h1 class="title">ImplementationProviderAttribute(String, String) Constructor</h1>
+  	<h1 class="title">ImplementationProviderAttribute Class</h1>
   	<div id="headerLinks">
 
 	<a href="#seeAlsoSection">See Also</a>
@@ -73,32 +74,18 @@ function replaceTitleAndUrl(win, title, url) {
       <div id="mainBody">
         <p />
        
-        This assembly attribute provides the information for instantiating an Implementation.
-The positional parameters specify the class and the method to be used as the factory method.
-The class name must be the fully qualified of name the class
-e.g.: Mycompany.MimeTypeValidationImplementation.MimeTypeValidation
-The method name is the name of the method that can instantiate the implementation.
-The Method MUST be a public static method with NO parameters and return an instance
-from which the IMimeTypeValidation is assignable from.
-for example:
-namespace MyCompany.MimeTypeValidationImplementation
-{
-    public class MimeTypeValidation : IMimeTypeValidation
-    {
-    public static MimeTypeValidation ImplementationInstance(){return new MimeTypeValidation();}
-    }
-}
-should have the ImplementationProviderAttribute set as
-[assembly: ImplementationProvider(&quot;Mycompany.MimeTypeValidationImplementation.MimeTypeValidation&quot;,&quot;ImplementationInstance&quot;)]
+        /// This assembly attribute provides the information for instantiating a client Implementation of a Plugin.
+    ///
 
 
         <p /><strong>Namespace:</strong>
-<a href="topic_0000000000000000.html">Penthera.VirtuosoClient.Public</a>
+<a href="topic_0000000000000001.html">Penthera.VirtuosoClient.Public</a>
 
 
 
 
         <br /><strong>Assembly:</strong> CnCWindowsSDK (in CnCWindowsSDK.dll)
+
 
 
 
@@ -130,6 +117,9 @@ should have the ImplementationProviderAttribute set as
 				<div class="codeSnippetTab csNaTab codeCsharp">
 					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
 				</div>
+				<div class="codeSnippetTab csNaTab codeFsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Fsharp');">F#</a>
+				</div>
 				<div class="codeSnippetTab csNaTab codeCpp">
 					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
 				</div>
@@ -148,7 +138,7 @@ should have the ImplementationProviderAttribute set as
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">Public Sub New( _&nbsp;<br />   ByVal <i>FactoryClassName</i> As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>, _&nbsp;<br />   ByVal <i>FactoryMethodName</i> As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a> _&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: vb">&lt;AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)&gt; _&nbsp;<br />Public Class ImplementationProviderAttribute&nbsp;<br />    Inherits <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.attribute.aspx">Attribute</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -165,6 +155,9 @@ should have the ImplementationProviderAttribute set as
 				</div>
 				<div class="codeSnippetTab csActiveTab codeCsharp">
 					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeFsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Fsharp');">F#</a>
 				</div>
 				<div class="codeSnippetTab csNaTab codeCpp">
 					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
@@ -184,13 +177,14 @@ should have the ImplementationProviderAttribute set as
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp">public ImplementationProviderAttribute(&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">string</a> <i>FactoryClassName</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">string</a> <i>FactoryMethodName</i>&nbsp;<br />)</pre>			
+					<pre xml:space="preserve" class="brush: csharp">[AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]&nbsp;<br />public class ImplementationProviderAttribute : <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.attribute.aspx">Attribute</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
 				</div>
 			</div>
 		</div>
+
 
 		<div class="codeSnippetContainer">
 			<div class="codeSnippetTabs">
@@ -201,6 +195,9 @@ should have the ImplementationProviderAttribute set as
 				</div>
 				<div class="codeSnippetTab csNaTab codeCsharp">
 					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeFsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Fsharp');">F#</a>
 				</div>
 				<div class="codeSnippetTab csActiveTab codeCpp">
 					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
@@ -220,7 +217,7 @@ should have the ImplementationProviderAttribute set as
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">public: &nbsp;<br />ImplementationProviderAttribute(&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>^ <i>FactoryClassName</i>,&nbsp;<br />   <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>^ <i>FactoryMethodName</i>&nbsp;<br />) </pre>			
+					<pre xml:space="preserve" class="brush: cpp">[AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)]&nbsp;<br />public ref class ImplementationProviderAttribute : public <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system::attribute.aspx">Attribute</a>^</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -237,6 +234,9 @@ should have the ImplementationProviderAttribute set as
 				</div>
 				<div class="codeSnippetTab csNaTab codeCsharp">
 					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeFsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Fsharp');">F#</a>
 				</div>
 				<div class="codeSnippetTab csNaTab codeCpp">
 					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
@@ -256,7 +256,7 @@ should have the ImplementationProviderAttribute set as
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">public function ImplementationProviderAttribute(&nbsp;<br />    <i>FactoryClassName</i> : <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>,&nbsp;<br />    <i>FactoryMethodName</i> : <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">String</a>&nbsp;<br />);</pre>			
+					<pre xml:space="preserve" class="brush: js">public &nbsp;<br />   AttributeUsage(AttributeTargets.Assembly, AllowMultiple = false, Inherited = false)&nbsp;<br />class ImplementationProviderAttribute&nbsp;<br />   extends <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.attribute.aspx">Attribute</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -267,35 +267,6 @@ should have the ImplementationProviderAttribute set as
 	</div>
 
 
-<h4 class="subHeading">
-	Parameters</h4><dl paramName="FactoryClassName">
-	<dt>
-		<span class="parameter">
-			FactoryClassName
-		</span>
-	</dt>
-	<dd>
-		Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">string</a> 
-		<p>
-			The Full name of the class containing the factory method 
-		</p>
-	</dd>
-</dl>
-<dl paramName="FactoryMethodName">
-	<dt>
-		<span class="parameter">
-			FactoryMethodName
-		</span>
-	</dt>
-	<dd>
-		Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.string.aspx">string</a> 
-		<p>
-			The name of the method that should be called to instantiate the implementation 
-		</p>
-	</dd>
-</dl>
-
-<p />
 
 
 
@@ -315,6 +286,262 @@ should have the ImplementationProviderAttribute set as
 
 
 
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Constructors</a></span>
+		<div><hr /></div>
+	</div>
+
+	<div id="ConstructorsSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+
+							<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public constructor" title="Public constructor" src="msdn2017/pubmethod.png"></img>
+
+	
+	    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000DA.html">ImplementationProviderAttribute(string, string)</a>
+
+	  </td>
+	  <td>
+	
+	/// This assembly attribute provides the information for instantiating an Implementation.
+        /// The positional parameters specify the class and the method to be used as the factory method.
+        /// The class name must be the fully qualified of name the class
+        /// e.g.: Mycompany.MimeTypeValidationImplementation.MimeTypeValidation
+        /// The method name is the name of the method that can instantiate the implementation.
+        /// The Method MUST be a public static method with NO parameters and return an instance
+        /// from which the IMimeTypeValidation is assignable from.
+        /// for example:
+        /// namespace MyCompany.MimeTypeValidationImplementation
+        /// {
+        ///     public class MimeTypeValidation : IMimeTypeValidation
+        ///     {
+        ///     public static MimeTypeValidation ImplementationInstance(){return new MimeTypeValidation();}
+        ///     }
+        /// }
+        /// should have the ImplementationProviderAttribute set as
+        /// [assembly: ImplementationProvider(&quot;Mycompany.MimeTypeValidationImplementation.MimeTypeValidation&quot;,&quot;ImplementationInstance&quot;)]
+        ///
+	
+		</td>
+	</tr>
+						<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public constructor" title="Public constructor" src="msdn2017/pubmethod.png"></img>
+
+	
+	    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000DB.html">ImplementationProviderAttribute(string)</a>
+
+	  </td>
+	  <td>
+	
+	/// This assembly attribute provides the information for instantiating an Implementation.
+        /// The positional parameter specifies the fully qualified name of the method to be used as the factory method.
+        /// e.g.: Mycompany.MimeTypeValidationImplementation.MimeTypeValidationr.ImplementationInstance
+        /// The Method MUST be a public static method with NO parameters and return an instance
+        /// from which the IStoreContentProvider is assignable from.
+        /// for example:
+        /// namespace MyCompany.MimeTypeValidationImplementation
+        /// {
+        ///     public class MimeTypeValidation : IMimeTypeValidation
+        ///     {
+        ///     public static MimeTypeValidation ImplementationInstance(){return new MimeTypeValidation();}
+        ///     }
+        /// }
+        /// should have the ImplementationProviderrAttribute set as
+        /// [assembly: ImplementationProvider(&quot;Mycompany.MimeTypeValidationImplementation.MimeTypeValidation.ImplementationInstance&quot;)]
+        ///
+	
+		</td>
+	</tr>
+		
+	
+
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Properties</a></span>
+		<div><hr /></div>
+	</div>
+
+	<div id="PropertiesSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000D8.html">Method</a>
+
+	</td>
+	<td>
+
+/// The name of the method that should be called to instantiate the implementation
+        ///
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.attribute.typeid.aspx">TypeId</a>
+
+	</td>
+	<td>
+
+
+(inherited from <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.attribute.aspx">Attribute</a>).
+
+	</td>
+</tr>
+	
+
+
+	
+		<tr class="
+
+
+">
+	<td>
+<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a href="topic_00000000000000D9.html">TypeName</a>
+
+	</td>
+	<td>
+
+/// The Full name of the class containing the factory method.
+        ///
+
+	</td>
+</tr>
+	
+
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
+
+
+
+
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Methods</a></span>
+		<div><hr /></div>
+	</div>
+
+	<div id="MethodsSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a target="_top" href="http://msdn2.microsoft.com/en-us/library/09ds241w.aspx">Equals(Object)</a>
+
+	</td>
+	<td>
+
+
+(inherited from <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.attribute.aspx">Attribute</a>).
+
+	</td>
+</tr>
 
 
 
@@ -323,6 +550,191 @@ should have the ImplementationProviderAttribute set as
 
 
 
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.attribute.gethashcode.aspx">GetHashCode</a>
+
+	</td>
+	<td>
+
+
+(inherited from <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.attribute.aspx">Attribute</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.object.gettype.aspx">GetType</a>
+
+	</td>
+	<td>
+
+
+(inherited from <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.object.aspx">Object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.attribute.isdefaultattribute.aspx">IsDefaultAttribute</a>
+
+	</td>
+	<td>
+
+
+(inherited from <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.attribute.aspx">Attribute</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.attribute.match.aspx">Match(Object)</a>
+
+	</td>
+	<td>
+
+
+(inherited from <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.attribute.aspx">Attribute</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+
+
+	<tr class="
+inheritedMember 
+
+
+">
+	<td>
+<img alt="Public method" title="Public method" src="msdn2017/pubmethod.png"></img>
+	  
+
+    
+	</td>
+	<td>
+	<a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.object.tostring.aspx">ToString</a>
+
+	</td>
+	<td>
+
+
+(inherited from <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.object.aspx">Object</a>).
+
+	</td>
+</tr>
+
+
+
+
+
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+<!-- Classes -->
+
+<!-- Classes End -->
+
+<!-- Standard Modules -->
+
+<!-- Standard Modules End -->
+
+  
 
 
 
@@ -337,27 +749,50 @@ should have the ImplementationProviderAttribute set as
 
 <div class="section_container">
 	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Platforms</a></span>
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Inheritance Hierarchy</a></span>
 		<div><hr /></div>
 	</div>
 
-	<div id="platformsSection" class="section">	
-		<p>
-			Universal Windows
-		</p>
-		<p>
-			The .NET Framework does not support all versions of every platform. For a list of the supported versions, see 
-			<a target="_top" href="http://msdn2.microsoft.com/en-us/library/298275e2-da1d-4618-9f74-6a3567832350.aspx">System Requirements</a>.
-		</p>
-	</div>					
+<div id="inheritanceHierarchySection" class="section">
+
+<div style="padding-left:0em;"><a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.object.aspx">System.Object</a>
 </div>
+
+<div style="padding-left:1em;"><a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.attribute.aspx">System.Attribute</a>
+</div>
+
+
+
+<div style="padding-left:2em;">Penthera.VirtuosoClient.Public.ImplementationProviderAttribute</div>
+
+				
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
   
 
 
-	
+
+
+
+
+
 	
 	
 	
@@ -366,14 +801,18 @@ should have the ImplementationProviderAttribute set as
 
 <div class="section_container">
 	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Version Information</a></span>
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Applies to</a></span>
 		<div><hr /></div>
 	</div>
 
 	<div id="frameworksSection" class="section">	
-  <h4 class="subHeading">.NET Framework</h4>Supported in: 4.6, 4.5, 4, 3.5, 3.0, 2.0, 1.1, 1.0<br />
+  <h4 class="subHeading">.NET Framework</h4>Supported in: 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1<br />
 
-  <h4 class="subHeading">.NET Framework Client Profile</h4>Supported in: 4, 3.5 SP1<br />
+
+
+
+
+
 
 
 
@@ -382,6 +821,7 @@ should have the ImplementationProviderAttribute set as
 	
 	</div>					
 </div>
+
 
 <div class="section_container">
 	<div class="section_heading">
@@ -391,14 +831,10 @@ should have the ImplementationProviderAttribute set as
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000000D4.html">ImplementationProviderAttribute Class</a><br />
+	<a href="topic_0000000000000001.html">Penthera.VirtuosoClient.Public Namespace</a><br />
 
 
-
-<a href="topic_0000000000000000.html">Penthera.VirtuosoClient.Public Namespace</a><br />
-
-
-			
+	
 
 		</div>
 	</div>					
@@ -406,7 +842,7 @@ should have the ImplementationProviderAttribute set as
 			</div>
 			</div>
       <div id="footer">
-      	<p>VirtuosoSDK Version 3.13.1.8</p>
+      	<p>Generated with <a target="_top" href="http://www.helixoft.com/vsdocman/overview.html">VSdocman</a></p>
       </div>
     </div>
   	<script type="text/javascript">

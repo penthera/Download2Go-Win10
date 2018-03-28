@@ -1,7 +1,499 @@
 {
   "Sections": [
     {
-      "UniqueId": "HSS_FIles",
+      "UniqueId": "HLS_Files",
+      "Title": "HLS Files",
+      "Tests": [
+        {
+          "UniqueId": "HTTYDHLSENC4SB",
+          "Title": "How To Train Your Dragon HLS Relative URLs",
+          "Assets": [
+            {
+              "AssetId": "HTTYDHLSENC4SB",
+              "Title": "How To Train Your Dragon HLS Relative URLs",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/httyd_rel.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "HTTYDHLSABS",
+          "Title": "How To Train Your Dragon HLS Absolute URLs",
+          "Assets": [
+            {
+              "AssetId": "HTTYDHLSABS",
+              "Title": "How To Train Your Dragon HLS Absolute URLs",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/httyd.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "IM2HLSREL",
+          "Title": "Iron Man 2 HLS Relative URLs",
+          "Assets": [
+            {
+              "AssetId": "IM2HLSREL",
+              "Title": "Iron Man 2 HLS Relative URLs",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/im2_rel.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "TBHLSABSENC",
+          "Title": "True Blood HLS Encrypted Absolute URLs",
+          "Assets": [
+            {
+              "AssetId": "TBHLSABSENC",
+              "Title": "True Blood HLS Encrypted Absolute URLs",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/tb_enc.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "IM2HLSRELENC",
+          "Title": "Iron Man 2 HLS Encrypted Relative URLs",
+          "Assets": [
+            {
+              "AssetId": "IM2HLSRELENC",
+              "Title": "Iron Man 2 HLS Encrypted Relative URLs",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/im2_enc_rel.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "TBHLSRELENCM",
+          "Title": "True Blood HLS Encrypted Multiple Keys",
+          "Assets": [
+            {
+              "AssetId": "TBHLSRELENCM",
+              "Title": "True Blood HLS Encrypted Multiple Keys",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/tb_encm_rel.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "IRONMAN2SHORT",
+          "Title": "Iron Man 2 HLS Relative Shortened",
+          "Assets": [
+            {
+              "AssetId": "IRONMAN2SHORT",
+              "Title": "Iron Man 2 HLS Relative Shortened",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/normal/1200/im2_short_1.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "CC_TEST",
+          "Title": "Basic CC Test",
+          "Assets": [
+            {
+              "AssetId": "CC_TEST",
+              "Title": "Basic CC Test",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/cc_test/a.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "SINGLE_CC_TEST",
+          "Title": "Single File CC Test",
+          "Assets": [
+            {
+              "AssetId": "SINGLE_CC_TEST",
+              "Title": "Single File CC Test",
+              "FileUrl": "http://playertest.longtailvideo.com/adaptive/eleph-audio/playlist.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "Chappie_20_sec",
+          "Title": "Chappie HD (361 Seg)",
+          "Assets": [
+            {
+              "AssetId": "Chappie_20_sec",
+              "Title": "Chappie HD (361 Seg)",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/chappie/chappie_twenty_sec/prog_index.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "Chappie_10_sec",
+          "Title": "Chappie HD (724 Seg)",
+          "Assets": [
+            {
+              "AssetId": "Chappie_10_sec",
+              "Title": "Chappie HD (724 Seg)",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/chappie/chappie_ten_sec/prog_index.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "Chappie_5_sec",
+          "Title": "Chappie HD (1453 Seg)",
+          "Assets": [
+            {
+              "AssetId": "Chappie_5_sec",
+              "Title": "Chappie HD (1453 Seg)",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/chappie/chappie_five_sec/prog_index.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "Chappie_3_sec",
+          "Title": "Chappie HD (2438 Seg)",
+          "Assets": [
+            {
+              "AssetId": "Chappie_3_sec",
+              "Title": "Chappie HD (2438 Seg)",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/chappie/chappie_three_sec/prog_index.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "Chappie_2_sec",
+          "Title": "Chappie HD (3683 Seg)",
+          "Assets": [
+            {
+              "AssetId": "Chappie_2_sec",
+              "Title": "Chappie HD (3683 Seg)",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/chappie/chappie_two_sec/prog_index.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "Chappie_1_sec",
+          "Title": "Chappie HD (7527 Seg)",
+          "Assets": [
+            {
+              "AssetId": "Chappie_1_sec",
+              "Title": "Chappie HD (7527 Seg)",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/chappie/chappie_one_sec/prog_index.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "KungFu_Ten_Sec",
+          "Title": "Kung Fu Dragon 512Kbps (498 Seg)",
+          "Assets": [
+            {
+              "AssetId": "KungFu_Ten_Sec",
+              "Title": "Kung Fu Dragon 512Kbps (498 Seg)",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/dragon_ten_sec/prog_index.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "KungFu_One_Sec",
+          "Title": "Kung Fu Dragon 512 Kbps (5177 Seg)",
+          "Assets": [
+            {
+              "AssetId": "KungFu_One_Sec",
+              "Title": "Kung Fu Dragon 512 Kbps (5177 Seg)",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/dragon_one_sec/prog_index.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "Frank_Ten_Sec",
+          "Title": "Lady Frankenstein 128Kbps (503 Seg)",
+          "Assets": [
+            {
+              "AssetId": "Frank_Ten_Sec",
+              "Title": "Lady Frankenstein 128Kbps (503 Seg)",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/frankenstein_ten_sec/prog_index.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "Frank_One_Sec",
+          "Title": "Lady Frankenstein 128 Kbps (5138 Seg)",
+          "Assets": [
+            {
+              "AssetId": "Frank_One_Sec",
+              "Title": "Lady Frankenstein 128 Kbps (5138 Seg)",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/frankenstein_one_sec/prog_index.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "IM2_BROKEN",
+          "Title": "Iron Man 2 (Broken Segments)",
+          "Assets": [
+            {
+              "AssetId": "IM2_BROKEN",
+              "Title": "Iron Man 2 (Broken Segments)",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/normal/1200/im2_broken.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        },
+        {
+          "UniqueId": "IM2_BROKEN_END",
+          "Title": "Iron Man 2 (Broken At End)",
+          "Assets": [
+            {
+              "AssetId": "IM2_BROKEN_END",
+              "Title": "Iron Man 2 (Broken At End)",
+              "FileUrl": "http://hls-vbcp.s3.amazonaws.com/normal/1200/im2_broken2.m3u8",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "video/m3u8",
+              "Metadata": null,
+              "mediaType": 3,
+              "audioMax": 2147483647,
+              "videoMax": 2147483647
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "UniqueId": "LGI_FILES",
+      "Title": "LGI Files",
+      "Tests": [
+        {
+          "UniqueId": "LGITEST1",
+          "Title": "LGI Manifest Test 1",
+          "Assets": [
+            {
+              "AssetId": "LGITEST1",
+              "Title": "LGI Manifest Test 1",
+              "FileUrl": "http://wp16-vod-nl.horizon.tv/shss/7c30add0-9b8d-40a4-ace7-1999e99ac84f/3.ism/Manifest?start=0&end=-1&device=Orion-HSS",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "text/xml",
+              "Metadata": null,
+              "mediaType": 5,
+              "audioMax": 99999999999,
+              "videoMax": 99999999999
+            }
+          ]
+        },
+        {
+          "UniqueId": "LGITEST2",
+          "Title": "LGI Manifest Test 2",
+          "Assets": [
+            {
+              "AssetId": "LGITEST2",
+              "Title": "LGI Manifest Test 2",
+              "FileUrl": "http://wp10-vod-nl.horizon.tv/shss/46e82bd8-f33a-4242-80f1-de10f559717d/3.ism/Manifest?start=0&end=-1&device=Orion-HSS",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "text/xml",
+              "Metadata": null,
+              "mediaType": 5,
+              "audioMax": 9999999999,
+              "videoMax": 9999999999
+            }
+          ]
+        },
+        {
+          "UniqueId": "LGI_TEST",
+          "Title": "LGI Test in STATES ONLY",
+          "Assets": [
+            {
+              "AssetId": "LGI_TEST",
+              "Title": "LGI Test in STATES ONLY",
+              "FileUrl": "http://wpm5-vod-de.horizon.tv/shss/b7c27f44-99b7-4d24-9012-0a4d455af455/3.ism/Manifest?start=0&amp;end=-1&amp;device=Orion-HSS",
+              "PublishDate": null,
+              "ExpiryDate": null,
+              "ExpiryAfterDownload": null,
+              "ExpiryAfterPlay": null,
+              "MimeTypes": "text/xml",
+              "Metadata": null,
+              "mediaType": 5,
+              "audioMax": -1,
+              "videoMax": -1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "UniqueId": "HSS_Files",
       "Title": "HSS Files",
       "Tests": [
         {
@@ -667,4 +1159,4 @@
       ]
     }
   ]
-}
+    }

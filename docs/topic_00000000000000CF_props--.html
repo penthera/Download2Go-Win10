@@ -3,13 +3,14 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="GENERATOR" content="VSdocman - documentation generator; http://www.helixoft.com" />
-	<title>ILicense Properties</title>
+	<title>ILicenseProvider Properties</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2017/msdn2017.css"></link>
 	<script src="msdn2017/msdn2017.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushFSharp.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCpp.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushJScript.js" type="text/javascript"></script>
 	<link href="SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
@@ -59,9 +60,9 @@ function replaceTitleAndUrl(win, title, url) {
 <!--HEADER START-->
   <div id="header">
   	<div id="runningHeaderText">VirtuosoSDK Reference</div>
-  	<h1 class="title">ILicense Properties</h1>
+  	<h1 class="title">ILicenseProvider Properties</h1>
   	<div id="headerLinks">
-              <a href="topic_00000000000000CF.html">ILicense Interface</a>
+              <a href="topic_00000000000000CF.html">ILicenseProvider Interface</a>
             &nbsp;<a href="#seeAlsoSection">See Also</a>
 		</div>
 		<hr />
@@ -73,7 +74,7 @@ function replaceTitleAndUrl(win, title, url) {
         <p />
         <p>
           The following tables list the members exposed by the  
-              <a href="topic_00000000000000CF.html">ILicense</a>
+              <a href="topic_00000000000000CF.html">ILicenseProvider</a>
              type.
         </p>
 
@@ -108,36 +109,13 @@ function replaceTitleAndUrl(win, title, url) {
     
 	</td>
 	<td>
-	<a href="topic_00000000000000D1.html">ExpiryDate</a>
+	<a href="topic_00000000000000D0.html">LicenseKey</a>
 
 	</td>
 	<td>
 
-Gets the expiry date.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000000D2.html">ExpiryDays</a>
-
-	</td>
-	<td>
-
-Gets the expiry days.
+/// Gets the license key.
+        ///
 
 	</td>
 </tr>
@@ -156,114 +134,13 @@ Gets the expiry days.
     
 	</td>
 	<td>
-	<a href="topic_00000000000000D0.html">IsValid</a>
+	<a href="topic_00000000000000D1.html">LicenseSignature</a>
 
 	</td>
 	<td>
 
-Gets a value indicating whether this object is valid.
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-inheritedMember 
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000000CD.html">LicenseKey</a>
-
-	</td>
-	<td>
-
-Gets the license key.
-(inherited from <a target="_top" href="topic_00000000000000CC.html" onclick="this.target='';return true;">ILicenseProvider</a>).
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-inheritedMember 
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000000CE.html">LicenseSignature</a>
-
-	</td>
-	<td>
-
-Gets the license signature.
-(inherited from <a target="_top" href="topic_00000000000000CC.html" onclick="this.target='';return true;">ILicenseProvider</a>).
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-inheritedMember 
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000000CB.html">LicenseState</a>
-
-	</td>
-	<td>
-
-Gets the state of the license.
-(inherited from <a target="_top" href="topic_00000000000000CA.html" onclick="this.target='';return true;">ILicenseState</a>).
-
-	</td>
-</tr>
-	
-
-
-	
-		<tr class="
-
-
-">
-	<td>
-<img alt="Public property" title="Public property" src="msdn2017/pubproperty.png"></img>
-	  
-
-    
-	</td>
-	<td>
-	<a href="topic_00000000000000D3.html">MaxSdkVersion</a>
-
-	</td>
-	<td>
-
-Gets the maximum SDK version.
+/// Gets the license signature.
+        ///
 
 	</td>
 </tr>
@@ -288,8 +165,8 @@ Gets the maximum SDK version.
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000000CF.html">ILicense Interface</a><br />
-	<a href="topic_00000000000000BA.html">Penthera.VirtuosoClient.Public.License Namespace</a><br />
+			<a href="topic_00000000000000CF.html">ILicenseProvider Interface</a><br />
+	<a href="topic_00000000000000BD.html">Penthera.VirtuosoClient.Public.License Namespace</a><br />
 
 
 			
@@ -300,7 +177,7 @@ Gets the maximum SDK version.
 			</div>
 			</div>
       <div id="footer">
-      	<p>VirtuosoSDK Version 3.13.1.8</p>
+      	<p>Generated with <a target="_top" href="http://www.helixoft.com/vsdocman/overview.html">VSdocman</a></p>
       </div>
     </div>
   	<script type="text/javascript">

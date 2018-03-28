@@ -1,0 +1,133 @@
+﻿<Page
+    x:Name="pageRoot"
+    x:Class="VirtuosoClient.TestHarness.AssetInfoView"
+    DataContext="{Binding DefaultModel, RelativeSource={RelativeSource Self}}"
+    xmlns:local="using:VirtuosoClient.TestHarness"
+    xmlns:common="using:VirtuosoClient.TestHarness.Common"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <common:AssetPercentFormatter x:Key="AssetPercentFormatter"/>
+        <common:AssetStatusFormatter   x:Key="AssetStatusFormatter"/>
+        <common:DiskStorageFormatter x:Key="DiskStorageFormatter"/>
+        <common:AssetErrorFormatter   x:Key="AssetErrorFormatter"/>
+        <common:ExpiryFormatter x:Key="ExpiryFormatter"/>
+        <common:ExpirySpanFormatter x:Key="ExpirySpanFormatter"/>
+    </Page.Resources>
+
+
+    <Grid 
+        x:Name="layoutRoot" 
+       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}"
+        Margin="12,0,12,12" 
+        DataContext="{Binding Asset}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroup x:Name="VisualStateGroup">
+                <VisualState x:Name="portrait">
+                    <VisualState.StateTriggers>
+                        <common:DisplayStateTrigger DisplayState="SmallPortrait"/>
+                        <common:DisplayStateTrigger DisplayState="MediumPortrait"/>
+                        <common:DisplayStateTrigger DisplayState="LargePortrait"/>
+                        <common:DisplayStateTrigger DisplayState="WidePortrait"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="layoutRoot.RowDefinitions[2].Height" Value="*"/>
+                        <Setter Target="layoutRoot.ColumnDefinitions[1].Width" Value="auto"/>
+                        <Setter Target="titleRow.(Grid.Row)" Value="0"/>
+                        <Setter Target="detailRow.(Grid.Column)" Value="1"/>
+                        <Setter Target="detailRow.(Grid.Row)" Value="1"/>
+                    </VisualState.Setters>
+                </VisualState>
+                <VisualState x:Name="landscape">
+                    <VisualState.StateTriggers>
+                        <common:DisplayStateTrigger DisplayState="SmallLandscape"/>
+                        <common:DisplayStateTrigger DisplayState="MediumLandscape"/>
+                        <common:DisplayStateTrigger DisplayState="LargeLandscape"/>
+                        <common:DisplayStateTrigger DisplayState="WideLandcape"/>
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Target="layoutRoot.ColumnDefinitions[1].Width" Value="*"/>
+                        <Setter Target="titleRow.(Grid.Row)" Value="0"/>
+                        <Setter Target="detailRow.(Grid.Column)" Value="1"/>
+                        <Setter Target="detailRow.(Grid.Row)" Value="1"/>
+                    </VisualState.Setters>
+                </VisualState>
+            </VisualStateGroup>
+        </VisualStateManager.VisualStateGroups>
+
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+
+        <Grid Grid.Row="0" Grid.Column="0" x:Name="titleRow">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock x:Name="pageTitle" Text="{Binding  Metadata}" Style="{StaticResource TitleTextBlockStyle}" Grid.Column="0" IsHitTestVisible="false" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            </Grid>
+        </Grid>
+
+
+        <Grid Grid.Row="1" Grid.Column="0" x:Name="detailRow">
+            <Grid x:Name="details" Margin="0,-181,0,0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition/>
+
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+
+                <TextBlock Grid.Row="0" Grid.Column="0" Text="Asset ID: " />
+                <TextBlock Grid.Row="0"  Grid.Column="1" Text="{Binding AssetId}" TextWrapping="Wrap" HorizontalAlignment="Right" />
+
+                <TextBlock Grid.Row="1" Grid.Column="0" Text="Progress: " />
+                <TextBlock Grid.Row="1"  Grid.Column="1" Text="{Binding FractionComplete, Converter={StaticResource AssetPercentFormatter}}" HorizontalAlignment="Right"/>
+
+                <TextBlock Grid.Row="2" Grid.Column="0" Text="Status: "/>
+                <TextBlock Grid.Row="2"  Grid.Column="1"  Text="{Binding Status, Converter={StaticResource AssetStatusFormatter}}" HorizontalAlignment="Right" />
+
+                <TextBlock Grid.Row="3" Grid.Column="0" Text="Size: "/>
+                <TextBlock Grid.Row="3"  Grid.Column="1"  Text="{Binding CurrentSize, Converter={StaticResource DiskStorageFormatter}}" HorizontalAlignment="Right"  />
+
+                <TextBlock Grid.Row="4" Grid.Column="0" Text="Last Error: "/>
+                <TextBlock Grid.Row="4"  Grid.Column="1"  Text="{Binding DownloadError, Converter={StaticResource AssetErrorFormatter}}" HorizontalAlignment="Right" />
+
+                <TextBlock Grid.Row="5" Grid.Column="0" Text="Error Count: " />
+                <TextBlock Grid.Row="5"  Grid.Column="1" Text="{Binding DownloadRetryCount}" HorizontalAlignment="Right" />
+
+                <TextBlock Grid.Row="6" Grid.Column="0" Text="Effective Expiry: " />
+                <TextBlock Grid.Row="6"  Grid.Column="1" Text="{Binding EffectiveExpiryDate, Converter={StaticResource ExpiryFormatter}}" HorizontalAlignment="Right" />
+
+                <Button Grid.Row="7"  Content="Reset" Grid.Column="0"  Click="Reset_Errors_Click"  />
+                <Button Grid.Row="7" Content="Delete" Grid.Column="1"  Click="Delete_Asset_Click" />
+                <Button Grid.Row="8"  Content="Pause" Grid.Column="0"  Click="Pause_Asset_Click" />
+                <Button Grid.Row="8" Content="Resume" Grid.Column="1" Click="Resume_Asset_Click" />
+                <Button Grid.Row="9"  Content="Play Video" Grid.Column="0"  Click="Play_Asset_Click" />
+                <Button Grid.Row="9" Content="Go Home" Grid.Column="1" Click="GoHome_Click" />
+            </Grid>
+        </Grid>
+    </Grid>
+</Page>

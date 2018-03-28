@@ -13,6 +13,7 @@
 
 
     <Page.Resources>
+
         <ResourceDictionary>
             <ResourceDictionary.ThemeDictionaries>
                 <ResourceDictionary x:Key="Default">
@@ -22,7 +23,10 @@
                     <ImageBrush x:Key="HubBackgroundImageBrush" ImageSource="{x:Null}"/>
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
-
+        <!--MenuFlyout x:Key="contextMenu">
+            <MenuFlyoutItem Text="Play Video" Click="PlayAsset_Click" />
+            <MenuFlyoutItem Text="Asset Statistics" Click="ViewAssetInfo_Click" />
+        </MenuFlyout-->
             <common:DiskStorageFormatter x:Key="DiskStorageFormatter"/>
             <common:VirtuosoClientEnvironmentStatusFormatter x:Key="VirtuosoClientEnvironmentStatusFormatter"/>
             <common:VirtuosoClientEnabledFormatter x:Key="VirtuosoClientEnabledFormatter"/>
@@ -89,6 +93,8 @@
                     <ListView ItemsSource="{Binding Assets}" 
                               SelectionMode="None" 
                               ItemClick="ListViewBase_OnItemClick"
+                              ContextCanceled="ListView_ContextCanceled"
+                              ContextRequested="ListView_ContextRequested"
                               IsItemClickEnabled="False">
                         <ListView.ItemTemplate>
                             <DataTemplate>
@@ -107,6 +113,7 @@
                     <TextBlock Text="{Binding Title}" FontWeight="Bold" Foreground="{ThemeResource ListViewItemOverlaySecondaryForegroundThemeBrush}" />
                     <ListView ItemsSource="{Binding Tests}" 
                               SelectionMode="None" 
+
                               ItemClick="ListViewBase_OnItemClick"
                               IsItemClickEnabled="True">
                         <ListView.ItemTemplate>

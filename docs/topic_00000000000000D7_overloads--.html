@@ -10,6 +10,7 @@
 	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushFSharp.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCpp.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushJScript.js" type="text/javascript"></script>
 	<link href="SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
@@ -61,7 +62,7 @@ function replaceTitleAndUrl(win, title, url) {
   	<div id="runningHeaderText">VirtuosoSDK Reference</div>
   	<h1 class="title">ImplementationProviderAttribute Constructor</h1>
   	<div id="headerLinks">
-          	<a href="topic_00000000000000D4.html">ImplementationProviderAttribute Class</a>
+          	<a href="topic_00000000000000D3.html">ImplementationProviderAttribute Class</a>
 
 
 
@@ -76,23 +77,22 @@ function replaceTitleAndUrl(win, title, url) {
         <p />
        
 
-        This assembly attribute provides the information for instantiating an Implementation.
-The positional parameters specify the class and the method to be used as the factory method.
-The class name must be the fully qualified of name the class
-e.g.: Mycompany.MimeTypeValidationImplementation.MimeTypeValidation
-The method name is the name of the method that can instantiate the implementation.
-The Method MUST be a public static method with NO parameters and return an instance
-from which the IMimeTypeValidation is assignable from.
-for example:
-namespace MyCompany.MimeTypeValidationImplementation
-{
-    public class MimeTypeValidation : IMimeTypeValidation
-    {
-    public static MimeTypeValidation ImplementationInstance(){return new MimeTypeValidation();}
-    }
-}
-should have the ImplementationProviderAttribute set as
-[assembly: ImplementationProvider(&quot;Mycompany.MimeTypeValidationImplementation.MimeTypeValidation&quot;,&quot;ImplementationInstance&quot;)]
+        /// This assembly attribute provides the information for instantiating an Implementation.
+        /// The positional parameter specifies the fully qualified name of the method to be used as the factory method.
+        /// e.g.: Mycompany.MimeTypeValidationImplementation.MimeTypeValidationr.ImplementationInstance
+        /// The Method MUST be a public static method with NO parameters and return an instance
+        /// from which the IStoreContentProvider is assignable from.
+        /// for example:
+        /// namespace MyCompany.MimeTypeValidationImplementation
+        /// {
+        ///     public class MimeTypeValidation : IMimeTypeValidation
+        ///     {
+        ///     public static MimeTypeValidation ImplementationInstance(){return new MimeTypeValidation();}
+        ///     }
+        /// }
+        /// should have the ImplementationProviderrAttribute set as
+        /// [assembly: ImplementationProvider(&quot;Mycompany.MimeTypeValidationImplementation.MimeTypeValidation.ImplementationInstance&quot;)]
+        ///
 
 
 <div class="section_container">
@@ -114,54 +114,56 @@ should have the ImplementationProviderAttribute set as
             <tr>
               <td>
 
-<a href="topic_00000000000000D7.html">ImplementationProviderAttribute(string, string)</a>
+<a href="topic_00000000000000D6.html">ImplementationProviderAttribute(string, string)</a>
               
               </td>
               <td>
 
-This assembly attribute provides the information for instantiating an Implementation.
-The positional parameters specify the class and the method to be used as the factory method.
-The class name must be the fully qualified of name the class
-e.g.: Mycompany.MimeTypeValidationImplementation.MimeTypeValidation
-The method name is the name of the method that can instantiate the implementation.
-The Method MUST be a public static method with NO parameters and return an instance
-from which the IMimeTypeValidation is assignable from.
-for example:
-namespace MyCompany.MimeTypeValidationImplementation
-{
-    public class MimeTypeValidation : IMimeTypeValidation
-    {
-    public static MimeTypeValidation ImplementationInstance(){return new MimeTypeValidation();}
-    }
-}
-should have the ImplementationProviderAttribute set as
-[assembly: ImplementationProvider(&quot;Mycompany.MimeTypeValidationImplementation.MimeTypeValidation&quot;,&quot;ImplementationInstance&quot;)]
+/// This assembly attribute provides the information for instantiating an Implementation.
+        /// The positional parameters specify the class and the method to be used as the factory method.
+        /// The class name must be the fully qualified of name the class
+        /// e.g.: Mycompany.MimeTypeValidationImplementation.MimeTypeValidation
+        /// The method name is the name of the method that can instantiate the implementation.
+        /// The Method MUST be a public static method with NO parameters and return an instance
+        /// from which the IMimeTypeValidation is assignable from.
+        /// for example:
+        /// namespace MyCompany.MimeTypeValidationImplementation
+        /// {
+        ///     public class MimeTypeValidation : IMimeTypeValidation
+        ///     {
+        ///     public static MimeTypeValidation ImplementationInstance(){return new MimeTypeValidation();}
+        ///     }
+        /// }
+        /// should have the ImplementationProviderAttribute set as
+        /// [assembly: ImplementationProvider(&quot;Mycompany.MimeTypeValidationImplementation.MimeTypeValidation&quot;,&quot;ImplementationInstance&quot;)]
+        ///
 
               </td>
             </tr>
             <tr>
               <td>
 
-<a href="topic_00000000000000D8.html">ImplementationProviderAttribute(string)</a>
+<a href="topic_00000000000000D7.html">ImplementationProviderAttribute(string)</a>
               
               </td>
               <td>
 
-This assembly attribute provides the information for instantiating an Implementation.
-The positional parameter specifies the fully qualified name of the method to be used as the factory method.
-e.g.: Mycompany.MimeTypeValidationImplementation.MimeTypeValidationr.ImplementationInstance
-The Method MUST be a public static method with NO parameters and return an instance
-from which the IStoreContentProvider is assignable from.
-for example:
-namespace MyCompany.MimeTypeValidationImplementation
-{
-    public class MimeTypeValidation : IMimeTypeValidation
-    {
-    public static MimeTypeValidation ImplementationInstance(){return new MimeTypeValidation();}
-    }
-}
-should have the ImplementationProviderrAttribute set as
-[assembly: ImplementationProvider(&quot;Mycompany.MimeTypeValidationImplementation.MimeTypeValidation.ImplementationInstance&quot;)]
+/// This assembly attribute provides the information for instantiating an Implementation.
+        /// The positional parameter specifies the fully qualified name of the method to be used as the factory method.
+        /// e.g.: Mycompany.MimeTypeValidationImplementation.MimeTypeValidationr.ImplementationInstance
+        /// The Method MUST be a public static method with NO parameters and return an instance
+        /// from which the IStoreContentProvider is assignable from.
+        /// for example:
+        /// namespace MyCompany.MimeTypeValidationImplementation
+        /// {
+        ///     public class MimeTypeValidation : IMimeTypeValidation
+        ///     {
+        ///     public static MimeTypeValidation ImplementationInstance(){return new MimeTypeValidation();}
+        ///     }
+        /// }
+        /// should have the ImplementationProviderrAttribute set as
+        /// [assembly: ImplementationProvider(&quot;Mycompany.MimeTypeValidationImplementation.MimeTypeValidation.ImplementationInstance&quot;)]
+        ///
 
               </td>
             </tr>
@@ -182,11 +184,11 @@ should have the ImplementationProviderrAttribute set as
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_00000000000000D4.html">ImplementationProviderAttribute Class</a><br />
+			<a href="topic_00000000000000D3.html">ImplementationProviderAttribute Class</a><br />
 
 
 
-<a href="topic_0000000000000000.html">Penthera.VirtuosoClient.Public Namespace</a><br />
+<a href="topic_0000000000000004.html">Penthera.VirtuosoClient.Public Namespace</a><br />
 
 
 			
@@ -197,7 +199,7 @@ should have the ImplementationProviderrAttribute set as
 			</div>
 			</div>
       <div id="footer">
-      	<p>VirtuosoSDK Version 3.13.1.8</p>
+      	<p><span style="color: #FF0000;">Generated with unregistered version of <a target="_top" href="http://www.helixoft.com/vsdocman/overview.html">VSdocman</a></span>&nbsp;<br />Your own footer text will only be shown in registered version.</p>
       </div>
     </div>
   	<script type="text/javascript">

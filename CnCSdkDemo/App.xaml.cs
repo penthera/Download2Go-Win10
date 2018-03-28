@@ -26,7 +26,7 @@ namespace VirtuosoClient.TestHarness
     {
         internal static IVirtuosoClient VClient = VirtuosoClientFactory.ClientInstance();
         internal static IVirtuosoSettings VSettings = VClient.Settings;
-        internal static Frame RootFrame { get; set; }
+        //internal static Frame RootFrame { get; set; }
 #if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
 #endif
@@ -58,6 +58,8 @@ namespace VirtuosoClient.TestHarness
         /// <param name="e">Details about the launch request and process.</param>
         protected async override void OnLaunched(LaunchActivatedEventArgs e)
         {
+            VClient.Backplane.SetLogs(Config.LOG_IP, Config.LOG_PORT, Config.LOG_ENABLE);
+
             //var channel = await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync();
             await InitNotificationsAsync();
 
@@ -152,38 +154,29 @@ namespace VirtuosoClient.TestHarness
             channel.PushNotificationReceived += PushNotificationReceived;
             VClient.Backplane.backplaneSettings.DevicePushToken = channel.Uri;
             _devicePushToken = channel.Uri;
-           
-            
         }
+        
 
         private void PushNotificationReceived(object sender, PushNotificationReceivedEventArgs e)
         {
-            var payload = "";
-            if (e.NotificationType == PushNotificationType.Toast)
-            {
-                payload = e.ToastNotification.Content.GetXml();
-                Windows.UI.Notifications.ToastNotification toast = e.ToastNotification;
-                toast.SuppressPopup = true;
-                XmlDocument xml = new XmlDocument();
-                xml.LoadXml(payload);
+            if (e.NotificationType == PushNotificationType.Raw) {
+                var payload = e.RawNotification.Content;
 
-                string command = xml.InnerText;
+                // Get the command from the response to tell us what to do. 
+                //string command = ""; // payload;
 
-                var dialog = new MessageDialog("Your settings have been saved.");
-                dialog.ShowAsync();
-                switch (command)
+                switch (payload)
                 {
-                    case "DownloadsAvailable":
-                        //VClient.re
+                    case "[download_available:true]":
+                        VClient.CheckDownloadStatus(false);
                         break;
-                    case "BackplaneSync":
+                    case "[analytics_sync:true]":
                         VClient.SyncWithBackplaneAsync();
                         break;
                     default:
                         break;
                 }
             }
-
         }
 
         private void onNavigated(object sender, NavigationEventArgs e)

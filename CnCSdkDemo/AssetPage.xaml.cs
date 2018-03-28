@@ -25,6 +25,7 @@ namespace VirtuosoClient.TestHarness
     using Windows.System.Display;
     using System.IO;
     using Windows.Storage.Streams;
+    using Windows.Media.Core;
 
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
@@ -198,6 +199,7 @@ namespace VirtuosoClient.TestHarness
 
         #endregion
 
+        #region Button Event Handlers
         private void Delete_Asset_Click(object sender, RoutedEventArgs e)
         {
             IAsset asset = (IAsset)DefaultModel["Asset"];
@@ -214,7 +216,7 @@ namespace VirtuosoClient.TestHarness
             //We suggest to use threadpool to wait delete conclude before continue
             ThreadPool.RunAsync(async (workitem) => await VClient.DeleteAssetAsync(asset));
 
-            this.NavigationHelper.GoBack();
+            this.Frame.Navigate(typeof(HubPage));
         }
 
         private void Pause_Asset_Click(object sender, RoutedEventArgs e) {
@@ -238,6 +240,7 @@ namespace VirtuosoClient.TestHarness
             Asset.ResetErrorState();
             this.NavigationHelper.GoBack();
         }
+        #endregion
 
         /// <summary>
         /// Initializes the PlayReady protection manager.  This method contains example code only.  You will most likely need to customize
@@ -299,8 +302,22 @@ namespace VirtuosoClient.TestHarness
 
             completionNotifier.Complete(result);
         }
+
+        private void ViewInfo_Click(object sender, RoutedEventArgs e)
+        {
+            IAsset asset = (IAsset)DefaultModel["Asset"];
+            this.Frame.Navigate(typeof(AssetInfoView), asset.Uuid);
+        }
+
+        private void GoHome_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(HubPage));
+        }
     }
 
+    /// <summary>
+    /// 
+    /// </summary>
     public class PlayReadyLicenseHandler
     {
         /// <summary>Request a token that identifies the player session.</summary>

@@ -1,6 +1,7 @@
 function stripSpaces(text) {
 //    return text.replace(/^\W+/,'').replace(/\W+$/,'');
-    return text.split(" ").join(" ");
+    text = text.replace(/\./g,' ');	// replace dots with spaces
+    return text.split(" ").join(" ");  // remove multiple spaces
 }
 
 function get_bitmap(setbit, size) {

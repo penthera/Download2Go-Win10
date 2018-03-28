@@ -3,13 +3,14 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="GENERATOR" content="VSdocman - documentation generator; http://www.helixoft.com" />
-	<title>EAssetStatus Enumeration</title>
+	<title>Penthera.VirtuosoClient.Public Namespace</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2017/msdn2017.css"></link>
 	<script src="msdn2017/msdn2017.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushFSharp.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCpp.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushJScript.js" type="text/javascript"></script>
 	<link href="SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
@@ -59,10 +60,9 @@ function replaceTitleAndUrl(win, title, url) {
 <!--HEADER START-->
   <div id="header">
   	<div id="runningHeaderText">VirtuosoSDK Reference</div>
-  	<h1 class="title">EAssetStatus Enumeration</h1>
+  	<h1 class="title">Penthera.VirtuosoClient.Public Namespace</h1>
   	<div id="headerLinks">
 
-	<a href="#seeAlsoSection">See Also</a>
 
 		</div>
 		<hr />
@@ -73,17 +73,11 @@ function replaceTitleAndUrl(win, title, url) {
       <div id="mainBody">
         <p />
        
-        Allowable states that a CNC asset can be in.  Returned via the 'Status' property on an Asset.
-
-        <p>This enumeration has a   <a target="_top" href="http://msdn2.microsoft.com/en-US/library/System.FlagsAttribute">FlagsAttribute</a> attribute that allows a bitwise combination of its member values.</p>
-
-        <p /><strong>Namespace:</strong>
-<a href="topic_0000000000000000.html">Penthera.VirtuosoClient.Public</a>
-
 
 
 
         <br /><strong>Assembly:</strong> CnCWindowsSDK (in CnCWindowsSDK.dll)
+
 
 
 
@@ -96,174 +90,10 @@ function replaceTitleAndUrl(win, title, url) {
 	<div id="syntaxCodeBlocks">
 		
 
+
 		
 		
 	</div>
-
-
-
-<div class="section_container">
-	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Members</a></span>
-		<div><hr /></div>
-	</div>
-
-<div id="membersSection" class="section">
-	<table>
-		<tr>
-			<th>&nbsp;
-			</th>
-			<th>
-				Member name
-			</th>
-			<th>
-				Description
-			</th>
-		</tr>
-		<tr>
-			<td>
-			</td>
-			<td>
-				KVDE_Download_Error
-			</td>
-			<td>
-				CNC has marked this asset Error
-			</td>
-		</tr>
-		<tr>
-			<td>
-			</td>
-			<td>
-				kVDE_Download_Active
-			</td>
-			<td>
-				Download is in progress for this asset
-			</td>
-		</tr>
-		<tr>
-			<td>
-			</td>
-			<td>
-				kVDE_Download_Attaching
-			</td>
-			<td>
-				Asset is preparing to download.
-			</td>
-		</tr>
-		<tr>
-			<td>
-			</td>
-			<td>
-				kVDE_Download_Blocked
-			</td>
-			<td>
-				Asset is blocked
-			</td>
-		</tr>
-		<tr>
-			<td>
-			</td>
-			<td>
-				kVDE_Download_Complete
-			</td>
-			<td>
-				Download is complete; asset is stored locally
-			</td>
-		</tr>
-		<tr>
-			<td>
-			</td>
-			<td>
-				kVDE_Download_Deleted
-			</td>
-			<td>
-				CNC has deleted this asset
-			</td>
-		</tr>
-		<tr>
-			<td>
-			</td>
-			<td>
-				kVDE_Download_Expired
-			</td>
-			<td>
-				CNC has marked this asset as expired
-			</td>
-		</tr>
-		<tr>
-			<td>
-			</td>
-			<td>
-				kVDE_Download_None
-			</td>
-			<td>
-				Asset exists, but is not in the download queue
-			</td>
-		</tr>
-		<tr>
-			<td>
-			</td>
-			<td>
-				kVDE_Download_NotAvailable
-			</td>
-			<td>
-				Asset has a publish date in the future, and thus not available
-			</td>
-		</tr>
-		<tr>
-			<td>
-			</td>
-			<td>
-				kVDE_Download_Paused_Stopped
-			</td>
-			<td>
-				Asset is Paused or Stopped
-			</td>
-		</tr>
-		<tr>
-			<td>
-			</td>
-			<td>
-				kVDE_Download_Pending
-			</td>
-			<td>
-				Asset is in download queue, waiting its turn
-			</td>
-		</tr>
-		<tr>
-			<td>
-			</td>
-			<td>
-				kVDE_Download_Preparing
-			</td>
-			<td>
-				Asset is preparing to download.
-			</td>
-		</tr>
-		<tr>
-			<td>
-			</td>
-			<td>
-				kVDE_Download_Ready
-			</td>
-			<td>
-				Asset is ready to download
-			</td>
-		</tr>
-		
-	</table>
-</div>					
-</div>
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -288,27 +118,1167 @@ function replaceTitleAndUrl(win, title, url) {
 
 <div class="section_container">
 	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">See Also</a></span>
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Classes</a></span>
 		<div><hr /></div>
 	</div>
 
-	<div id="seeAlsoSection" class="section">	
-		<div>
-			
-<a href="topic_0000000000000000.html">Penthera.VirtuosoClient.Public Namespace</a><br />
+	<div id="ClassSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
 
 
-			
-<a href="topic_000000000000003A.html">Status</a>
-<br />
+<!-- Classes -->
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public class" title="Public class" src="msdn2017/pubclass.png"></img>
+    
+    <img alt="Static" title="Static" src="msdn2017/static.png"></img>
 
-		</div>
+    
+	  </td>
+	  <td>
+	    <a href="topic_000000000000015D.html">DeviceInfo</a>
+	  </td>
+	  <td>
+
+Information about the device.
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public class" title="Public class" src="msdn2017/pubclass.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000D7.html">ImplementationProviderAttribute</a>
+	  </td>
+	  <td>
+
+/// This assembly attribute provides the information for instantiating a client Implementation of a Plugin.
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public class" title="Public class" src="msdn2017/pubclass.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000169.html">VirtuosoApplication</a>
+	  </td>
+	  <td>
+
+
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public class" title="Public class" src="msdn2017/pubclass.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_000000000000016A.html">VirtuosoClientFactory</a>
+	  </td>
+	  <td>
+
+/// Provides static access to the IVirtuosoClient instance.
+    ///
+
+		</td>
+	</tr>
+
+<!-- Classes End -->
+
+<!-- Standard Modules -->
+
+<!-- Standard Modules End -->
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
 	</div>					
 </div>
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Interfaces</a></span>
+		<div><hr /></div>
+	</div>
+
+	<div id="InterfaceSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_000000000000007E.html">IAccountDeviceDownloads</a>
+	  </td>
+	  <td>
+
+/// This details the number of assets you have against each device on your account.
+    /// It is part of Backplane Permission Response
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000084.html">IAccountDownloads</a>
+	  </td>
+	  <td>
+
+/// This details the number of assets you have against each account.
+    /// It is part of Backplane Permission Response
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000025.html">IAsset</a>
+	  </td>
+	  <td>
+
+/// Parent interface for all CNC assets.
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000081.html">IAssetDeviceDownloads</a>
+	  </td>
+	  <td>
+
+/// This is the representation of the Assets to Device mappings in the IAccountDeviceDownloads
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_000000000000007B.html">IAssetDownloads</a>
+	  </td>
+	  <td>
+
+/// This details the number of assets you have against each device.
+    /// It is part of Backplane Permission Response
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_000000000000005F.html">IBackplane</a>
+	  </td>
+	  <td>
+
+/// The IBackplane interface provides you the access to the APIs for communication with the Backplane
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_000000000000006C.html">IBackplaneEvent</a>
+	  </td>
+	  <td>
+
+/// This represents a BackplaneEvent
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000070.html">IBackplaneEventData</a>
+	  </td>
+	  <td>
+
+/// This interface allows you to provide the data that will be sent on a BackplaneEvent
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000075.html">IBackplanePermission</a>
+	  </td>
+	  <td>
+
+/// When the MAD and/or the MDA settings are enabled on the Backplane.
+    /// This interface represents the data returned in a permission request
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000087.html">IBackplaneSettings</a>
+	  </td>
+	  <td>
+
+/// This are the settings governed by the Backplane
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_000000000000009B.html">IDevice</a>
+	  </td>
+	  <td>
+
+/// Represents a specific device known to CNC
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000A9.html">IEvent</a>
+	  </td>
+	  <td>
+
+Interface for event.
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000DF.html">IImplementation&lt;T&gt;</a>
+	  </td>
+	  <td>
+
+
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000F2.html">IMimeTypeValidation</a>
+	  </td>
+	  <td>
+
+
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000EA.html">IMimeTypeValidationArgs</a>
+	  </td>
+	  <td>
+
+
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000DC.html">IPlugin</a>
+	  </td>
+	  <td>
+
+
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000054.html">ISegment</a>
+	  </td>
+	  <td>
+
+/// Represent a single segment within a Segmented Asset
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_000000000000004A.html">ISegmentedFileProperties</a>
+	  </td>
+	  <td>
+
+/// Aditional data related to Segmented Assets
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000011.html">IStatusProvider</a>
+	  </td>
+	  <td>
+
+Interface that provides the status of the asset.
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000E1.html">IUriRewriteArgs</a>
+	  </td>
+	  <td>
+
+
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000E8.html">IUrlRewriter</a>
+	  </td>
+	  <td>
+
+
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000108.html">IVirtuosoClient</a>
+	  </td>
+	  <td>
+
+/// The central control for all download-related activities.
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000143.html">IVirtuosoLogger</a>
+	  </td>
+	  <td>
+
+/// The central interface responsible for managing all CNC logging.
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_000000000000014C.html">IVirtuosoSettings</a>
+	  </td>
+	  <td>
+
+/// Access to user-configurable CNC settings
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public interface" title="Public interface" src="msdn2017/pubinterface.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_000000000000015B.html">IVirtuosoSubscriber</a>
+	  </td>
+	  <td>
+
+/// The central control for all download-related activities.
+    ///
+
+		</td>
+	</tr>
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
+
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Delegates</a></span>
+		<div><hr /></div>
+	</div>
+
+	<div id="DelegateSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public delegate" title="Public delegate" src="msdn2017/pubdeligate.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000106.html">AssetSizeValidationWarningEventHandler</a>
+	  </td>
+	  <td>
+
+/// Fired when validation on file size is disabled and the engine detects a file size mismatch.
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public delegate" title="Public delegate" src="msdn2017/pubdeligate.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000102.html">BackplanePermissionEventHandler</a>
+	  </td>
+	  <td>
+
+/// Delegate BackplanePermissionEventHandler
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public delegate" title="Public delegate" src="msdn2017/pubdeligate.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000074.html">BackplaneRequestComplete</a>
+	  </td>
+	  <td>
+
+/// Delegate BackplaneRequestComplete
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public delegate" title="Public delegate" src="msdn2017/pubdeligate.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_000000000000001E.html">DownloadCompleteEventHandler</a>
+	  </td>
+	  <td>
+
+/// Sent when download of an Asset finishes
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public delegate" title="Public delegate" src="msdn2017/pubdeligate.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_000000000000001F.html">ExpireEventHandler</a>
+	  </td>
+	  <td>
+
+/// Sent when expire of an Asset occurs
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public delegate" title="Public delegate" src="msdn2017/pubdeligate.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000107.html">LicenseChangedEventHandler</a>
+	  </td>
+	  <td>
+
+/// Delegate LicenseChangedEventHandler
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public delegate" title="Public delegate" src="msdn2017/pubdeligate.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000F1.html">MimeTypeValidationHandler</a>
+	  </td>
+	  <td>
+
+
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public delegate" title="Public delegate" src="msdn2017/pubdeligate.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000101.html">RemoteWipeCompleteEventHandler</a>
+	  </td>
+	  <td>
+
+/// Fired after CNC receives a remote-wipe command from Backplane and has performed the wipe.
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public delegate" title="Public delegate" src="msdn2017/pubdeligate.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000E7.html">UrlRewriteHandler</a>
+	  </td>
+	  <td>
+
+
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public delegate" title="Public delegate" src="msdn2017/pubdeligate.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000105.html">VirtuosoCcbDeviceSavedEventHandler</a>
+	  </td>
+	  <td>
+
+/// Fired when Backplane acknowledges saving device data
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public delegate" title="Public delegate" src="msdn2017/pubdeligate.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000104.html">VirtuosoClientAuthenticationUpdatedHandler</a>
+	  </td>
+	  <td>
+
+/// Delegate CNCClientAuthenticationUpdatedHandler
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public delegate" title="Public delegate" src="msdn2017/pubdeligate.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000103.html">VirtuosoClientStatusChangeEventHandler</a>
+	  </td>
+	  <td>
+
+/// Fired when CNC's download engine changes status.
+    ///
+
+		</td>
+	</tr>
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Enumerations</a></span>
+		<div><hr /></div>
+	</div>
+
+	<div id="EnumerationSection" class="section">	
+  <table class="memberListTable">
+    <tr>
+      <th></th>
+      <th>
+        Name
+      </th>
+      <th>
+        Description
+      </th>
+    </tr>
+
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public enumeration" title="Public enumeration" src="msdn2017/pubenum.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000F4.html">AuthenticationStatus</a>
+	  </td>
+	  <td>
+
+Values that represent authentication status.
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public enumeration" title="Public enumeration" src="msdn2017/pubenum.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000002.html">EAssetStatus</a>
+	  </td>
+	  <td>
+
+/// Allowable states that a CNC asset can be in.  Returned via the 'Status' property on an Asset.
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public enumeration" title="Public enumeration" src="msdn2017/pubenum.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000020.html">EAssetType</a>
+	  </td>
+	  <td>
+
+/// They type of Asset.
+    /// Either a Single flat file or a Segmented file.
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public enumeration" title="Public enumeration" src="msdn2017/pubenum.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000013.html">EDownloadError</a>
+	  </td>
+	  <td>
+
+/// Error states that CNC can be in when downloading an asset.  Returned via the 'DownloadError' and
+    /// 'PreviousDownloadError' property on an Asset.
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public enumeration" title="Public enumeration" src="msdn2017/pubenum.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_000000000000005B.html">ESegmentType</a>
+	  </td>
+	  <td>
+
+/// The enumerated type of the segment.
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public enumeration" title="Public enumeration" src="msdn2017/pubenum.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_0000000000000056.html">ESegmentedAssetType</a>
+	  </td>
+	  <td>
+
+/// The enumerated type of the segmented asset.
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public enumeration" title="Public enumeration" src="msdn2017/pubenum.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_00000000000000F7.html">VirtuosoClientStatus</a>
+	  </td>
+	  <td>
+
+/// Current activity status of CNC's download engine.
+    ///
+
+		</td>
+	</tr>
+	<tr class="
+	
+	
+	">
+	  <td>
+    <img alt="Public enumeration" title="Public enumeration" src="msdn2017/pubenum.png"></img>
+    
+
+    
+	  </td>
+	  <td>
+	    <a href="topic_000000000000013D.html">VirtuosoLoggingLevel</a>
+	  </td>
+	  <td>
+
+/// Configures the amount of output that is returned in the DebugLogText string
+    ///
+
+		</td>
+	</tr>
+
+  </table>
+
+  <a href="#mainBody">
+    Top
+  </a>
+
+	</div>					
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+	
+	
+	
+	
+	
+
+<div class="section_container">
+	<div class="section_heading">
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Applies to</a></span>
+		<div><hr /></div>
+	</div>
+
+	<div id="frameworksSection" class="section">	
+  <h4 class="subHeading">.NET Framework</h4>Supported in: 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1<br />
+
+
+
+
+
+
+
+
+
+
+	
+	
+	</div>					
+</div>
+
+
+
 			</div>
 			</div>
       <div id="footer">
-      	<p>VirtuosoSDK Version 3.13.1.8</p>
+      	<p>Generated with <a target="_top" href="http://www.helixoft.com/vsdocman/overview.html">VSdocman</a></p>
       </div>
     </div>
   	<script type="text/javascript">

@@ -9,6 +9,8 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:playerFramework="using:Microsoft.PlayerFramework"
+    xmlns:hlsPlayerFramework="using:Microsoft.PlayerFramework.Adaptive.HLS"
+    xmlns:webVTTFramework="using:Microsoft.PlayerFramework.WebVTT"
     mc:Ignorable="d">
 
     <Page.Resources>
@@ -82,17 +84,16 @@
         </VisualStateManager.VisualStateGroups>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="1.5*"/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
 
-        <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" x:Name="titleRow">
+        <Grid Grid.Row="0"  x:Name="titleRow">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition />
@@ -103,58 +104,27 @@
             </Grid>
         </Grid>
 
-        <Grid Grid.Row="1" Grid.Column="0" x:Name="mediaRow">
-            <playerFramework:MediaPlayer x:Name="Player" AutoPlay="False"/>
+        <Grid Grid.Row="1" x:Name="mediaRow">
+            <playerFramework:MediaPlayer x:Name="Player" AutoPlay="False" IsCaptionSelectionVisible="True" IsAudioSelectionVisible="True" IsAudioSelectionEnabled="True">
+                <playerFramework:MediaPlayer.Plugins>
+                    <hlsPlayerFramework:HLSPlugin x:Name="hlsplugin" ClosedCaptionType="WebVTTSidecar"/>
+                    <webVTTFramework:WebVTTPlugin />
+                </playerFramework:MediaPlayer.Plugins>
+            </playerFramework:MediaPlayer>
         </Grid>
-
-        <Grid Grid.Row="2" Grid.Column="0" x:Name="detailRow">
-            <Grid x:Name="details" >
+        <Grid Grid.Row="2">
+            <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto" />
-                    <ColumnDefinition />
-                    <ColumnDefinition />
+                    <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
                     <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-
-                <TextBlock Grid.Row="0" Grid.Column="0" Text="Asset ID: " />
-                <TextBlock Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="1" Text="{Binding AssetId}" TextWrapping="Wrap" HorizontalAlignment="Right" />
-
-                <TextBlock Grid.Row="1" Grid.Column="0" Text="Progress: " />
-                <TextBlock Grid.Row="1" Grid.ColumnSpan="3" Grid.Column="1" Text="{Binding FractionComplete, Converter={StaticResource AssetPercentFormatter}}" HorizontalAlignment="Right"/>
-
-                <TextBlock Grid.Row="2" Grid.Column="0" Text="Status: "/>
-                <TextBlock Grid.Row="2" Grid.ColumnSpan="3" Grid.Column="1"  Text="{Binding Status, Converter={StaticResource AssetStatusFormatter}}" HorizontalAlignment="Right" />
-
-                <TextBlock Grid.Row="3" Grid.Column="0" Text="Size: "/>
-                <TextBlock Grid.Row="3" Grid.ColumnSpan="3" Grid.Column="1"  Text="{Binding CurrentSize, Converter={StaticResource DiskStorageFormatter}}" HorizontalAlignment="Right"  />
-
-                <TextBlock Grid.Row="4" Grid.Column="0" Text="Last Error: "/>
-                <TextBlock Grid.Row="4" Grid.ColumnSpan="3" Grid.Column="1"  Text="{Binding DownloadError, Converter={StaticResource AssetErrorFormatter}}" HorizontalAlignment="Right" />
-
-                <TextBlock Grid.Row="5" Grid.Column="0" Text="Error Count: " />
-                <TextBlock Grid.Row="5" Grid.ColumnSpan="3" Grid.Column="1" Text="{Binding DownloadRetryCount}" HorizontalAlignment="Right" />
-
-                <TextBlock Grid.Row="6" Grid.Column="0" Text="Effective Expiry: " />
-                <TextBlock Grid.Row="6" Grid.ColumnSpan="3" Grid.Column="1" Text="{Binding EffectiveExpiryDate, Converter={StaticResource ExpiryFormatter}}" HorizontalAlignment="Right" />
-
-                <Button Grid.Row="9"  Content="Reset" Grid.Column="0"  Click="Reset_Errors_Click"  />
-                <Button Grid.Row="9" Content="Delete" Grid.Column="1"  Click="Delete_Asset_Click" />
-                <Button Grid.Row="9"  Content="Pause" Grid.Column="2"  Click="Pause_Asset_Click" />
-                <Button Grid.Row="9" Content="Resume" Grid.Column="3" Click="Resume_Asset_Click" />
-
+                <Button Grid.Row="0" Content="View Info" Grid.Column="0" Click="ViewInfo_Click" />
+                <Button Grid.Row="0" Content="Home" Grid.Column="1" Click="GoHome_Click" />
             </Grid>
+           
         </Grid>
     </Grid>
 </Page>

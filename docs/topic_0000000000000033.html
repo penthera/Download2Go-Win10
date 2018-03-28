@@ -3,13 +3,14 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta name="GENERATOR" content="VSdocman - documentation generator; http://www.helixoft.com" />
-	<title>IAsset.FractionComplete Property</title>
+	<title>IAsset.ExpectedSize Property</title>
 
 	<link rel="stylesheet" type="text/css" href="msdn2017/msdn2017.css"></link>
 	<script src="msdn2017/msdn2017.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shCore_helixoft.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushVb.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCSharp.js" type="text/javascript"></script>
+	<script src="SyntaxHighlighter/scripts/shBrushFSharp.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushCpp.js" type="text/javascript"></script>
 	<script src="SyntaxHighlighter/scripts/shBrushJScript.js" type="text/javascript"></script>
 	<link href="SyntaxHighlighter/styles/shCore.css" rel="stylesheet" type="text/css" />
@@ -59,7 +60,7 @@ function replaceTitleAndUrl(win, title, url) {
 <!--HEADER START-->
   <div id="header">
   	<div id="runningHeaderText">VirtuosoSDK Reference</div>
-  	<h1 class="title">IAsset.FractionComplete Property</h1>
+  	<h1 class="title">IAsset.ExpectedSize Property</h1>
   	<div id="headerLinks">
 
 	<a href="#seeAlsoSection">See Also</a>
@@ -73,16 +74,18 @@ function replaceTitleAndUrl(win, title, url) {
       <div id="mainBody">
         <p />
        
-        How much of this asset CNC has already downloaded, as a fraction between 0.0 and 1.0
+        /// Expected size of this asset, in bytes
+        ///
 
 
         <p /><strong>Namespace:</strong>
-<a href="topic_0000000000000000.html">Penthera.VirtuosoClient.Public</a>
+<a href="topic_0000000000000001.html">Penthera.VirtuosoClient.Public</a>
 
 
 
 
         <br /><strong>Assembly:</strong> CnCWindowsSDK (in CnCWindowsSDK.dll)
+
 
 
 
@@ -114,6 +117,9 @@ function replaceTitleAndUrl(win, title, url) {
 				<div class="codeSnippetTab csNaTab codeCsharp">
 					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
 				</div>
+				<div class="codeSnippetTab csNaTab codeFsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Fsharp');">F#</a>
+				</div>
 				<div class="codeSnippetTab csNaTab codeCpp">
 					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
 				</div>
@@ -132,7 +138,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeVB">
-					<pre xml:space="preserve" class="brush: vb">ReadOnly Property FractionComplete() As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.double.aspx">Double</a></pre>			
+					<pre xml:space="preserve" class="brush: vb">ReadOnly Property ExpectedSize() As <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.uint64.aspx">UInt64</a></pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -149,6 +155,9 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				<div class="codeSnippetTab csActiveTab codeCsharp">
 					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeFsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Fsharp');">F#</a>
 				</div>
 				<div class="codeSnippetTab csNaTab codeCpp">
 					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
@@ -168,13 +177,14 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeCsharp">
-					<pre xml:space="preserve" class="brush: csharp"><a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.double.aspx">double</a> FractionComplete {get;}</pre>			
+					<pre xml:space="preserve" class="brush: csharp"><a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.uint64.aspx">UInt64</a> ExpectedSize {get;}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
 				</div>
 			</div>
 		</div>
+
 
 		<div class="codeSnippetContainer">
 			<div class="codeSnippetTabs">
@@ -185,6 +195,9 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				<div class="codeSnippetTab csNaTab codeCsharp">
 					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeFsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Fsharp');">F#</a>
 				</div>
 				<div class="codeSnippetTab csActiveTab codeCpp">
 					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
@@ -204,7 +217,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeCpp">
-					<pre xml:space="preserve" class="brush: cpp">&nbsp;<br />property <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.double.aspx">double</a> FractionComplete {&nbsp;<br /> <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.double.aspx">double</a> get( );&nbsp;<br />}</pre>			
+					<pre xml:space="preserve" class="brush: cpp">&nbsp;<br />property <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.uint64.aspx">UInt64</a> ExpectedSize {&nbsp;<br /> <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.uint64.aspx">UInt64</a> get( );&nbsp;<br />}</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -221,6 +234,9 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				<div class="codeSnippetTab csNaTab codeCsharp">
 					<a href="javascript: CodeSnippet_SetLanguage('Csharp');">C#</a>
+				</div>
+				<div class="codeSnippetTab csNaTab codeFsharp">
+					<a href="javascript: CodeSnippet_SetLanguage('Fsharp');">F#</a>
 				</div>
 				<div class="codeSnippetTab csNaTab codeCpp">
 					<a href="javascript: CodeSnippet_SetLanguage('Cpp');">C++</a>
@@ -240,7 +256,7 @@ function replaceTitleAndUrl(win, title, url) {
 				</div>
 				
 				<div class="codeSnippetCode codeJScript">
-					<pre xml:space="preserve" class="brush: js">function get FractionComplete() : <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.double.aspx">double</a>;</pre>			
+					<pre xml:space="preserve" class="brush: js">function get ExpectedSize() : <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.uint64.aspx">UInt64</a>;</pre>			
 				</div>
 				<div class="codeSnippetCode codeNA">
 					<pre xml:space="preserve">This language is not supported or no code example is available.</pre>			
@@ -254,7 +270,7 @@ function replaceTitleAndUrl(win, title, url) {
 
 	<h4 class="subHeading">
 		Property Value</h4>
-	Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.double.aspx">double</a> 
+	Type: <a target="_top" href="http://msdn2.microsoft.com/en-us/library/system.uint64.aspx">UInt64</a> 
 	
 
 
@@ -269,26 +285,9 @@ function replaceTitleAndUrl(win, title, url) {
 
 
 
+
 	</div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -296,27 +295,49 @@ function replaceTitleAndUrl(win, title, url) {
 
 <div class="section_container">
 	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Platforms</a></span>
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Remarks</a></span>
 		<div><hr /></div>
 	</div>
 
-	<div id="platformsSection" class="section">	
-		<p>
-			Universal Windows
-		</p>
-		<p>
-			The .NET Framework does not support all versions of every platform. For a list of the supported versions, see 
-			<a target="_top" href="http://msdn2.microsoft.com/en-us/library/298275e2-da1d-4618-9f74-6a3567832350.aspx">System Requirements</a>.
-		</p>
+	<div id="remarksSection" class="section">	
+			You should provide this value to CNC so that CNC can validate this asset after downloading.
+        /// If you don't supply a file size in advance, then CNC will use the file size advertised by the HTTP
+        /// server when download commences.
+        /// <p>CNC can validate sizes for Assets. When it does so, CNC will verify that the observed file
+        /// size matches expectedSize. If they do not match,  CNC will mark the asset in error, with the code
+        /// kVDE_Download_EngineError, and will send an event containing an error with code kVDE_File_Length_Mismatch.</p>
+        /// <p>Providing this value is optional but strongly recommended.</p>
 	</div>					
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
   
 
 
-	
+
+
+
+
+
 	
 	
 	
@@ -325,14 +346,18 @@ function replaceTitleAndUrl(win, title, url) {
 
 <div class="section_container">
 	<div class="section_heading">
-		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Version Information</a></span>
+		<span><a href="javascript:void(0)" title="Collapse" onclick="toggleSection(this);">Applies to</a></span>
 		<div><hr /></div>
 	</div>
 
 	<div id="frameworksSection" class="section">	
-  <h4 class="subHeading">.NET Framework</h4>Supported in: 4.6, 4.5, 4, 3.5, 3.0, 2.0, 1.1, 1.0<br />
+  <h4 class="subHeading">.NET Framework</h4>Supported in: 4.5, 4.5.1, 4.5.2, 4.6, 4.6.1, 4.6.2, 4.7, 4.7.1<br />
 
-  <h4 class="subHeading">.NET Framework Client Profile</h4>Supported in: 4, 3.5 SP1<br />
+
+
+
+
+
 
 
 
@@ -350,11 +375,11 @@ function replaceTitleAndUrl(win, title, url) {
 
 	<div id="seeAlsoSection" class="section">	
 		<div>
-			<a href="topic_0000000000000023.html">IAsset Interface</a><br />
+			<a href="topic_0000000000000025.html">IAsset Interface</a><br />
 
 
 
-<a href="topic_0000000000000000.html">Penthera.VirtuosoClient.Public Namespace</a><br />
+<a href="topic_0000000000000001.html">Penthera.VirtuosoClient.Public Namespace</a><br />
 
 
 			
@@ -365,7 +390,7 @@ function replaceTitleAndUrl(win, title, url) {
 			</div>
 			</div>
       <div id="footer">
-      	<p>VirtuosoSDK Version 3.13.1.8</p>
+      	<p>Generated with <a target="_top" href="http://www.helixoft.com/vsdocman/overview.html">VSdocman</a></p>
       </div>
     </div>
   	<script type="text/javascript">

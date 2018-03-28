@@ -82,7 +82,7 @@
                     <TextBlock Text="User:" Style="{ThemeResource TitleTextBlockStyle}" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
                 </StackPanel>
                 <StackPanel Grid.Row="2">
-                    <TextBox x:Name="User" Text="{Binding default_user,Mode=TwoWay}" VerticalAlignment="Top"/>
+                    <TextBox x:Name="User" Text="{Binding default_user,Mode=TwoWay}" VerticalAlignment="Top" KeyUp="User_KeyUp"/>
                 </StackPanel>
 
                 <StackPanel Grid.Row="3">

@@ -252,6 +252,10 @@ namespace VirtuosoClient.TestHarness
             var dialog = new MessageDialog("Your settings have been saved.");
             await dialog.ShowAsync();
 
+            if (client.ThisDevice.DownloadEnabled) {
+                client.ResumeActivity();
+            }
+
             VirtuosoClientFactory.ClientInstance().VirtuosoLogger.NetworkLoggingIP = (String)DefaultViewModel["NetworkLoggingIP"];
             VirtuosoClientFactory.ClientInstance().VirtuosoLogger.NetworkLoggingPort = (String)DefaultViewModel["NetworkLoggingPort"];
             VirtuosoClientFactory.ClientInstance().VirtuosoLogger.NetworkLoggingEnabled = (bool)DefaultViewModel["NetworkLoggingEnabled"];

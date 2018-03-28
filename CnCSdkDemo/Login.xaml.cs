@@ -120,16 +120,40 @@ namespace VirtuosoClient.TestHarness
         private bool _loggingIn = false;
         private void Login_Btn_Click(object sender, RoutedEventArgs e)
         {
-            if (_loggingIn) {
+            //if (_loggingIn) {
+            //    Login_Btn.IsEnabled = true;
+            //    return;
+            //}
+
+            // disable the button; should replace the button with progress "please wait..." status to the user
+            //Login_Btn.IsEnabled = false;
+            //_loggingIn = true;
+
+            VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "Login button click");
+            login();
+            //VClient.AuthenticationUpdated += Client_AuthenticationChanged;
+            //VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "Registered status change event handler");
+            //VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "calling startup");
+            //var pushToken = VClient.Backplane.backplaneSettings.DevicePushToken;
+            //VClient.StartupAsync(
+            //                    (string)DefaultViewModel["default_url"],
+            //                    (string)DefaultViewModel["default_user"],
+            //                    "",
+            //                    Config.PRIVATE_KEY, Config.PUBLIC_KEY, pushToken).AsAsyncAction().Completed = (isender, iargs) =>
+            //                        {
+            //                            _loggingIn = false;
+            //                        };
+        }
+
+        private void login()
+        {
+            if (_loggingIn)
+            {
                 Login_Btn.IsEnabled = true;
                 return;
             }
-
-            // disable the button; should replace the button with progress "please wait..." status to the user
             Login_Btn.IsEnabled = false;
             _loggingIn = true;
-
-            VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "Login button click");
             VClient.AuthenticationUpdated += Client_AuthenticationChanged;
             VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "Registered status change event handler");
             VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "calling startup");
@@ -139,9 +163,10 @@ namespace VirtuosoClient.TestHarness
                                 (string)DefaultViewModel["default_user"],
                                 "",
                                 Config.PRIVATE_KEY, Config.PUBLIC_KEY, pushToken).AsAsyncAction().Completed = (isender, iargs) =>
-                                    {
-                                        _loggingIn = false;
-                                    };
+                                {
+                                    _loggingIn = false;
+                                };
+
         }
 
         /// <summary>
@@ -176,6 +201,14 @@ namespace VirtuosoClient.TestHarness
         private void setAuthenticationFailure()
         {
             DefaultViewModel["login_error"] = "Authentication failed: Please try Again.";
+        }
+
+        private void User_KeyUp(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e)
+        {
+            if (e.Key == Windows.System.VirtualKey.Enter) {
+                VClient.VirtuosoLogger.WriteLine(VirtuosoLoggingLevel.Debug, "User hit enter to login");
+                login();
+            }
         }
     }
 }
