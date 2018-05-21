@@ -113,7 +113,7 @@ namespace VirtuosoClient.TestHarness
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private async void ForceSync_Click(object sender, RoutedEventArgs e)
         {
-            await VClient.SyncWithBackplaneAsync();
+            await VClient.SyncWithBackplaneAsync(DeleteReason.User);
         }
     }
 }

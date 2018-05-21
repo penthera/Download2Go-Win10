@@ -214,7 +214,7 @@ namespace VirtuosoClient.TestHarness
 
             //Thread to delete selected asset
             //We suggest to use threadpool to wait delete conclude before continue
-            ThreadPool.RunAsync(async (workitem) => await VClient.DeleteAssetAsync(asset));
+            ThreadPool.RunAsync(async (workitem) => await VClient.DeleteAssetAsync(asset, DeleteReason.User));
 
             this.Frame.Navigate(typeof(HubPage));
         }

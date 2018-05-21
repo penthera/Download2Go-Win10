@@ -12,6 +12,7 @@ using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
 using Windows.Networking.PushNotifications;
+using Microsoft.HockeyApp;
 using Windows.UI.Popups;
 //using Windows.Data.Xml.Dom;
 using System.Xml;
@@ -24,6 +25,7 @@ namespace VirtuosoClient.TestHarness
     /// </summary>
     public sealed partial class App : Application
     {
+       
         internal static IVirtuosoClient VClient = VirtuosoClientFactory.ClientInstance();
         internal static IVirtuosoSettings VSettings = VClient.Settings;
         //internal static Frame RootFrame { get; set; }
@@ -45,6 +47,10 @@ namespace VirtuosoClient.TestHarness
         /// </summary>
         public App()
         {
+            Microsoft.HockeyApp.HockeyClient.Current.Configure("94839f9fef1b45bcac73ecaca2bfd710");
+
+
+
             UnhandledException += App_UnhandledException;
             this.InitializeComponent();
             this.Suspending += this.OnSuspending;
@@ -168,10 +174,10 @@ namespace VirtuosoClient.TestHarness
                 switch (payload)
                 {
                     case "[download_available:true]":
-                        VClient.CheckDownloadStatus(false);
+                        VClient.CheckDownloadStatus(false, DeleteReason.Internal);
                         break;
                     case "[analytics_sync:true]":
-                        VClient.SyncWithBackplaneAsync();
+                        VClient.SyncWithBackplaneAsync(DeleteReason.Internal);
                         break;
                     default:
                         break;
@@ -205,6 +211,10 @@ namespace VirtuosoClient.TestHarness
         /// </summary>
         private async void OnSuspending(object sender, SuspendingEventArgs e)
         {
+            var logger = VirtuosoClientFactory.ClientInstance().VirtuosoLogger;
+            logger.WriteLine(VirtuosoLoggingLevel.Error, "********** THE APPLICATION IS CLOSING :: SESSION ENDING **********");
+            logger.WriteLine(VirtuosoLoggingLevel.Error, "********** " + _sb.ToString() + " **********");
+
             var deferral = e.SuspendingOperation.GetDeferral();
             await SuspensionManager.SaveAsync();
             deferral.Complete();
@@ -231,7 +241,7 @@ namespace VirtuosoClient.TestHarness
                                       client.Backplane.backplaneSettings.BackplaneUrl,
                                       user,
                                       client.Backplane.backplaneSettings.ExternalDeviceID,
-                                      Config.PRIVATE_KEY, Config.PUBLIC_KEY, _devicePushToken);
+                                      Config.PRIVATE_KEY, Config.PUBLIC_KEY, _devicePushToken, DeleteReason.Internal);
             return typeof(HubPage);
         }
 
@@ -252,7 +262,7 @@ namespace VirtuosoClient.TestHarness
 
         public async Task UnregisterDevice()
         {
-            if (await VirtuosoClientFactory.ClientInstance().UnregisterThisDevice())
+            if (await VirtuosoClientFactory.ClientInstance().UnregisterThisDevice(DeleteReason.Internal))
             {
                 SuspensionManager.CleanState();
                 // Normally, you would want to reset the application state to an un-logged in view, for instance, a Login page.
@@ -261,39 +271,44 @@ namespace VirtuosoClient.TestHarness
             }
         }
 
+        StringBuilder _sb = new StringBuilder();
         private void App_UnhandledException(object sender, UnhandledExceptionEventArgs e)
         {
             try
             {
+                
                 var logger = VirtuosoClientFactory.ClientInstance().VirtuosoLogger;
-                StringBuilder sb = new StringBuilder();
-                sb.Append("FATAL EXCEPTION");
-                sb.AppendLine();
-                sb.Append(e.Message);
-                sb.AppendLine();
-                sb.Append(e.Exception.StackTrace);
+                 _sb = new StringBuilder();
+                _sb.Append("FATAL EXCEPTION");
+                _sb.AppendLine();
+                _sb.Append(e.Message);
+                _sb.AppendLine();
+                _sb.Append(e.Exception.StackTrace);
                 if (e.Exception.InnerException != null)
                 {
-                    sb.Append("InnerException:");
-                    sb.AppendLine();
-                    sb.Append(e.Exception.InnerException.Message);
-                    sb.AppendLine();
+                    _sb.Append("InnerException:");
+                    _sb.AppendLine();
+                    _sb.Append(e.Exception.InnerException.Message);
+                   _sb.AppendLine();
                     if (e.Exception.InnerException.StackTrace != null)
-                        sb.Append(e.Exception.InnerException.StackTrace);
+                        _sb.Append(e.Exception.InnerException.StackTrace);
                 }
                 Exception baseex = e.Exception.GetBaseException();
                 if (baseex != null)
                 {
-                    sb.Append("BaseException");
-                    sb.AppendLine();
-                    sb.Append(baseex.Message);
-                    sb.AppendLine();
+                    _sb.Append("BaseException");
+                    _sb.AppendLine();
+                    _sb.Append(baseex.Message);
+                    _sb.AppendLine();
                     if (baseex.StackTrace != null)
-                        sb.Append(baseex.StackTrace);
+                        _sb.Append(baseex.StackTrace);
                 }
-                logger.WriteLine(VirtuosoLoggingLevel.Error, sb.ToString());
+                logger.WriteLine(VirtuosoLoggingLevel.Error, _sb.ToString());
             }
-            catch (Exception) { }
+            catch (Exception ex) {
+                var logger = VirtuosoClientFactory.ClientInstance().VirtuosoLogger;
+                logger.WriteLine(VirtuosoLoggingLevel.Error, ex.Message);
+            }
         }
     }
 }

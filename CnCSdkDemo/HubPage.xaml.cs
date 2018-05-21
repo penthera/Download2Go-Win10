@@ -72,7 +72,7 @@ namespace VirtuosoClient.TestHarness {
             ThreadPoolTimer timer2 = ThreadPoolTimer.CreatePeriodicTimer((t) => {
                 if (VClient.Settings.MinimumBackplaneSyncInterval >= 60)
                 {
-                    VClient.SyncWithBackplaneAsync();
+                    VClient.SyncWithBackplaneAsync(DeleteReason.Internal);
                     VClient.Settings.LastSyncDateTime = DateTime.UtcNow;
                 }
             }, TimeSpan.FromMinutes(60));
@@ -82,18 +82,24 @@ namespace VirtuosoClient.TestHarness {
             // This is for moving expired content 
             // from the completed list to the 
             // expired list in the UI.
-            ThreadPoolTimer timer = ThreadPoolTimer.CreatePeriodicTimer((t) =>
-            {
-                ObservableCollection<IAsset> _assets = QATestDataSource.GetCompletedAssetsAsync().Result;
-                foreach (var asset in _assets)
+//            Task.Run(async () => {
+                ThreadPoolTimer timer = ThreadPoolTimer.CreatePeriodicTimer((t) =>
                 {
-                    this.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, () =>
-                    {
-                        if(!VClient.Expired.Contains(asset) && asset.Expired)
-                        VClient.Expired.Add(asset);
-                    });
-                }
-            }, TimeSpan.FromSeconds(59));
+                    //ObservableCollection<IAsset> _assets = QATestDataSource.GetCompletedAssetsAsync().Result;
+                    //foreach (var asset in _assets)
+                    //{
+                    //    this.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.High, () =>
+                    //    {
+                    //        if (!VClient.Expired.Contains(asset) && asset.Expired)
+                    //            VClient.Expired.Add(asset);
+                    //    });
+                    //}
+                    RefreshExpiredAssetsAsync();
+                    RefreshCompletedAssetsAsync();
+                    VClient.RunConsistencyCheck();
+                }, TimeSpan.FromSeconds(59));
+  //          }
+  //          );
             // *******************************//
         }
 
@@ -104,7 +110,7 @@ namespace VirtuosoClient.TestHarness {
         private void RunSyncAsync(object state) {
             AutoResetEvent autoEvent = (AutoResetEvent)state;
             if (VClient.Settings.MinimumBackplaneSyncInterval >= 60) {
-                VClient.SyncWithBackplaneAsync();
+                VClient.SyncWithBackplaneAsync(DeleteReason.Internal);
                 VClient.Settings.LastSyncDateTime = DateTime.UtcNow;
             }
             autoEvent.Set();
@@ -312,6 +318,8 @@ namespace VirtuosoClient.TestHarness {
             MessageDialog msgbox = new MessageDialog("What do you want to do ?");
             msgbox.Commands.Add(new UICommand("Play the Video", new UICommandInvokedHandler(PlayAssetHandler), asset_id));
             msgbox.Commands.Add(new UICommand("View Statistics", new UICommandInvokedHandler(ViewAssetHandler), asset_id));
+            msgbox.Commands.Add(new UICommand("Cancel"));
+            msgbox.CancelCommandIndex = 2;
             msgbox.ShowAsync();
 
 
@@ -420,7 +428,7 @@ namespace VirtuosoClient.TestHarness {
             var diff = DateTime.UtcNow.Subtract(VClient.Settings.LastSyncDateTime);
 
             if (diff.TotalMinutes > VClient.Settings.MinimumBackplaneSyncInterval) {
-                await VClient.SyncWithBackplaneAsync();
+                await VClient.SyncWithBackplaneAsync(DeleteReason.Internal);
                 VClient.Settings.LastSyncDateTime = DateTime.UtcNow;
             }
         }
@@ -432,7 +440,7 @@ namespace VirtuosoClient.TestHarness {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private async void Public_Delete_All(object sender, RoutedEventArgs e) {
-            await VClient.DeleteAll();
+            await VClient.DeleteAll(DeleteReason.User);
         }
 
         /// <summary>
@@ -441,7 +449,7 @@ namespace VirtuosoClient.TestHarness {
         /// <param name="sender">The source of the event.</param>
         /// <param name="e">The <see cref="RoutedEventArgs"/> instance containing the event data.</param>
         private async void ClearQueue_Click(object sender, RoutedEventArgs e) {
-            ThreadPool.RunAsync(async (workitem) => VClient.DeletePendingQueue());
+            ThreadPool.RunAsync(async (workitem) => VClient.DeletePendingQueue(DeleteReason.User));
             await RefreshQueuedAssetsAsync();
         }
 
@@ -492,7 +500,6 @@ namespace VirtuosoClient.TestHarness {
 
         #region Menu Flyout 
 
-   
         private void ListView_ContextRequested(UIElement sender, ContextRequestedEventArgs e)
         {
             // Walk up the tree to find the ListViewItem.

@@ -162,7 +162,7 @@ namespace VirtuosoClient.TestHarness
                                 (string)DefaultViewModel["default_url"],
                                 (string)DefaultViewModel["default_user"],
                                 "",
-                                Config.PRIVATE_KEY, Config.PUBLIC_KEY, pushToken).AsAsyncAction().Completed = (isender, iargs) =>
+                                Config.PRIVATE_KEY, Config.PUBLIC_KEY, pushToken, DeleteReason.Internal).AsAsyncAction().Completed = (isender, iargs) =>
                                 {
                                     _loggingIn = false;
                                 };

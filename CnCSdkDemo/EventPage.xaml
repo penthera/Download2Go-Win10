@@ -19,10 +19,10 @@
                 </ResourceDictionary>
             </ResourceDictionary.ThemeDictionaries>
 
-            <Common:VirtuosoClientStatusFormatter x:Key="VirtuosoClientStatusFormatter"/>
+            <!--Common:VirtuosoClientStatusFormatter x:Key="VirtuosoClientStatusFormatter"/>
             <Common:VirtuosoClientEnvironmentStatusFormatter x:Key="VirtuosoClientEnvironmentStatusFormatter"/>
             <Common:DiskStorageFormatter x:Key="DiskStorageFormatter"/>
-            <Common:UnlimitedFormatter x:Key="UnlimitedFormatter"/>
+            <Common:UnlimitedFormatter x:Key="UnlimitedFormatter"/-->
 
         </ResourceDictionary>
     </Page.Resources>
@@ -184,10 +184,7 @@
                         <Setter Target="AppLaunch.FontSize" Value="13"/>
                         <Setter Target="EventAppLaunch.Padding" Value="0,2,10,2"/>
                         <Setter Target="EventAppLaunch.FontSize" Value="14"/>
-                        <Setter Target="UserTriggeredDelete.Padding" Value="0,2,10,2"/>
-                        <Setter Target="UserTriggeredDelete.FontSize" Value="14"/>
-                        <Setter Target="EventUserTriggeredDelete.Padding" Value="0,2,10,2"/>
-                        <Setter Target="EventUserTriggeredDelete.FontSize" Value="14"/>
+
                         <Setter Target="AssetExpire.Padding" Value="0,2,10,2"/>
                         <Setter Target="AssetExpire.FontSize" Value="14"/>
 

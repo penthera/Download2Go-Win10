@@ -68,11 +68,11 @@ namespace VirtuosoClient.TestHarness {
         }
 
         private async void ForceSync_Click(object sender, RoutedEventArgs e) {
-            await VClient.SyncWithBackplaneAsync();
+            await VClient.SyncWithBackplaneAsync(DeleteReason.User);
         }
 
         private async void Public_Delete_All(object sender, RoutedEventArgs e) {
-            await VClient.DeleteAll();
+            await VClient.DeleteAll(DeleteReason.User);
         }
 
 
@@ -164,7 +164,7 @@ namespace VirtuosoClient.TestHarness {
                 //Set status of device
                 _devicedetail.DownloadEnabled = _devicedetail.DownloadEnabled == true ? false : true;
 
-                VClient.CheckDownloadStatus(false);
+                VClient.CheckDownloadStatus(false, DeleteReason.User);
 
                 //update device details
                 bool result = await App.VClient.UpdateDeviceDetail(_devicedetail);

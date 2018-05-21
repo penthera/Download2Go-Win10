@@ -47,6 +47,10 @@
                 <StackPanel Margin="0,0,0,19">
                     <TextBlock Text="{Binding Metadata}"/>
                     <TextBlock Text="{Binding Status}"/>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Duration: "/>
+                        <TextBlock Text="{Binding Duration}"/>
+                    </StackPanel>
                 </StackPanel>
             </DataTemplate>
 
@@ -77,10 +81,6 @@
                     <StackPanel Orientation="Horizontal">
                         <TextBlock Text="Duration: "/>
                         <TextBlock Text="{Binding Duration}"/>
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock />
-
                     </StackPanel>
                 </StackPanel>
             </DataTemplate>

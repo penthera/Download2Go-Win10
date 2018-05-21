@@ -74,9 +74,7 @@
                         <Setter Target="mediaRow.(Grid.RowSpan)" Value="2"/>
                         <Setter Target="mediaRow.Margin" Value="0,0,10,0"/>
 
-                        <Setter Target="detailRow.(Grid.Column)" Value="1"/>
-                        <Setter Target="detailRow.(Grid.Row)" Value="1"/>
-                        <Setter Target="detailRow.(Grid.RowSpan)" Value="2"/>
+
 
                     </VisualState.Setters>
                 </VisualState>
@@ -105,7 +103,7 @@
         </Grid>
 
         <Grid Grid.Row="1" x:Name="mediaRow">
-            <playerFramework:MediaPlayer x:Name="Player" AutoPlay="False" IsCaptionSelectionVisible="True" IsAudioSelectionVisible="True" IsAudioSelectionEnabled="True">
+            <playerFramework:MediaPlayer x:Name="Player"  AutoPlay="False" IsCaptionSelectionVisible="True" IsAudioSelectionVisible="True" IsAudioSelectionEnabled="True">
                 <playerFramework:MediaPlayer.Plugins>
                     <hlsPlayerFramework:HLSPlugin x:Name="hlsplugin" ClosedCaptionType="WebVTTSidecar"/>
                     <webVTTFramework:WebVTTPlugin />
